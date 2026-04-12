@@ -1,16 +1,15 @@
 import CapabilitiesSection from "./components/CapabilitiesSection";
-import DemoSection from "./components/DemoSection";
 import EarlyAccessSection from "./components/EarlyAccessSection";
 import FaqSection from "./components/FaqSection";
+import FeelingSection from "./components/FeelingSection";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import HowItWorksSection from "./components/HowItWorksSection";
 import MeetPalarisSection from "./components/MeetPalarisSection";
 import Navbar from "./components/Navbar";
 import PricingSection from "./components/PricingSection";
-import SocialProofBar from "./components/SocialProofBar";
+import QuoteSection from "./components/QuoteSection";
 import VibesLayerSection from "./components/VibesLayerSection";
-import WhatIsPalariSection from "./components/WhatIsPalariSection";
 
 export default function Home() {
   return (
@@ -18,13 +17,12 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <SocialProofBar />
-        <WhatIsPalariSection />
+        <FeelingSection />
         <MeetPalarisSection />
         <HowItWorksSection />
-        <CapabilitiesSection />
         <VibesLayerSection />
-        <DemoSection />
+        <CapabilitiesSection />
+        <QuoteSection />
         <PricingSection />
         <FaqSection />
         <EarlyAccessSection />

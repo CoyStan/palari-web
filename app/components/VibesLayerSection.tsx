@@ -12,9 +12,12 @@ export default function VibesLayerSection() {
       <section className="py-24 md:py-32">
         <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-[#1B2A4A] md:text-4xl">The Vibes Layer</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1B2A4A] md:text-4xl">
+              The difference you can feel
+            </h2>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
-              The difference between a tool and a teammate
+              Every message passes through something we call the Vibes Layer. Same accuracy. Zero
+              robot.
             </p>
           </div>
 
@@ -49,11 +52,6 @@ export default function VibesLayerSection() {
               </div>
             </article>
           </div>
-
-          <p className="mx-auto mt-10 max-w-4xl text-center text-lg leading-relaxed text-gray-600">
-            Every message passes through the Vibes Layer. It keeps all the technical accuracy and
-            strips all the robot. Your Palaris sound like real colleagues, not language models.
-          </p>
         </div>
       </section>
     </FadeIn>

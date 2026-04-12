@@ -4,15 +4,16 @@ export default function EarlyAccessSection() {
   return (
     <FadeIn>
       <section
-        className="scroll-mt-28 bg-gradient-to-r from-teal-50 via-white to-blue-50 py-24 md:py-32"
+        className="scroll-mt-28 bg-gradient-to-r from-[#FDF8F4] via-[#F8FCF8] to-[#E8FBF5] py-24 md:py-32"
         id="early-access"
       >
         <div className="mx-auto w-full max-w-6xl px-6 text-center md:px-8">
           <h2 className="text-3xl font-bold tracking-tight text-[#1B2A4A] md:text-5xl">
-            Your team is waiting
+            They&apos;re waiting to meet you
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-gray-600">
-            We are onboarding early users one at a time to make sure every Palari feels right.
+            Every Palari starts as a stranger. Give them a week and they&apos;ll feel like someone
+            you&apos;ve worked with for years.
           </p>
 
           <div className="mx-auto mt-10 flex w-full max-w-2xl flex-col gap-3 sm:flex-row sm:items-center">
@@ -25,7 +26,7 @@ export default function EarlyAccessSection() {
               href="mailto:hello@palari.io?subject=Early%20Access%20Request"
               className="inline-flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-[#3ECDA5] to-[#3B5EE8] px-8 py-4 text-lg font-semibold text-white"
             >
-              Request Access
+              Request Early Access
             </a>
           </div>
 

@@ -20,16 +20,16 @@ const beyondSlack = [
 export default function CapabilitiesSection() {
   return (
     <FadeIn>
-      <section className="bg-[#F8F9FC] py-24 md:py-32">
+      <section className="bg-[#FDF8F4] py-24 md:py-32">
         <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#1B2A4A] md:text-4xl">
-              What your Palaris can do
+              They do real work
             </h2>
           </div>
 
           <div className="mt-14 grid gap-8 md:grid-cols-2">
-            <article className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+            <article className="rounded-2xl border border-[#E6DDD5] bg-white p-8 shadow-sm">
               <span className="mb-5 block h-1.5 w-14 rounded-full bg-[#3ECDA5]" />
               <h3 className="text-2xl font-semibold text-[#1B2A4A]">In Slack</h3>
               <ul className="mt-6 space-y-4 text-base text-gray-600">
@@ -42,7 +42,7 @@ export default function CapabilitiesSection() {
               </ul>
             </article>
 
-            <article className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+            <article className="rounded-2xl border border-[#E6DDD5] bg-white p-8 shadow-sm">
               <span className="mb-5 block h-1.5 w-14 rounded-full bg-[#F07B7B]" />
               <h3 className="text-2xl font-semibold text-[#1B2A4A]">Beyond Slack</h3>
               <ul className="mt-6 space-y-4 text-base text-gray-600">

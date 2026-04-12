@@ -13,7 +13,7 @@ const tiers: PricingTier[] = [
   {
     name: "Free",
     price: "$0",
-    subtitle: "Try it out",
+    subtitle: "One Palari. Enough to feel the difference.",
     features: [
       "1 Palari",
       "Basic memory",
@@ -25,7 +25,7 @@ const tiers: PricingTier[] = [
   {
     name: "Pro",
     price: "$49",
-    subtitle: "Your AI team",
+    subtitle: "Three Palaris who remember everything. Your AI team.",
     features: [
       "3 Palaris",
       "Full memory (they remember everything)",
@@ -39,7 +39,7 @@ const tiers: PricingTier[] = [
   {
     name: "Team",
     price: "$149",
-    subtitle: "For real teams",
+    subtitle: "Unlimited Palaris. Shared memory. Weekly briefings from Alfred.",
     features: [
       "Unlimited Palaris",
       "Shared team memory",
@@ -54,15 +54,13 @@ const tiers: PricingTier[] = [
 export default function PricingSection() {
   return (
     <FadeIn>
-      <section className="scroll-mt-28 py-24 md:py-32" id="pricing">
+      <section className="scroll-mt-28 bg-gradient-to-b from-white to-[#FDF8F4] py-24 md:py-32" id="pricing">
         <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#1B2A4A] md:text-4xl">
-              Simple, honest pricing
+              Grow your team
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-gray-600">
-              Like hiring a teammate, not buying software.
-            </p>
+            <p className="mt-4 text-lg leading-relaxed text-gray-600">Like hiring, not subscribing.</p>
           </div>
 
           <div className="mt-14 flex gap-5 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:overflow-visible">
@@ -72,7 +70,7 @@ export default function PricingSection() {
                 className={`relative min-w-[280px] rounded-2xl border bg-white p-8 shadow-sm transition-transform hover:scale-[1.02] ${
                   tier.highlighted
                     ? "border-2 border-[#3ECDA5] md:scale-105"
-                    : "border border-gray-200"
+                    : "border border-[#E4DAD2]"
                 }`}
               >
                 {tier.highlighted && (
@@ -86,7 +84,7 @@ export default function PricingSection() {
                   <span className="text-5xl font-bold tracking-tight text-[#1B2A4A]">{tier.price}</span>
                   <span className="pb-1 text-sm text-gray-500">/month</span>
                 </div>
-                <p className="mt-2 text-base text-gray-600">{tier.subtitle}</p>
+                <p className="mt-2 text-base leading-relaxed text-gray-600">{tier.subtitle}</p>
 
                 <ul className="mt-6 space-y-3 text-base text-gray-600">
                   {tier.features.map((feature) => (

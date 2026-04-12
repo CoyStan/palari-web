@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur transition-shadow ${
+      className={`sticky top-0 z-50 border-b border-[#EEE3DA] bg-[#FFFCFA]/85 backdrop-blur transition-shadow ${
         isScrolled ? "shadow-sm" : ""
       }`}
     >
@@ -50,10 +50,10 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#early-access"
+            href="#meet-team"
             className="rounded-full bg-gradient-to-r from-[#3ECDA5] to-[#3B5EE8] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.01]"
           >
-            Get Early Access
+            Meet the team
           </a>
         </nav>
 
@@ -61,7 +61,7 @@ export default function Navbar() {
           type="button"
           aria-label="Open menu"
           onClick={() => setIsOpen(true)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#E9DED5] md:hidden"
         >
           <span className="sr-only">Open menu</span>
           <div className="space-y-1.5">
@@ -85,7 +85,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             />
             <motion.aside
-              className="fixed right-0 top-0 z-50 flex h-full w-72 flex-col gap-8 border-l border-gray-100 bg-white p-6 md:hidden"
+              className="fixed right-0 top-0 z-50 flex h-full w-72 flex-col gap-8 border-l border-[#EEE3DA] bg-[#FFFCFA] p-6 md:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -99,7 +99,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setIsOpen(false)}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-200"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#E9DED5]"
                   aria-label="Close menu"
                 >
                   ✕
@@ -120,11 +120,11 @@ export default function Navbar() {
               </div>
 
               <a
-                href="#early-access"
+                href="#meet-team"
                 onClick={() => setIsOpen(false)}
                 className="mt-auto rounded-full bg-gradient-to-r from-[#3ECDA5] to-[#3B5EE8] px-5 py-3 text-center text-sm font-semibold text-white"
               >
-                Get Early Access
+                Meet the team
               </a>
             </motion.aside>
           </>
