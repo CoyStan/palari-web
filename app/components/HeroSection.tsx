@@ -1,78 +1,161 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import FadeIn from "./FadeIn";
+import { motion } from "framer-motion";
 
-const cyclingLines = [
-  "Sofia just fixed the auth bug",
-  "Leo optimized the dashboard query",
-  "Alfred prepared your weekly briefing",
+const stats = [
+  { value: "4", label: "Palaris ready" },
+  { value: "1", label: "click setup" },
+  { value: "0", label: "terminal needed" },
+];
+
+const slackPreview = [
+  {
+    name: "Sofia",
+    dot: "bg-[#F46F61]",
+    text: "updated the proposal, budget is now 65k",
+  },
+  {
+    name: "Leo",
+    dot: "bg-[#22B8B0]",
+    text: "expense report ready, 14 entries added",
+  },
+  {
+    name: "Alfred",
+    dot: "bg-[#E7B83D]",
+    text: "Good morning, Sr. Two items today.",
+  },
 ];
 
 export default function HeroSection() {
-  const [activeLine, setActiveLine] = useState(0);
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveLine((prev) => (prev + 1) % cyclingLines.length);
-    }, 3000);
-
-    return () => window.clearInterval(timer);
-  }, []);
-
   return (
-    <FadeIn>
-      <section className="flex min-h-screen items-center py-24 md:py-32" id="top">
-        <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
-          <div className="grid gap-14 md:grid-cols-2 md:items-center">
-            <div className="space-y-8">
-              <motion.h1
-                initial={{ opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
-                className="text-5xl font-bold tracking-tight text-[#1B2A4A] md:text-7xl"
+    <section className="relative overflow-hidden border-b border-black/5 bg-gradient-to-br from-[#EEEAF8] via-white to-[#F7F5F2]">
+      {/* Decorative blur circles */}
+      <div
+        className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-[#22B8B0]/15 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute right-0 top-0 h-72 w-72 rounded-full bg-[#F46F61]/15 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center md:px-10 lg:py-20">
+        {/* Left column */}
+        <div className="relative z-10 flex flex-col">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-4 inline-flex w-fit items-center rounded-full border border-[#2E2A7B]/10 bg-white/80 px-4 py-2 text-sm font-medium text-[#2E2A7B] shadow-sm"
+          >
+            Now in early access
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="max-w-xl text-4xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl lg:text-6xl"
+          >
+            Some colleagues are unforgettable
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
+            className="mt-6 max-w-xl text-lg leading-8 text-[#4A4D73]"
+          >
+            They show up every morning. They remember your last conversation. They push back when
+            your idea needs work. And they never forget what you&apos;re working on.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-8 flex flex-wrap gap-4"
+          >
+            <a
+              href="#meet-team"
+              className="rounded-2xl bg-[#F46F61] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#F46F61]/25 transition hover:-translate-y-0.5"
+            >
+              Meet them
+            </a>
+            <a
+              href="#how-it-works"
+              className="rounded-2xl border border-[#2E2A7B]/10 bg-white px-6 py-3 text-base font-semibold text-[#2E2A7B] shadow-sm transition hover:bg-[#EEEAF8]"
+            >
+              See how it works
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.55 }}
+            className="mt-10 grid grid-cols-3 gap-4"
+          >
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm backdrop-blur"
               >
-                Some colleagues are unforgettable
-              </motion.h1>
+                <div className="text-2xl font-semibold text-[#2E2A7B]">{stat.value}</div>
+                <div className="mt-1 text-sm text-[#5B5E84]">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
 
-              <p className="max-w-xl text-xl leading-relaxed text-gray-500">
-                They show up every morning. They remember your last conversation. They push back
-                when your idea needs work. They celebrate when you ship. And they never, ever
-                forget what you&apos;re working on.
-              </p>
+        {/* Right column — nested dark card with Slack preview */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="relative z-10"
+        >
+          <div className="rounded-[32px] border border-black/5 bg-white p-4 shadow-2xl shadow-[#2E2A7B]/10">
+            <div className="rounded-[24px] bg-[#2E2A7B] p-5">
+              {/* Header */}
+              <div className="mb-4 flex items-center justify-between">
+                <div>
+                  <div className="text-sm font-medium text-white/70">Palari HQ</div>
+                  <div className="text-xl font-semibold text-white">#operations</div>
+                </div>
+                <div className="flex gap-2">
+                  <span className="h-3 w-3 rounded-full bg-[#F46F61]" />
+                  <span className="h-3 w-3 rounded-full bg-[#E7B83D]" />
+                  <span className="h-3 w-3 rounded-full bg-[#22B8B0]" />
+                </div>
+              </div>
 
-              <a
-                href="#meet-team"
-                className="inline-flex rounded-full bg-gradient-to-r from-[#3ECDA5] to-[#3B5EE8] px-8 py-4 text-lg font-semibold text-white shadow-sm transition-transform hover:scale-[1.02]"
-              >
-                Meet them
-              </a>
-            </div>
-
-            <div className="flex w-full justify-center md:justify-end">
-              <div className="aspect-[4/5] w-full max-w-lg rounded-3xl border border-[#EEE2D8] bg-gradient-to-br from-[#FDEEE4] via-[#FBECDD] to-[#EAF3FF] shadow-sm">
-                {/* IMAGE: Warm office scene, Palaris and humans working together at a wooden desk, coffee cups, brick walls, natural lighting. Use Image 7 or 9 style. */}
+              {/* Messages panel */}
+              <div className="rounded-[20px] bg-white p-5">
+                <div className="mb-3 inline-flex rounded-full bg-[#EEEAF8] px-3 py-1 text-xs font-semibold text-[#2E2A7B]">
+                  Active now
+                </div>
+                <div className="space-y-4">
+                  {slackPreview.map((msg) => (
+                    <div key={msg.name} className="flex items-start gap-3">
+                      <span
+                        className={`mt-1 h-8 w-8 shrink-0 rounded-full ${msg.dot}`}
+                        aria-hidden="true"
+                      />
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-[#2E2A7B]">{msg.name}</p>
+                        <p className="mt-0.5 text-sm leading-relaxed text-[#535778]">
+                          {msg.text}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-
-          <div className="mt-10 flex h-8 items-center justify-center">
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={cyclingLines[activeLine]}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.45 }}
-                className="text-center text-sm italic text-gray-400 md:text-base"
-              >
-                {cyclingLines[activeLine]}
-              </motion.p>
-            </AnimatePresence>
-          </div>
-        </div>
-      </section>
-    </FadeIn>
+        </motion.div>
+      </div>
+    </section>
   );
 }

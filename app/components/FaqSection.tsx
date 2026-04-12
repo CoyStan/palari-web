@@ -8,27 +8,27 @@ const faqItems = [
   {
     question: "How is this different from ChatGPT?",
     answer:
-      "ChatGPT is a tool you visit. A Palari is a teammate who shows up. Sofia lives in your Slack, remembers your project, reads your docs, makes changes, and asks before she acts. ChatGPT forgets everything when you close the tab.",
+      "ChatGPT is a tool you visit. A Palari is a teammate who shows up. Sofia lives in your Slack, remembers your projects, reads your docs, makes changes, and asks before she acts. ChatGPT forgets everything when you close the tab.",
   },
   {
-    question: "Do I need to know how to code?",
+    question: "Do I need to be technical?",
     answer:
-      "No. You talk to your Palaris in plain language. They handle the technical parts and explain everything in words you understand.",
+      "Not at all. You talk to your Palaris in plain language. They handle everything else and explain what they did in words you understand.",
   },
   {
     question: "Is my data safe?",
     answer:
-      "Palaris only access what you explicitly connect. Google Docs require your OAuth approval. Code stays on your machine or server. We never store your data longer than needed for processing.",
+      "Palaris only access what you explicitly connect. Google Docs require your approval. We never store your documents longer than needed.",
   },
   {
     question: "Can I customize my Palaris?",
     answer:
-      "Completely. Change their name, personality, expertise, communication style, and opinions. Create new Palaris from scratch or install pre-built ones from the marketplace.",
+      "Completely. Change their name, personality, expertise, and how they communicate. Or install pre-built Palaris from the marketplace.",
   },
   {
     question: "What if I want to stop?",
     answer:
-      "Cancel anytime. Export your Palari configurations. No lock-in. The open source core means you can always self-host.",
+      "Cancel anytime. No lock-in. The open source core means you can always self-host.",
   },
 ];
 
@@ -36,29 +36,33 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <FadeIn>
-      <section className="bg-[#F8F9FC] py-24 md:py-32">
-        <div className="mx-auto w-full max-w-4xl px-6 md:px-8">
+    <section className="bg-[#F7F5F2] py-16 md:py-20">
+      <div className="mx-auto w-full max-w-4xl px-6 md:px-10">
+        <FadeIn>
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-[#1B2A4A] md:text-4xl">Questions</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-[#2E2A7B] md:text-4xl">
+              Questions
+            </h2>
           </div>
+        </FadeIn>
 
-          <div className="mt-12 space-y-4">
-            {faqItems.map((item, index) => {
-              const isOpen = openIndex === index;
+        <div className="mt-10 space-y-3">
+          {faqItems.map((item, index) => {
+            const isOpen = openIndex === index;
 
-              return (
-                <article key={item.question} className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            return (
+              <FadeIn key={item.question}>
+                <article className="overflow-hidden rounded-[28px] bg-white ring-1 ring-black/5">
                   <button
                     type="button"
                     className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left"
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                   >
-                    <span className="text-lg font-semibold text-[#1B2A4A]">{item.question}</span>
+                    <span className="text-lg font-semibold text-[#2E2A7B]">{item.question}</span>
                     <motion.span
                       animate={{ rotate: isOpen ? 45 : 0 }}
                       transition={{ duration: 0.2 }}
-                      className="text-2xl text-gray-400"
+                      className="text-2xl text-[#2E2A7B]/30"
                     >
                       +
                     </motion.span>
@@ -73,16 +77,18 @@ export default function FaqSection() {
                         transition={{ duration: 0.3, ease: "easeOut" }}
                         className="overflow-hidden"
                       >
-                        <p className="px-6 pb-6 text-base leading-relaxed text-gray-600">{item.answer}</p>
+                        <p className="px-6 pb-6 text-base leading-relaxed text-[#535778]">
+                          {item.answer}
+                        </p>
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </article>
-              );
-            })}
-          </div>
+              </FadeIn>
+            );
+          })}
         </div>
-      </section>
-    </FadeIn>
+      </div>
+    </section>
   );
 }

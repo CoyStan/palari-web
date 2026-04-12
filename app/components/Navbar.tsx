@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import DotLogo from "./DotLogo";
+import PalariDots from "./PalariDots";
 
 const navItems = [
   { label: "How it works", href: "#how-it-works" },
@@ -29,14 +29,14 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-[#EEE3DA] bg-[#FFFCFA]/85 backdrop-blur transition-shadow ${
-        isScrolled ? "shadow-sm" : ""
+      className={`sticky top-0 z-50 bg-[#F7F5F2]/85 backdrop-blur transition-shadow ${
+        isScrolled ? "shadow-md ring-1 ring-black/5" : ""
       }`}
     >
-      <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-6 md:px-8">
-        <a href="#" className="inline-flex items-center gap-3 text-[#1B2A4A]">
-          <DotLogo />
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 md:px-10">
+        <a href="#" className="inline-flex items-center gap-2 text-[#2E2A7B]">
           <span className="text-xl font-bold tracking-tight">Palari</span>
+          <PalariDots scale="navbar" />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -44,14 +44,14 @@ export default function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-gray-600 transition-colors hover:text-[#1B2A4A]"
+              className="text-sm font-medium text-[#4A4D73] transition-colors hover:text-[#2E2A7B]"
             >
               {item.label}
             </a>
           ))}
           <a
             href="#meet-team"
-            className="rounded-full bg-gradient-to-r from-[#3ECDA5] to-[#3B5EE8] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.01]"
+            className="rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.02]"
           >
             Meet the team
           </a>
@@ -61,13 +61,13 @@ export default function Navbar() {
           type="button"
           aria-label="Open menu"
           onClick={() => setIsOpen(true)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#E9DED5] md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-2xl ring-1 ring-black/5 md:hidden"
         >
           <span className="sr-only">Open menu</span>
           <div className="space-y-1.5">
-            <span className="block h-0.5 w-5 bg-[#1B2A4A]" />
-            <span className="block h-0.5 w-5 bg-[#1B2A4A]" />
-            <span className="block h-0.5 w-5 bg-[#1B2A4A]" />
+            <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
+            <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
+            <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
           </div>
         </button>
       </div>
@@ -85,21 +85,21 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             />
             <motion.aside
-              className="fixed right-0 top-0 z-50 flex h-full w-72 flex-col gap-8 border-l border-[#EEE3DA] bg-[#FFFCFA] p-6 md:hidden"
+              className="fixed right-0 top-0 z-50 flex h-full w-72 flex-col gap-8 bg-[#F7F5F2] p-6 ring-1 ring-black/5 md:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.25, ease: "easeOut" }}
             >
               <div className="flex items-center justify-between">
-                <div className="inline-flex items-center gap-3">
-                  <DotLogo />
-                  <span className="text-lg font-bold tracking-tight">Palari</span>
+                <div className="inline-flex items-center gap-2">
+                  <span className="text-lg font-bold tracking-tight text-[#2E2A7B]">Palari</span>
+                  <PalariDots scale="navbar" />
                 </div>
                 <button
                   type="button"
                   onClick={() => setIsOpen(false)}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#E9DED5]"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-xl ring-1 ring-black/5"
                   aria-label="Close menu"
                 >
                   ✕
@@ -112,7 +112,7 @@ export default function Navbar() {
                     key={item.label}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-base font-medium text-gray-700"
+                    className="text-base font-medium text-[#4A4D73]"
                   >
                     {item.label}
                   </a>
@@ -122,7 +122,7 @@ export default function Navbar() {
               <a
                 href="#meet-team"
                 onClick={() => setIsOpen(false)}
-                className="mt-auto rounded-full bg-gradient-to-r from-[#3ECDA5] to-[#3B5EE8] px-5 py-3 text-center text-sm font-semibold text-white"
+                className="mt-auto rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-3 text-center text-sm font-semibold text-white"
               >
                 Meet the team
               </a>

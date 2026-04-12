@@ -8,41 +8,38 @@ type ConversationItem =
   | { kind: "system"; text: string }
   | { kind: "message"; author: "Sofia" | "You"; text: string }
   | { kind: "reaction"; text: string }
-  | { kind: "actions" }
-  | { kind: "attachment"; file: string }
-  | { kind: "pin"; text: string };
+  | { kind: "actions" };
 
 const conversation: ConversationItem[] = [
-  { kind: "system", text: "Sofia has joined #frontend" },
+  { kind: "system", text: "Sofia has joined #operations" },
   {
     kind: "message",
     author: "Sofia",
-    text: "hey! I'm Sofia, I'll be handling frontend here. point me at a repo and I'll get to work, or just drop a question",
+    text: "hey! I'm Sofia. tell me what's on your plate and I'll start helping",
   },
   {
     kind: "message",
     author: "You",
-    text: "sofia can you look at the login component? it's breaking on mobile",
+    text: "can you update the client proposal? the budget changed from 50k to 65k and the timeline moved to Q3",
   },
   { kind: "reaction", text: "Sofia reacted with :eyes:" },
-  { kind: "message", author: "Sofia", text: "looking at it now" },
-  { kind: "reaction", text: "Sofia reacted with :hourglass:" },
   {
     kind: "message",
     author: "Sofia",
-    text: "found it, the viewport meta tag is missing and theres a css issue on the form container",
+    text: "found it. two changes: budget in section 4 and timeline in section 2",
   },
   {
     kind: "message",
     author: "Sofia",
-    text: "I can fix both. the viewport tag is one line and the css is just a max-width change",
+    text: "want me to update the doc or leave comments for the team to review?",
   },
-  { kind: "message", author: "Sofia", text: "want me to go ahead?" },
   { kind: "actions" },
   { kind: "reaction", text: "Sofia reacted with :white_check_mark:" },
-  { kind: "message", author: "Sofia", text: "done! pushed both fixes. diff attached" },
-  { kind: "attachment", file: "login-fix.diff" },
-  { kind: "pin", text: "Sofia pinned this message" },
+  {
+    kind: "message",
+    author: "Sofia",
+    text: "done, both sections updated. here's the doc",
+  },
 ];
 
 function avatarClass(author: "Sofia" | "You") {
@@ -56,107 +53,125 @@ export default function HowItWorksSection() {
   const inView = useInView(chatRef, { once: true, margin: "-120px" });
 
   return (
-    <FadeIn>
-      <section className="scroll-mt-28 py-24 md:py-32" id="how-it-works">
-        <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
+    <section className="relative bg-gradient-to-b from-[#F7F5F2] to-[#F2F0ED] py-16 md:py-20" id="how-it-works">
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
+        <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-[#1B2A4A] md:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-[#2E2A7B] md:text-4xl">
               It starts with a conversation
             </h2>
           </div>
+        </FadeIn>
 
-          <div className="mt-12 overflow-x-auto rounded-3xl border border-[#E7DBD2] bg-[#FBF6F1] p-2 md:p-4">
-            <div ref={chatRef} className="min-w-[720px] overflow-hidden rounded-2xl border border-[#D8D2CA] bg-white shadow-xl">
-              <div className="grid grid-cols-[240px_1fr]">
-                <aside className="bg-[#1D1C1D] px-4 py-5 text-[#D9D7DA]">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#B9B7BB]">Workspace</p>
-                  <p className="mt-2 text-sm font-medium text-white">Palari HQ</p>
+        <FadeIn>
+          <div className="mt-10 overflow-x-auto">
+            {/* Dark outer card frame */}
+            <div className="min-w-[680px] rounded-[32px] bg-[#2E2A7B] p-4 shadow-2xl shadow-[#2E2A7B]/10">
+              {/* Header */}
+              <div className="mb-3 flex items-center justify-between px-2">
+                <div>
+                  <p className="text-sm font-medium text-white/70">Palari HQ</p>
+                  <p className="text-lg font-semibold text-white">#operations</p>
+                </div>
+                <div className="flex gap-2">
+                  <span className="h-3 w-3 rounded-full bg-[#F46F61]" />
+                  <span className="h-3 w-3 rounded-full bg-[#E7B83D]" />
+                  <span className="h-3 w-3 rounded-full bg-[#22B8B0]" />
+                </div>
+              </div>
 
-                  <div className="mt-6 space-y-1 text-sm">
-                    <p className="rounded-md px-2 py-1 text-[#BFBCC2]">#general</p>
-                    <p className="rounded-md bg-[#4A154B] px-2 py-1 text-white">
-                      <span className="mr-2 inline-flex h-2 w-2 rounded-full bg-[#3ECDA5]" />
-                      #frontend
+              {/* White inner panel */}
+              <div
+                ref={chatRef}
+                className="overflow-hidden rounded-[24px] bg-white"
+              >
+                <div className="grid grid-cols-[200px_1fr]">
+                  {/* Slack sidebar */}
+                  <aside className="bg-[#1D1C1D] px-4 py-5 text-[#D9D7DA]">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#B9B7BB]">
+                      Channels
                     </p>
-                    <p className="rounded-md px-2 py-1 text-[#BFBCC2]">#product</p>
-                    <p className="rounded-md px-2 py-1 text-[#BFBCC2]">#standup</p>
-                  </div>
-                </aside>
 
-                <div className="bg-white">
-                  <header className="border-b border-gray-200 px-6 py-4">
-                    <p className="text-lg font-semibold text-[#1D1C1D]">#frontend</p>
-                    <p className="mt-1 text-xs text-gray-500">4 members · Sofia active now</p>
-                  </header>
+                    <div className="mt-4 space-y-1 text-sm">
+                      <p className="rounded-lg px-2 py-1.5 text-[#BFBCC2]">#general</p>
+                      <p className="rounded-lg bg-[#4A154B] px-2 py-1.5 font-medium text-white">
+                        <span className="mr-2 inline-flex h-2 w-2 rounded-full bg-[#22B8B0]" />
+                        #operations
+                      </p>
+                      <p className="rounded-lg px-2 py-1.5 text-[#BFBCC2]">#client-projects</p>
+                    </div>
+                  </aside>
 
-                  <div className="space-y-3 px-6 py-5">
-                    {conversation.map((item, index) => (
-                      <motion.div
-                        key={`${item.kind}-${index}`}
-                        initial={{ opacity: 0, y: 12 }}
-                        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
-                        transition={{ duration: 0.35, delay: index * 0.5 }}
-                      >
-                        {item.kind === "system" && (
-                          <p className="text-center text-xs font-medium text-gray-400">{item.text}</p>
-                        )}
+                  {/* Chat area */}
+                  <div className="bg-white">
+                    <header className="border-b border-black/5 px-6 py-3">
+                      <p className="text-base font-semibold text-[#1D1C1D]">#operations</p>
+                      <p className="mt-0.5 text-xs text-[#5B5E84]">
+                        3 members · Sofia active now
+                      </p>
+                    </header>
 
-                        {item.kind === "reaction" && (
-                          <p className="text-sm italic text-gray-500">[{item.text}]</p>
-                        )}
+                    <div className="space-y-3 px-6 py-5">
+                      {conversation.map((item, index) => (
+                        <motion.div
+                          key={`${item.kind}-${index}`}
+                          initial={{ opacity: 0, y: 12 }}
+                          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
+                          transition={{ duration: 0.35, delay: index * 0.5 }}
+                        >
+                          {item.kind === "system" && (
+                            <p className="text-center text-xs font-medium text-[#5B5E84]/60">
+                              {item.text}
+                            </p>
+                          )}
 
-                        {item.kind === "actions" && (
-                          <div className="flex gap-3">
-                            <span className="inline-flex rounded-full bg-[#3ECDA5] px-4 py-1.5 text-sm font-semibold text-white">
-                              Go ahead
-                            </span>
-                            <span className="inline-flex rounded-full border border-gray-300 px-4 py-1.5 text-sm font-semibold text-gray-600">
-                              Skip
-                            </span>
-                          </div>
-                        )}
+                          {item.kind === "reaction" && (
+                            <p className="text-sm italic text-[#5B5E84]">[{item.text}]</p>
+                          )}
 
-                        {item.kind === "attachment" && (
-                          <div className="inline-flex items-center gap-2 rounded-lg border border-[#D8E4FF] bg-[#F2F6FF] px-3 py-2 text-sm text-[#2E4A8A]">
-                            <span aria-hidden="true">[file]</span>
-                            {item.file}
-                          </div>
-                        )}
-
-                        {item.kind === "pin" && (
-                          <p className="text-sm italic text-gray-500">[{item.text}]</p>
-                        )}
-
-                        {item.kind === "message" && (
-                          <div className="flex items-start gap-3">
-                            <span
-                              className={`mt-1 h-7 w-7 shrink-0 rounded-full ${avatarClass(item.author)}`}
-                              aria-hidden="true"
-                            />
-                            <div className="min-w-0">
-                              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-gray-400">
-                                {item.author}
-                              </p>
-                              <p className="mt-1 rounded-xl bg-[#F7F8FB] px-3 py-2 text-[0.94rem] leading-relaxed text-[#334155]">
-                                {item.text}
-                              </p>
+                          {item.kind === "actions" && (
+                            <div className="flex gap-3">
+                              <span className="inline-flex rounded-full bg-[#22B8B0] px-4 py-1.5 text-sm font-semibold text-white">
+                                Update the doc
+                              </span>
+                              <span className="inline-flex rounded-full border border-black/10 px-4 py-1.5 text-sm font-semibold text-[#4A4D73]">
+                                Leave comments
+                              </span>
                             </div>
-                          </div>
-                        )}
-                      </motion.div>
-                    ))}
+                          )}
+
+                          {item.kind === "message" && (
+                            <div className="flex items-start gap-3">
+                              <span
+                                className={`mt-1 h-7 w-7 shrink-0 rounded-full ${avatarClass(item.author)}`}
+                                aria-hidden="true"
+                              />
+                              <div className="min-w-0">
+                                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#5B5E84]/60">
+                                  {item.author}
+                                </p>
+                                <p className="mt-1 rounded-xl bg-[#F7F8FB] px-3 py-2 text-[0.94rem] leading-relaxed text-[#334155]">
+                                  {item.text}
+                                </p>
+                              </div>
+                            </div>
+                          )}
+                        </motion.div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </FadeIn>
 
-          <p className="mx-auto mt-8 max-w-3xl text-center text-lg leading-relaxed text-gray-600">
-            No terminal. No config files. No scary prompts. Just a conversation with your
-            teammate.
+        <FadeIn>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-lg leading-relaxed text-[#4A4D73]">
+            No learning curve. No setup guide. No training. Just tell your Palari what you need.
           </p>
-        </div>
-      </section>
-    </FadeIn>
+        </FadeIn>
+      </div>
+    </section>
   );
 }

@@ -8,9 +8,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const title = "Palari — Your AI Team Lives in Slack";
+const title = "Palari — Some colleagues are unforgettable";
 const description =
-  "Add AI coworkers to your Slack workspace. They have names, personalities, and opinions. They write code, edit docs, set reminders, and show up to standup.";
+  "Palaris are colleagues with names, personalities, and memory. They update your docs, clean your spreadsheets, and show up to standup. You talk in Slack. They handle the rest.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://palari.io"),
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         url: "/og-image-placeholder.png",
         width: 1200,
         height: 630,
-        alt: "Palari landing page preview",
+        alt: "Palari — Some colleagues are unforgettable",
       },
     ],
   },
@@ -49,7 +49,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col bg-white text-[#1B2A4A]">{children}</body>
+      <body className="flex min-h-full flex-col bg-[#F7F5F2] text-[#2E2A7B]">
+        {children}
+      </body>
     </html>
   );
 }

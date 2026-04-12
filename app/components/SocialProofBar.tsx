@@ -3,15 +3,11 @@ import FadeIn from "./FadeIn";
 export default function SocialProofBar() {
   return (
     <FadeIn>
-      <section className="border-y border-gray-200 bg-[#F8F9FC] py-12">
-        <div className="mx-auto w-full max-w-6xl px-6 text-center text-sm text-gray-500 md:px-8 md:text-base">
-          <span className="font-medium text-gray-600">Built with</span>
-          <span className="mx-3 text-gray-300">|</span>
-          <span className="text-gray-400">Claude by Anthropic</span>
-          <span className="mx-3 text-gray-300">|</span>
-          <span className="text-gray-400">OpenAI Codex</span>
-          <span className="mx-3 text-gray-300">|</span>
-          <span className="text-gray-400">Slack API</span>
+      <section className="bg-[#EEEAF8]/70 py-5">
+        <div className="mx-auto max-w-7xl px-6 text-center md:px-10">
+          <p className="text-sm font-medium text-[#4A4D73]">
+            Built with Claude by Anthropic · OpenAI Codex · Slack API
+          </p>
         </div>
       </section>
     </FadeIn>
