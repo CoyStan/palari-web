@@ -24,7 +24,7 @@ export default function CapabilitiesSection() {
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#2E2A7B] md:text-4xl">
-              They do real work
+              Palaris do real work
             </h2>
           </div>
         </FadeIn>
@@ -65,9 +65,9 @@ export default function CapabilitiesSection() {
           <div className="mx-auto mt-8 max-w-4xl rounded-[28px] border-2 border-[#22B8B0]/30 bg-white p-7 text-center">
             <h3 className="text-2xl font-bold text-[#2E2A7B]">The Golden Rule</h3>
             <p className="mt-3 text-lg leading-relaxed text-[#4A4D73]">
-              Palaris never act without your permission. They propose changes, explain what will
-              happen in plain language, and wait for you to tap Approve or Skip. You are always in
-              control.
+              Palaris never act without your permission. They remember your preferences, propose
+              changes in the way you like them explained, and wait for your Approve or Skip. Your
+              Palari learns how you work&mdash;but you are always in control.
             </p>
           </div>
         </FadeIn>

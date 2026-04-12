@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "4", label: "Palaris ready" },
+  { value: "4", label: "Palaris who remember" },
   { value: "1", label: "click setup" },
   { value: "0", label: "terminal needed" },
 ];
@@ -22,7 +22,7 @@ const slackPreview = [
   {
     name: "Alfred",
     dot: "bg-[#E7B83D]",
-    text: "Good morning, Sr. Two items today.",
+    text: "Good morning, Sr. You mentioned Friday\u2019s deadline\u2014two items need your attention.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="mb-4 inline-flex w-fit items-center rounded-full border border-[#2E2A7B]/10 bg-white/80 px-4 py-2 text-sm font-medium text-[#2E2A7B] shadow-sm"
           >
-            Now in early access
+            Palari — now in early access
           </motion.div>
 
           <motion.h1
@@ -57,7 +57,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="max-w-xl text-4xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl lg:text-6xl"
           >
-            Some colleagues are unforgettable
+            Some colleagues remember everything
           </motion.h1>
 
           <motion.p
@@ -66,8 +66,9 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-6 max-w-xl text-lg leading-8 text-[#4A4D73]"
           >
-            They show up every morning. They remember your last conversation. They push back when
-            your idea needs work. And they never forget what you&apos;re working on.
+            A Palari shows up every morning carrying the memory of yesterday. Your last
+            conversation, your preferences, the context that matters. They don&apos;t just
+            respond&mdash;they remember who you are.
           </motion.p>
 
           <motion.div
@@ -80,7 +81,7 @@ export default function HeroSection() {
               href="#meet-team"
               className="rounded-2xl bg-[#F46F61] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#F46F61]/25 transition hover:-translate-y-0.5"
             >
-              Meet them
+              Meet the Palaris
             </a>
             <a
               href="#how-it-works"

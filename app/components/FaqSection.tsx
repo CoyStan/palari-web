@@ -6,14 +6,14 @@ import FadeIn from "./FadeIn";
 
 const faqItems = [
   {
-    question: "How is this different from ChatGPT?",
+    question: "How is a Palari different from ChatGPT?",
     answer:
-      "ChatGPT is a tool you visit. A Palari is a teammate who shows up. Sofia lives in your Slack, remembers your projects, reads your docs, makes changes, and asks before she acts. ChatGPT forgets everything when you close the tab.",
+      "ChatGPT forgets you the moment you close the tab. A Palari remembers. Sofia lives in your Slack and carries your context\u2014your projects, your preferences, your history\u2014across every conversation. She doesn\u2019t just respond to what you say now. She remembers what you said last week.",
   },
   {
     question: "Do I need to be technical?",
     answer:
-      "Not at all. You talk to your Palaris in plain language. They handle everything else and explain what they did in words you understand.",
+      "Not at all. You talk to your Palaris in plain language, and they remember how you prefer to communicate. Over time, a Palari learns your style and explains things the way you understand best.",
   },
   {
     question: "Is my data safe?",
@@ -21,9 +21,9 @@ const faqItems = [
       "Palaris only access what you explicitly connect. Google Docs require your approval. We never store your documents longer than needed.",
   },
   {
-    question: "Can I customize my Palaris?",
+    question: "Can I customize a Palari?",
     answer:
-      "Completely. Change their name, personality, expertise, and how they communicate. Or install pre-built Palaris from the marketplace.",
+      "Completely. Change their name, personality, expertise, and how they communicate. Every customization becomes part of their memory\u2014your Palari grows into exactly the colleague you need. Or start with a pre-built Palari from the marketplace.",
   },
   {
     question: "What if I want to stop?",

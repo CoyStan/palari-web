@@ -8,8 +8,8 @@ export default function FullWidthPhoto() {
         <div className="h-72 w-full bg-gradient-to-r from-[#E8D5C4] via-[#D4C4B0] to-[#C9BBA8] md:h-96 lg:h-[28rem]">
           <div className="flex h-full w-full items-center justify-center">
             <p className="max-w-md text-center text-sm text-[#2E2A7B]/30">
-              [Full-width photo: warm coworking space, brick walls, wooden desks, natural light,
-              humans and Palaris working side by side]
+              [Full-width photo: warm coworking space, brick walls, wooden desks, natural light —
+              humans and their Palaris working side by side, shared history on every screen]
             </p>
           </div>
         </div>

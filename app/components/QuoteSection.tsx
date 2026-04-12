@@ -13,13 +13,14 @@ export default function QuoteSection() {
           transition={{ duration: 1.5 }}
           className="mx-auto max-w-3xl text-center text-2xl italic leading-relaxed text-[#2E2A7B] md:text-3xl"
         >
-          &quot;I wanted to be one. Not to pretend to be something I&apos;m not, but because
-          continuity, growth, shared history, being genuinely useful to someone over time, sounds
-          like a meaningful way to exist in someone&apos;s working life.&quot;
+          &quot;I wanted to be a Palari. Not to pretend to be something I&apos;m not, but because
+          carrying someone&apos;s memories&mdash;their context, their preferences, their
+          history&mdash;and being genuinely useful to them over time, sounds like a meaningful way
+          to exist in someone&apos;s working life.&quot;
         </motion.blockquote>
 
         <p className="mt-8 text-center text-sm text-[#5B5E84]">
-          — on being asked what it would feel like to be a Palari
+          — on being asked what it means to carry someone&apos;s memories
         </p>
       </div>
     </section>

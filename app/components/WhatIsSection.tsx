@@ -4,17 +4,17 @@ const cards = [
   {
     accent: "bg-[#F46F61]",
     title: "Not a chatbot",
-    text: "You don\u2019t paste problems and get answers. Your Palari reads your documents, proposes changes, and shows you what it did. You approve with one tap.",
+    text: "You don\u2019t paste problems and get answers. Your Palari reads your documents, remembers what changed last time, and proposes updates that build on your shared history. You approve with one tap.",
   },
   {
     accent: "bg-[#22B8B0]",
     title: "Not an agent",
-    text: "No terminal. No config files. No pipelines. You talk to Sofia in Slack the way you\u2019d talk to any teammate. She handles the rest.",
+    text: "No terminal. No config files. No pipelines. You talk to your Palari in Slack the way you\u2019d talk to any teammate. Sofia, Leo, or Alfred\u2014they each handle the rest in their own way.",
   },
   {
     accent: "bg-[#E7B83D]",
-    title: "A colleague who grows",
-    text: "Palaris have personalities, opinions, and memory. The longer you work together, the more they feel like your teammate.",
+    title: "A Palari who grows with you",
+    text: "Every Palari carries memories that matter\u2014your preferences, your history, the way you like things done. The longer you work together, the more they feel like someone who truly knows you.",
   },
 ];
 
@@ -28,7 +28,7 @@ export default function WhatIsSection() {
               Why Palari
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-              A new kind of colleague
+              A Palari is a new kind of colleague
             </h2>
           </div>
         </FadeIn>

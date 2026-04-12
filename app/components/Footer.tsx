@@ -11,7 +11,7 @@ export default function Footer() {
               <PalariDots scale="navbar" />
             </div>
             <p className="mt-4 max-w-xs text-base leading-relaxed text-white/50">
-              Colleagues that feel real
+              Colleagues who remember
             </p>
           </div>
 

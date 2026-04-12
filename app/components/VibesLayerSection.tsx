@@ -13,10 +13,10 @@ export default function VibesLayerSection() {
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#2E2A7B] md:text-4xl">
-              The difference you can feel
+              The Palari difference you can feel
             </h2>
             <p className="mt-3 text-lg leading-relaxed text-[#4A4D73]">
-              Same accuracy. Zero robot.
+              Same accuracy. Zero robot. Real memory.
             </p>
           </div>
         </FadeIn>
@@ -26,7 +26,7 @@ export default function VibesLayerSection() {
             {/* Left: robotic output */}
             <article>
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#5B5E84]">
-                What the AI produces
+                What generic AI produces
               </p>
               <div className="rounded-[28px] bg-gray-900 p-6 font-mono text-sm leading-relaxed text-green-400 ring-1 ring-black/5 md:text-base">
                 I have completed the update to the client proposal document. The following changes
@@ -65,8 +65,9 @@ export default function VibesLayerSection() {
 
         <FadeIn>
           <p className="mx-auto mt-10 max-w-2xl text-center text-base leading-relaxed text-[#4A4D73]">
-            Every message passes through the Vibes Layer. Your Palaris sound like colleagues, not
-            language models.
+            Every message passes through the Vibes Layer. Your Palaris don&apos;t just sound like
+            colleagues&mdash;they remember like colleagues. Context, tone, and history in every
+            response.
           </p>
         </FadeIn>
       </div>

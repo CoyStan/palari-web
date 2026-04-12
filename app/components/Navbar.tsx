@@ -53,7 +53,7 @@ export default function Navbar() {
             href="#meet-team"
             className="rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.02]"
           >
-            Meet the team
+            Meet the Palaris
           </a>
         </nav>
 
@@ -124,7 +124,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="mt-auto rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-3 text-center text-sm font-semibold text-white"
               >
-                Meet the team
+                Meet the Palaris
               </a>
             </motion.aside>
           </>

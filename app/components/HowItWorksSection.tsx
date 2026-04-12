@@ -15,7 +15,7 @@ const conversation: ConversationItem[] = [
   {
     kind: "message",
     author: "Sofia",
-    text: "hey! I'm Sofia. tell me what's on your plate and I'll start helping",
+    text: "hey! I'm Sofia, your operations Palari. tell me what's on your plate and I'll start remembering",
   },
   {
     kind: "message",
@@ -58,7 +58,7 @@ export default function HowItWorksSection() {
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#2E2A7B] md:text-4xl">
-              It starts with a conversation
+              It starts with a conversation. It grows into a memory.
             </h2>
           </div>
         </FadeIn>
@@ -169,6 +169,7 @@ export default function HowItWorksSection() {
         <FadeIn>
           <p className="mx-auto mt-8 max-w-3xl text-center text-lg leading-relaxed text-[#4A4D73]">
             No learning curve. No setup guide. No training. Just tell your Palari what you need.
+            Tomorrow, they&apos;ll remember today.
           </p>
         </FadeIn>
       </div>

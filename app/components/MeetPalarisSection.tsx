@@ -5,7 +5,7 @@ import { useRef } from "react";
 import FadeIn from "./FadeIn";
 
 type ConversationLine = {
-  speaker: "User" | "Sofia" | "Leo" | "Alfred";
+  speaker: "User" | "Sofia" | "Leo" | "Alfred" | "Maya";
   text: string;
 };
 
@@ -24,10 +24,10 @@ type PalariProfile = {
 const palaris: PalariProfile[] = [
   {
     name: "Sofia",
-    role: "Your operations partner",
-    eyebrow: "Operations partner",
+    role: "Your operations Palari",
+    eyebrow: "Operations Palari",
     story:
-      "Sofia reads your documents faster than anyone on your team. She updates proposals, cleans up reports, and catches the inconsistency on page 12 that nobody else noticed. She asks before changing anything. When you share a Google Doc and say \"fix the numbers in section 3,\" she shows you exactly what she'll change and waits for your OK.",
+      "Sofia reads your documents faster than anyone on your team. But what makes her a Palari is that she remembers\u2014the last version she reviewed, the style you prefer, the budget format your CFO likes. She catches the inconsistency on page 12 that nobody else noticed. When you share a Google Doc, she already knows how you like changes presented.",
     badge: "Powered by Claude",
     accentColor: "bg-[#F46F61]",
     bgClass: "bg-[#FFF5F0]",
@@ -40,10 +40,10 @@ const palaris: PalariProfile[] = [
   },
   {
     name: "Leo",
-    role: "Your data wrangler",
-    eyebrow: "Data wrangler",
+    role: "Your data Palari",
+    eyebrow: "Data Palari",
     story:
-      "Leo handles the work you keep postponing. The spreadsheet that needs 200 rows cleaned up. The weekly report that takes two hours to compile. The data that lives in three different places and never matches. Give Leo the boring stuff and he gives you back your afternoon.",
+      "Leo handles the work you keep postponing. But unlike a tool you open fresh every time, Leo remembers where your data lives, which columns matter, and how you formatted it last quarter. The weekly report that used to take two hours? Leo already knows the template. Give him the boring stuff and he gives you back your afternoon.",
     badge: "Powered by Codex",
     accentColor: "bg-[#22B8B0]",
     bgClass: "bg-[#F0F4FF]",
@@ -56,10 +56,10 @@ const palaris: PalariProfile[] = [
   },
   {
     name: "Alfred",
-    role: "Your coordinator",
-    eyebrow: "Coordinator",
+    role: "Your coordinator Palari",
+    eyebrow: "Coordinator Palari",
     story:
-      "Alfred reads everything your team does so you don't have to. Every document updated, every task completed, every thing that's stuck. Monday morning you type /pal report and Alfred tells you exactly what happened last week and what needs your attention today. He protects your time like it's his job. Because it is.",
+      "Alfred carries the memory of your entire team. Every document updated, every task completed, everything that\u2019s stuck. Monday morning you type /pal report and Alfred tells you exactly what happened last week, what changed since you last checked, and what needs your attention today. He remembers so you don\u2019t have to.",
     badge: "Your weekly briefing",
     accentColor: "bg-[#E7B83D]",
     bgClass: "bg-[#F0FBF7]",
@@ -67,8 +67,23 @@ const palaris: PalariProfile[] = [
     lines: [
       {
         speaker: "Alfred",
-        text: "Good morning, Sr. Sofia finished the client proposal. Leo's expense report is ready for review. The quarterly presentation still needs your sign-off before Friday. Everything else is on track.",
+        text: "Good morning, Sr. Sofia finished the client proposal\u2014she remembered to use the new budget format you asked about last week. Leo\u2019s expense report is ready. The quarterly presentation still needs your sign-off before Friday. Everything else is on track.",
       },
+    ],
+  },
+  {
+    name: "Maya",
+    role: "Your creative Palari",
+    eyebrow: "Creative Palari \u00b7 Coming soon",
+    story:
+      "Maya will bring a designer\u2019s eye to everything your team creates. Slide decks, brand guidelines, visual consistency across docs\u2014she\u2019ll remember your brand standards and catch when something drifts off style. Maya is still learning the ropes, but she\u2019s almost ready to join the team.",
+    badge: "Coming soon",
+    accentColor: "bg-[#E7B83D]",
+    bgClass: "bg-[#FFFBF0]",
+    avatarBg: "bg-gradient-to-br from-[#FFF0CC] via-[#FFE8A8] to-[#FFD966]",
+    lines: [
+      { speaker: "User", text: "maya can you check if the pitch deck matches our brand guide?" },
+      { speaker: "Maya", text: "checking now. I remember your last brand update\u2014the new coral accent replaced the old red, right?" },
     ],
   },
 ];
@@ -78,6 +93,7 @@ const speakerAvatarClass: Record<ConversationLine["speaker"], string> = {
   Sofia: "bg-gradient-to-br from-[#FFD8C6] to-[#F5B9A2]",
   Leo: "bg-gradient-to-br from-[#DCE7FF] to-[#B4CAFF]",
   Alfred: "bg-gradient-to-br from-[#D4F5E9] to-[#9DDCC6]",
+  Maya: "bg-gradient-to-br from-[#FFE8A8] to-[#FFD966]",
 };
 
 function SlackConversation({ lines }: { lines: ConversationLine[] }) {
@@ -121,7 +137,7 @@ export default function MeetPalarisSection() {
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#2E2A7B] md:text-4xl">
-              Meet your team
+              Meet your Palaris
             </h2>
           </div>
         </FadeIn>
@@ -168,8 +184,8 @@ export default function MeetPalarisSection() {
 
         <FadeIn>
           <p className="mx-auto mt-10 max-w-3xl text-center text-base italic text-[#5B5E84]">
-            Every Palari is different. Create your own with any name, any personality, any expertise.
-            They grow with you.
+            Every Palari carries its own memories, its own personality, its own way of working.
+            Sofia, Leo, Alfred, and soon Maya&mdash;they grow with you because they remember who you are.
           </p>
         </FadeIn>
       </div>

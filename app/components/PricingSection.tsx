@@ -16,17 +16,17 @@ const tiers: PricingTier[] = [
   {
     name: "Free",
     price: "$0",
-    subtitle: "One Palari. Enough to feel the difference.",
-    features: ["1 Palari", "Basic memory", "50 interactions per week"],
+    subtitle: "One Palari. Enough to feel what memory changes.",
+    features: ["1 Palari", "7-day memory", "50 interactions per week"],
     cta: "Start free",
   },
   {
     name: "Pro",
     price: "$49",
-    subtitle: "Three Palaris who remember everything.",
+    subtitle: "Three Palaris with full memory. They carry who you are.",
     features: [
       "3 Palaris",
-      "Full memory",
+      "Unlimited memory",
       "All integrations (Google Docs, Sheets, Drive)",
       "Standup reports",
     ],
@@ -36,7 +36,7 @@ const tiers: PricingTier[] = [
   {
     name: "Team",
     price: "$149",
-    subtitle: "Unlimited Palaris. Weekly briefings from Alfred.",
+    subtitle: "Unlimited Palaris. Shared team memory. Weekly briefings from Alfred.",
     features: [
       "Unlimited Palaris",
       "Shared team memory",
@@ -58,7 +58,7 @@ export default function PricingSection() {
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#2E2A7B] md:text-4xl">
-              Grow your team
+              Grow your Palari team
             </h2>
             <p className="mt-3 text-lg leading-relaxed text-[#4A4D73]">
               Like hiring, not subscribing.
@@ -123,7 +123,7 @@ export default function PricingSection() {
 
         <FadeIn>
           <p className="mx-auto mt-8 max-w-4xl text-center text-sm leading-relaxed text-[#5B5E84]">
-            All plans include the Vibes Layer. Your Palaris never act without your permission.
+            All plans include the Vibes Layer and Palari memory. Your Palaris never act without your permission.
           </p>
         </FadeIn>
       </div>

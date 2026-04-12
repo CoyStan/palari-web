@@ -9,11 +9,11 @@ export default function EarlyAccessSection() {
       <div className="mx-auto w-full max-w-7xl px-6 text-center md:px-10">
         <FadeIn>
           <h2 className="text-3xl font-bold tracking-tight text-[#2E2A7B] md:text-5xl">
-            They&apos;re waiting to meet you
+            Your Palaris are waiting to meet you
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
-            Every Palari starts as a stranger. Give them a week and they&apos;ll feel like someone
-            you&apos;ve worked with for years.
+            Every Palari starts as a stranger. But give them a week of memories and they&apos;ll
+            feel like someone who&apos;s known you for years.
           </p>
         </FadeIn>
 
