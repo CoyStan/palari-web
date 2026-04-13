@@ -1,5 +1,6 @@
 import BeforeAfterSection from "./components/BeforeAfterSection";
 import ByokSection from "./components/ByokSection";
+import CapabilitiesSection from "./components/CapabilitiesSection";
 import EarlyAccessSection from "./components/EarlyAccessSection";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
@@ -23,6 +24,7 @@ export default function Home() {
         <BeforeAfterSection />
         <MeetPalarisSection />
         <HowItWorksSimple />
+        <CapabilitiesSection />
         <ByokSection />
         <FoundingBatchSection />
         <PricingSection />

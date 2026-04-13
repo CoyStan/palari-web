@@ -4,7 +4,7 @@ import FadeIn from "./FadeIn";
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="bg-white py-20 md:py-28">
+    <section id="pricing" className="bg-white py-12 md:py-16">
       <div className="mx-auto max-w-4xl px-6 md:px-10">
         <FadeIn>
           <div className="text-center">

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function EarlyAccessSection() {
   return (
     <section
-      className="bg-gradient-to-br from-[#F7F5F2] via-[#F0F9F8] to-[#E5F8F7] py-20 md:py-28"
+      className="bg-gradient-to-br from-[#F7F5F2] via-[#F0F9F8] to-[#E5F8F7] py-12 md:py-16"
       id="early-access"
     >
       <div className="mx-auto w-full max-w-7xl px-6 text-center md:px-10">

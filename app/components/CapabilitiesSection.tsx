@@ -1,0 +1,88 @@
+"use client";
+
+import FadeIn from "./FadeIn";
+
+const inSlack = [
+  "Reply in threads to keep channels clean",
+  "React with emoji so you see progress at a glance",
+  "Upload reports, spreadsheets, and documents as real files",
+  "Pin important outcomes automatically",
+  "Set reminders from natural language",
+  "Post morning standups and weekly reports",
+];
+
+const beyondSlack = [
+  "Read and edit Google Docs with propose-and-approve",
+  "Update Google Sheets and answer questions about your data",
+  "Search your Drive by name, no URL needed",
+  "Compile weekly summaries across your whole team",
+  "Warn you before expensive tasks",
+];
+
+export default function CapabilitiesSection() {
+  return (
+    <section className="bg-[#F7F5F2] py-12 md:py-16">
+      <div className="mx-auto max-w-6xl px-6 md:px-10">
+        <FadeIn>
+          <h2 className="text-center text-3xl font-bold tracking-tight text-[#2E2A7B] md:text-4xl">
+            Palaris do real work
+          </h2>
+        </FadeIn>
+
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
+          <FadeIn>
+            <article className="h-full rounded-[28px] bg-white p-6 shadow-sm ring-1 ring-black/5">
+              <div className="mb-4 h-3 w-16 rounded-full bg-[#22B8B0]" />
+              <h3 className="text-xl font-semibold text-[#2E2A7B]">In Slack</h3>
+              <ul className="mt-4 space-y-2.5 text-sm text-[#535778]">
+                {inSlack.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2.5 leading-relaxed"
+                  >
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#22B8B0]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </FadeIn>
+
+          <FadeIn>
+            <article className="h-full rounded-[28px] bg-white p-6 shadow-sm ring-1 ring-black/5">
+              <div className="mb-4 h-3 w-16 rounded-full bg-[#F46F61]" />
+              <h3 className="text-xl font-semibold text-[#2E2A7B]">
+                Beyond Slack
+              </h3>
+              <ul className="mt-4 space-y-2.5 text-sm text-[#535778]">
+                {beyondSlack.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2.5 leading-relaxed"
+                  >
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F46F61]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </FadeIn>
+        </div>
+
+        <FadeIn>
+          <div className="mx-auto mt-6 max-w-4xl rounded-[28px] border-2 border-[#22B8B0]/20 bg-white p-6 text-center">
+            <h3 className="text-xl font-bold text-[#2E2A7B]">
+              The Golden Rule
+            </h3>
+            <p className="mt-2 text-base leading-relaxed text-[#4A4D73]">
+              Palaris never act without your permission. They remember your
+              preferences, propose changes in the way you like them explained,
+              and wait for your Approve or Skip. Your Palari learns how you work
+              &mdash; but you are always in control.
+            </p>
+          </div>
+        </FadeIn>
+      </div>
+    </section>
+  );
+}

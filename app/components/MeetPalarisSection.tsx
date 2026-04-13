@@ -40,7 +40,7 @@ const palaris = [
 
 export default function MeetPalarisSection() {
   return (
-    <section id="meet-team" className="bg-white py-20 md:py-28">
+    <section id="meet-team" className="bg-white py-12 md:py-16">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <FadeIn>
           <div className="text-center">
@@ -48,9 +48,10 @@ export default function MeetPalarisSection() {
               Your team is waiting.
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-[#4A4D73]">
-              Every Palari is born, not built. Each one has a unique biography,
-              personality, and voice that emerged from a generated life &mdash;
-              not a template.
+              Every Palari is born, not built. When you join, a new Palari is
+              created for you &mdash; with a unique biography, personality, and
+              voice that emerged from a generated life. No two are the same.
+              Yours is yours alone.
             </p>
           </div>
         </FadeIn>
@@ -91,7 +92,7 @@ export default function MeetPalarisSection() {
               href="/palaris"
               className="inline-flex items-center gap-1 text-sm font-semibold text-[#2E2A7B] transition-colors hover:text-[#F46F61]"
             >
-              Meet all seven Palaris
+              Meet the seven Palaris born so far
               <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>

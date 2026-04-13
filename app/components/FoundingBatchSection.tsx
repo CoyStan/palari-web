@@ -35,7 +35,7 @@ function CreationGrid() {
 
 export default function FoundingBatchSection() {
   return (
-    <section id="founding-batch" className="py-20 md:py-28">
+    <section id="founding-batch" className="py-12 md:py-16">
       <div className="mx-auto max-w-4xl px-6 md:px-10">
         <FadeIn>
           <div className="text-center">

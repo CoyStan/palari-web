@@ -41,7 +41,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-12 md:py-16">
       <div className="mx-auto w-full max-w-4xl px-6 md:px-10">
         <FadeIn>
           <div className="text-center">

@@ -12,13 +12,13 @@ const slackThread = [
   {
     name: "Sofia",
     dot: "bg-[#F46F61]",
-    text: "on it — probably the token_lifetime thing you refactored on tuesday. checking now",
+    text: "On it — probably the token_lifetime thing you refactored on Tuesday. Checking now",
     time: "10:42 AM",
   },
   {
     name: "Sofia",
     dot: "bg-[#F46F61]",
-    text: "yep, found it. the default config path changed but three test fixtures still point to the old one. fixing and pushing",
+    text: "Yep, found it. The default config path changed but three test fixtures still point to the old one. Fixing and pushing",
     time: "10:44 AM",
   },
 ];
