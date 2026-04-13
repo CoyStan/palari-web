@@ -16,6 +16,11 @@ const cards = [
     title: "A Palari who grows with you",
     text: "Every Palari carries memories that matter\u2014your preferences, your history, the way you like things done. The longer you work together, the more they feel like someone who truly knows you.",
   },
+  {
+    accent: "bg-[#9B4FCC]",
+    title: "Yours, not ours",
+    text: "Your Palari\u2019s identity lives in a portable database you own. Switch models, export your data, self-host the server. Lock-in through value, not walls.",
+  },
 ];
 
 export default function WhatIsSection() {
@@ -33,7 +38,7 @@ export default function WhatIsSection() {
           </div>
         </FadeIn>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {cards.map((card) => (
             <FadeIn key={card.title}>
               <article className="rounded-[28px] bg-white p-7 shadow-sm ring-1 ring-black/5">

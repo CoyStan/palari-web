@@ -31,10 +31,10 @@ export default function MemoryCtaSection() {
             </a>
           </div>
           <a
-            href="/life"
+            href="/manifesto"
             className="mt-4 inline-flex items-center gap-2 text-base font-semibold text-[#9B4FCC] transition-colors hover:text-[#2E2A7B]"
           >
-            See how a Palari&apos;s life is generated
+            Read the manifesto
             <span aria-hidden="true">&rarr;</span>
           </a>
         </FadeIn>

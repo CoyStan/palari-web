@@ -30,6 +30,21 @@ const faqItems = [
     answer:
       "Cancel anytime. No lock-in. The open source core means you can always self-host.",
   },
+  {
+    question: "How does pricing work?",
+    answer:
+      "Your subscription covers a weekly compute budget. Most messages cost less than a tenth of a cent. Your Palari warns you before expensive tasks and never goes silent. The planning layer optimizes every interaction so you get the most from your budget.",
+  },
+  {
+    question: "Can I export my data?",
+    answer:
+      "Yes. Your Palari\u2019s identity lives in a SQLite database you own. Export it anytime. Run your own server with the open-source core. Switch models freely. We believe in lock-in through value, not walls.",
+  },
+  {
+    question: "Who can my Palari access?",
+    answer:
+      "Each Palari gets scoped access. Sofia might see your operations files. Leo might see your data. They don\u2019t cross boundaries unless you grant it. Start small, expand as trust builds. Mistakes stay contained.",
+  },
 ];
 
 export default function FaqSection() {

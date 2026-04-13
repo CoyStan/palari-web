@@ -1,17 +1,19 @@
 import CapabilitiesSection from "./components/CapabilitiesSection";
-import MemoryTeaser from "./components/MemoryTeaser";
 import EarlyAccessSection from "./components/EarlyAccessSection";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
+import FourPillarsSection from "./components/FourPillarsSection";
 import FullWidthPhoto from "./components/FullWidthPhoto";
 import HeroSection from "./components/HeroSection";
 import HowItWorksSection from "./components/HowItWorksSection";
+import IntelligenceTeaser from "./components/IntelligenceTeaser";
 import MeetPalarisSection from "./components/MeetPalarisSection";
+import MemoryTeaser from "./components/MemoryTeaser";
 import Navbar from "./components/Navbar";
 import PricingSection from "./components/PricingSection";
 import QuoteSection from "./components/QuoteSection";
 import SocialProofBar from "./components/SocialProofBar";
-import VibesLayerSection from "./components/VibesLayerSection";
+import TrustTeaser from "./components/TrustTeaser";
 import WhatIsSection from "./components/WhatIsSection";
 
 export default function Home() {
@@ -24,8 +26,10 @@ export default function Home() {
         <WhatIsSection />
         <MeetPalarisSection />
         <HowItWorksSection />
-        <VibesLayerSection />
+        <FourPillarsSection />
         <MemoryTeaser />
+        <IntelligenceTeaser />
+        <TrustTeaser />
         <CapabilitiesSection />
         <FullWidthPhoto />
         <QuoteSection />

@@ -74,7 +74,7 @@ export default function VibesLayerSection() {
               yours shapes yours.
             </p>
             <Link
-              href="/philosophy"
+              href="/manifesto"
               className="mt-4 inline-flex items-center gap-2 text-base font-semibold text-[#22B8B0] transition-colors hover:text-[#2E2A7B]"
             >
               Read more about why memory matters

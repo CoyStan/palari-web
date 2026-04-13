@@ -1,23 +1,31 @@
 import type { Metadata } from "next";
 import EfficiencySection from "../components/memory/EfficiencySection";
 import EndToEndFlow from "../components/memory/EndToEndFlow";
+import LifeDivider from "../components/memory/LifeDivider";
 import MemoryCtaSection from "../components/memory/MemoryCtaSection";
 import MemoryHero from "../components/memory/MemoryHero";
 import MemoryLifecycle from "../components/memory/MemoryLifecycle";
 import MemoryTypesGrid from "../components/memory/MemoryTypesGrid";
 import TwoBrainDiagram from "../components/memory/TwoBrainDiagram";
+import VibesLayerSection from "../components/VibesLayerSection";
+import LifeHero from "../components/life/LifeHero";
+import LifeGenerationOverview from "../components/life/LifeGenerationOverview";
+import FourPassesSection from "../components/life/FourPassesSection";
+import CompressionSection from "../components/life/CompressionSection";
+import SynthesisSection from "../components/life/SynthesisSection";
+import HumanizationSection from "../components/life/HumanizationSection";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Memory Architecture \u2014 Palari",
+  title: "Memory & Life \u2014 Palari",
   description:
-    "How Palari\u2019s two-brain memory system creates AI colleagues that genuinely remember who you are.",
+    "Eleven memory types, life generation, and the architecture that makes AI colleagues who genuinely remember.",
   alternates: { canonical: "https://palari.io/memory" },
   openGraph: {
-    title: "Memory Architecture \u2014 Palari",
+    title: "Memory & Life \u2014 Palari",
     description:
-      "How Palari\u2019s two-brain memory system creates AI colleagues that genuinely remember who you are.",
+      "Eleven memory types, life generation, and the architecture that makes AI colleagues who genuinely remember.",
     type: "website",
     url: "https://palari.io/memory",
   },
@@ -33,6 +41,14 @@ export default function MemoryPage() {
         <MemoryTypesGrid />
         <MemoryLifecycle />
         <EndToEndFlow />
+        <VibesLayerSection />
+        <LifeDivider />
+        <LifeHero />
+        <LifeGenerationOverview />
+        <FourPassesSection />
+        <CompressionSection />
+        <SynthesisSection />
+        <HumanizationSection />
         <EfficiencySection />
         <MemoryCtaSection />
       </main>

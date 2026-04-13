@@ -19,9 +19,10 @@ const navItems: NavItem[] = [
     label: "Learn",
     kind: "dropdown",
     items: [
-      { label: "Memory Architecture", href: "/memory" },
-      { label: "Philosophy", href: "/philosophy" },
-      { label: "How Palaris Are Born", href: "/life" },
+      { label: "Manifesto", href: "/manifesto" },
+      { label: "Memory & Life", href: "/memory" },
+      { label: "Intelligence", href: "/intelligence" },
+      { label: "Trust & Teamwork", href: "/trust" },
     ],
   },
   { label: "Pricing", href: "/#pricing", kind: "link" },

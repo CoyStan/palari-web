@@ -58,6 +58,34 @@ const memoryTypes: MemoryType[] = [
     description: "What happened today and this week \u2014 the short-term thread",
     example: "You mentioned Friday\u2019s deadline twice \u2014 it\u2019s clearly important",
   },
+  {
+    name: "Prompt Patterns",
+    brain: "Analytical",
+    accent: "bg-[#2E2A7B]",
+    description: "How you ask questions \u2014 learned patterns in your requests over time",
+    example: "Always asks for summaries before details. Prefers bullet points.",
+  },
+  {
+    name: "Budget Patterns",
+    brain: "Analytical",
+    accent: "bg-[#E7B83D]",
+    description: "How compute is used \u2014 which tasks are worth the cost",
+    example: "Uses deep analysis for proposals, quick replies for internal chat",
+  },
+  {
+    name: "Session Summaries",
+    brain: "Both",
+    accent: "bg-[#9B4FCC]",
+    description: "Compressed records of entire conversations and their outcomes",
+    example: "Monday: reviewed Q3 budget, approved proposal changes, flagged timeline risk",
+  },
+  {
+    name: "Project Context",
+    brain: "Analytical",
+    accent: "bg-[#22B8B0]",
+    description: "Long-running project state \u2014 goals, blockers, and progress",
+    example: "Project Phoenix: Phase 2 complete, waiting on client sign-off for Phase 3",
+  },
 ];
 
 const brainPillStyle: Record<MemoryType["brain"], string> = {
@@ -76,7 +104,7 @@ export default function MemoryTypesGrid() {
               Memory Types
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-              Seven kinds of memory. One coherent person.
+              Eleven kinds of memory. One coherent person.
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-[#4A4D73]">
               Each memory type serves a different purpose. Together, they create continuity that
@@ -105,8 +133,28 @@ export default function MemoryTypesGrid() {
           ))}
         </div>
 
+        <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {memoryTypes.slice(4, 8).map((mem) => (
+            <FadeIn key={mem.name}>
+              <article className="flex h-full flex-col rounded-[28px] bg-white p-7 shadow-sm ring-1 ring-black/5">
+                <div className={`mb-4 h-3 w-16 rounded-full ${mem.accent}`} />
+                <span
+                  className={`mb-3 w-fit rounded-full px-3 py-1 text-xs font-semibold ${brainPillStyle[mem.brain]}`}
+                >
+                  {mem.brain}
+                </span>
+                <h3 className="text-lg font-semibold text-[#2E2A7B]">{mem.name}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-[#535778]">
+                  {mem.description}
+                </p>
+                <p className="mt-4 text-sm italic text-[#5B5E84]/70">&ldquo;{mem.example}&rdquo;</p>
+              </article>
+            </FadeIn>
+          ))}
+        </div>
+
         <div className="mx-auto mt-5 grid max-w-[calc(75%+0.625rem)] gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {memoryTypes.slice(4).map((mem) => (
+          {memoryTypes.slice(8).map((mem) => (
             <FadeIn key={mem.name}>
               <article className="flex h-full flex-col rounded-[28px] bg-white p-7 shadow-sm ring-1 ring-black/5">
                 <div className={`mb-4 h-3 w-16 rounded-full ${mem.accent}`} />

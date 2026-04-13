@@ -30,18 +30,23 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <Link href="/manifesto" className="text-white/70 transition-colors hover:text-white">
+                  Manifesto
+                </Link>
+              </li>
+              <li>
                 <Link href="/memory" className="text-white/70 transition-colors hover:text-white">
-                  Memory Architecture
+                  Memory & Life
                 </Link>
               </li>
               <li>
-                <Link href="/philosophy" className="text-white/70 transition-colors hover:text-white">
-                  Philosophy
+                <Link href="/intelligence" className="text-white/70 transition-colors hover:text-white">
+                  Intelligence
                 </Link>
               </li>
               <li>
-                <Link href="/life" className="text-white/70 transition-colors hover:text-white">
-                  How Palaris Are Born
+                <Link href="/trust" className="text-white/70 transition-colors hover:text-white">
+                  Trust & Teamwork
                 </Link>
               </li>
               <li>

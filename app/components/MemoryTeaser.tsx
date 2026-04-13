@@ -11,7 +11,7 @@ export default function MemoryTeaser() {
               Deep Dive
             </p>
             <h3 className="mt-3 text-2xl font-semibold tracking-tight text-[#2E2A7B] md:text-3xl">
-              Two brains. Seven memory types. One colleague who grows with you.
+              Two brains. Eleven memory types. One colleague who grows with you.
             </h3>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-[#4A4D73]">
               Every Palari runs on a memory architecture designed to feel human&mdash;life events,
@@ -23,21 +23,14 @@ export default function MemoryTeaser() {
                 href="/memory"
                 className="inline-flex items-center gap-2 text-base font-semibold text-[#22B8B0] transition-colors hover:text-[#2E2A7B]"
               >
-                Explore the memory architecture
+                Explore memory & life
                 <span aria-hidden="true">&rarr;</span>
               </Link>
               <Link
-                href="/philosophy"
+                href="/manifesto"
                 className="inline-flex items-center gap-2 text-base font-semibold text-[#9B4FCC] transition-colors hover:text-[#2E2A7B]"
               >
-                Read the philosophy
-                <span aria-hidden="true">&rarr;</span>
-              </Link>
-              <Link
-                href="/life"
-                className="inline-flex items-center gap-2 text-base font-semibold text-[#F46F61] transition-colors hover:text-[#2E2A7B]"
-              >
-                How Palaris are born
+                Read the manifesto
                 <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>

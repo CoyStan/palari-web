@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import FadeIn from "../FadeIn";
 
 const stats = [
   { value: "28 years", label: "of life experience" },
@@ -17,58 +15,26 @@ const timeline = [
 
 export default function LifeHero() {
   return (
-    <section className="relative overflow-hidden border-b border-black/5 bg-gradient-to-br from-[#F0F9F8] via-white to-[#EEEAF8]">
-      <div
-        className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-[#22B8B0]/15 blur-3xl"
-        aria-hidden="true"
-      />
-
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center md:px-10 lg:py-20">
-        <div className="relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-4 inline-flex w-fit items-center rounded-full border border-[#2E2A7B]/10 bg-white/80 px-4 py-2 text-sm font-medium text-[#2E2A7B] shadow-sm"
-          >
-            Life Generation
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="max-w-xl text-4xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl lg:text-6xl"
-          >
-            Each Palari has lived 28 years before they meet you
-          </motion.h1>
-
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-10 grid grid-cols-3 gap-4"
-          >
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm backdrop-blur"
-              >
-                <div className="text-2xl font-semibold text-[#2E2A7B]">{stat.value}</div>
-                <div className="mt-1 text-sm text-[#5B5E84]">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
+    <section className="py-12 md:py-16">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-2 md:items-center md:px-10">
+        <div>
+          <FadeIn>
+            <div className="grid grid-cols-3 gap-4">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-2xl border border-black/5 bg-white p-4 shadow-sm"
+                >
+                  <div className="text-2xl font-semibold text-[#2E2A7B]">{stat.value}</div>
+                  <div className="mt-1 text-sm text-[#5B5E84]">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
         </div>
 
-        {/* Right: Timeline card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="relative z-10"
-        >
-          <div className="rounded-[32px] border border-black/5 bg-white p-6 shadow-2xl shadow-[#2E2A7B]/10">
+        <FadeIn>
+          <div className="rounded-[32px] border border-black/5 bg-white p-6 shadow-lg shadow-[#2E2A7B]/5">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#9B4FCC]">
               Sofia&apos;s Timeline (excerpt)
             </p>
@@ -88,7 +54,7 @@ export default function LifeHero() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </FadeIn>
       </div>
     </section>
   );
