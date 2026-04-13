@@ -1,13 +1,40 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import PalariDots from "./PalariDots";
 
 const navItems = [
-  { label: "How it works", href: "#how-it-works" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "How it works", href: "/#how-it-works" },
+  { label: "Memory", href: "/memory" },
+  { label: "Pricing", href: "/#pricing" },
 ];
+
+function NavLink({
+  href,
+  className,
+  children,
+  onClick,
+}: {
+  href: string;
+  className?: string;
+  children: React.ReactNode;
+  onClick?: () => void;
+}) {
+  if (href.startsWith("/") && !href.startsWith("/#")) {
+    return (
+      <Link href={href} className={className} onClick={onClick}>
+        {children}
+      </Link>
+    );
+  }
+  return (
+    <a href={href} className={className} onClick={onClick}>
+      {children}
+    </a>
+  );
+}
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,23 +61,23 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 md:px-10">
-        <a href="#" className="inline-flex items-center gap-2 text-[#2E2A7B]">
+        <Link href="/" className="inline-flex items-center gap-2 text-[#2E2A7B]">
           <span className="text-xl font-bold tracking-tight">Palari</span>
           <PalariDots scale="navbar" />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
-            <a
+            <NavLink
               key={item.label}
               href={item.href}
               className="text-sm font-medium text-[#4A4D73] transition-colors hover:text-[#2E2A7B]"
             >
               {item.label}
-            </a>
+            </NavLink>
           ))}
           <a
-            href="#meet-team"
+            href="/#meet-team"
             className="rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.02]"
           >
             Meet the Palaris
@@ -92,10 +119,10 @@ export default function Navbar() {
               transition={{ duration: 0.25, ease: "easeOut" }}
             >
               <div className="flex items-center justify-between">
-                <div className="inline-flex items-center gap-2">
+                <Link href="/" className="inline-flex items-center gap-2" onClick={() => setIsOpen(false)}>
                   <span className="text-lg font-bold tracking-tight text-[#2E2A7B]">Palari</span>
                   <PalariDots scale="navbar" />
-                </div>
+                </Link>
                 <button
                   type="button"
                   onClick={() => setIsOpen(false)}
@@ -108,19 +135,19 @@ export default function Navbar() {
 
               <div className="flex flex-col gap-5">
                 {navItems.map((item) => (
-                  <a
+                  <NavLink
                     key={item.label}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className="text-base font-medium text-[#4A4D73]"
                   >
                     {item.label}
-                  </a>
+                  </NavLink>
                 ))}
               </div>
 
               <a
-                href="#meet-team"
+                href="/#meet-team"
                 onClick={() => setIsOpen(false)}
                 className="mt-auto rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-3 text-center text-sm font-semibold text-white"
               >

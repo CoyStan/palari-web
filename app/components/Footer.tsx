@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PalariDots from "./PalariDots";
 
 export default function Footer() {
@@ -22,14 +23,19 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-base">
               <li>
                 <a
-                  href="#how-it-works"
+                  href="/#how-it-works"
                   className="text-white/70 transition-colors hover:text-white"
                 >
                   How it works
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-white/70 transition-colors hover:text-white">
+                <Link href="/memory" className="text-white/70 transition-colors hover:text-white">
+                  Memory Architecture
+                </Link>
+              </li>
+              <li>
+                <a href="/#pricing" className="text-white/70 transition-colors hover:text-white">
                   Pricing
                 </a>
               </li>

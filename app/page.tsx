@@ -1,4 +1,5 @@
 import CapabilitiesSection from "./components/CapabilitiesSection";
+import MemoryTeaser from "./components/MemoryTeaser";
 import EarlyAccessSection from "./components/EarlyAccessSection";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
@@ -24,6 +25,7 @@ export default function Home() {
         <MeetPalarisSection />
         <HowItWorksSection />
         <VibesLayerSection />
+        <MemoryTeaser />
         <CapabilitiesSection />
         <FullWidthPhoto />
         <QuoteSection />
