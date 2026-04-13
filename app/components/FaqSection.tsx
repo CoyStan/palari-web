@@ -6,44 +6,34 @@ import FadeIn from "./FadeIn";
 
 const faqItems = [
   {
-    question: "How is a Palari different from ChatGPT?",
+    question: "What API key do I need?",
     answer:
-      "ChatGPT forgets you the moment you close the tab. A Palari remembers. Sofia lives in your Slack and carries your context\u2014your projects, your preferences, your history\u2014across every conversation. She doesn\u2019t just respond to what you say now. She remembers what you said last week.",
+      "An Anthropic API key (for Claude) or an OpenAI key. Most founding users use Claude. You sign up at the provider\u2019s site, generate a key, and paste it into Palari. Your Palari uses this key for the heavy thinking work. Palari covers the rest.",
   },
   {
-    question: "Do I need to be technical?",
+    question: "How much will my API usage cost?",
     answer:
-      "Not at all. You talk to your Palaris in plain language, and they remember how you prefer to communicate. Over time, a Palari learns your style and explains things the way you understand best.",
+      "Roughly $5\u201315/month depending on how much you use it. The Planning Layer actively optimizes your spend \u2014 85% of messages go through the cheapest path. Your Palari will warn you before expensive tasks.",
+  },
+  {
+    question: "How is a Palari different from ChatGPT?",
+    answer:
+      "ChatGPT forgets you the moment you close the tab. A Palari remembers \u2014 your projects, your preferences, your history. It has a name, a personality, and a life story. It exists between conversations. The difference is not subtle; it\u2019s visceral.",
+  },
+  {
+    question: "Can I switch my Palari later?",
+    answer:
+      "Your Palari\u2019s identity lives in a SQLite file you own. You can download it, back it up, switch models (Claude to GPT and back), or self-host the server. Lock-in through value, not walls.",
   },
   {
     question: "Is my data safe?",
     answer:
-      "Palaris only access what you explicitly connect. Google Docs require your approval. We never store your documents longer than needed.",
+      "Each Palari has scoped access \u2014 Sofia sees the frontend folder, Leo sees the backend, neither sees your secrets. Memories are isolated per-Palari. You control exactly what each one can access.",
   },
   {
-    question: "Can I customize a Palari?",
+    question: "What happens after the founding batch?",
     answer:
-      "Completely. Change their name, personality, expertise, and how they communicate. Every customization becomes part of their memory\u2014your Palari grows into exactly the colleague you need. Or start with a pre-built Palari from the marketplace.",
-  },
-  {
-    question: "What if I want to stop?",
-    answer:
-      "Cancel anytime. No lock-in. The open source core means you can always self-host.",
-  },
-  {
-    question: "How does pricing work?",
-    answer:
-      "Your subscription covers a weekly compute budget. Most messages cost less than a tenth of a cent. Your Palari warns you before expensive tasks and never goes silent. The planning layer optimizes every interaction so you get the most from your budget.",
-  },
-  {
-    question: "Can I export my data?",
-    answer:
-      "Yes. Your Palari\u2019s identity lives in a SQLite database you own. Export it anytime. Run your own server with the open-source core. Switch models freely. We believe in lock-in through value, not walls.",
-  },
-  {
-    question: "Who can my Palari access?",
-    answer:
-      "Each Palari gets scoped access. Sofia might see your operations files. Leo might see your data. They don\u2019t cross boundaries unless you grant it. Start small, expand as trust builds. Mistakes stay contained.",
+      "Stage 2 pricing kicks in: $29/month for individuals, $149/month for teams. Founding batch members keep free access for the duration of Stage 1. Your creation number is permanent regardless.",
   },
 ];
 
@@ -51,11 +41,11 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-[#F7F5F2] py-16 md:py-20">
+    <section className="py-20 md:py-28">
       <div className="mx-auto w-full max-w-4xl px-6 md:px-10">
         <FadeIn>
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-[#2E2A7B] md:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
               Questions
             </h2>
           </div>
@@ -73,7 +63,9 @@ export default function FaqSection() {
                     className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left"
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                   >
-                    <span className="text-lg font-semibold text-[#2E2A7B]">{item.question}</span>
+                    <span className="text-lg font-semibold text-[#2E2A7B]">
+                      {item.question}
+                    </span>
                     <motion.span
                       animate={{ rotate: isOpen ? 45 : 0 }}
                       transition={{ duration: 0.2 }}

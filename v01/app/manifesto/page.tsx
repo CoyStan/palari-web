@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ManifestoHero from "../components/manifesto/ManifestoHero";
-import FounderLetter from "../components/manifesto/FounderLetter";
 import ThreeLayersSection from "../components/manifesto/ThreeLayersSection";
 import PortabilitySection from "../components/manifesto/PortabilitySection";
+import NeverTheSameSection from "../components/manifesto/NeverTheSameSection";
 import EthicsSection from "../components/manifesto/EthicsSection";
 import FounderStorySection from "../components/manifesto/FounderStorySection";
 import ManifestoCta from "../components/manifesto/ManifestoCta";
 
 export const metadata: Metadata = {
-  title: "Manifesto \u2014 Palari",
+  title: "The Palari Manifesto \u2014 Palari",
   description:
-    "Why Palari exists. A letter from the founder about memory, personality, and what it means to build AI that works the way people work.",
+    "What a Palari is, why identity belongs to you, and the principles we build on.",
   alternates: { canonical: "https://palari.io/manifesto" },
   openGraph: {
-    title: "Manifesto \u2014 Palari",
+    title: "The Palari Manifesto \u2014 Palari",
     description:
-      "Why Palari exists. A letter from the founder about memory, personality, and what it means to build AI that works the way people work.",
+      "What a Palari is, why identity belongs to you, and the principles we build on.",
     type: "website",
     url: "https://palari.io/manifesto",
   },
@@ -29,9 +29,9 @@ export default function ManifestoPage() {
       <Navbar />
       <main>
         <ManifestoHero />
-        <FounderLetter />
         <ThreeLayersSection />
         <PortabilitySection />
+        <NeverTheSameSection />
         <EthicsSection />
         <FounderStorySection />
         <ManifestoCta />

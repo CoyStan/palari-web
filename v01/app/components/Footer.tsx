@@ -12,58 +12,63 @@ export default function Footer() {
               <PalariDots scale="navbar" />
             </div>
             <p className="mt-4 max-w-xs text-base leading-relaxed text-white/50">
-              A coworker that remembers you.
-            </p>
-            <p className="mt-2 text-sm text-white/30">
-              Built in Washington, D.C.
+              Colleagues who remember
             </p>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-white/40">
-              Explore
+              Links
             </h3>
             <ul className="mt-4 space-y-3 text-base">
               <li>
-                <Link
-                  href="/how-it-works"
+                <a
+                  href="/#how-it-works"
                   className="text-white/70 transition-colors hover:text-white"
                 >
                   How it works
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  href="/palaris"
-                  className="text-white/70 transition-colors hover:text-white"
-                >
-                  Meet the Palaris
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/manifesto"
-                  className="text-white/70 transition-colors hover:text-white"
-                >
+                <Link href="/manifesto" className="text-white/70 transition-colors hover:text-white">
                   Manifesto
                 </Link>
               </li>
               <li>
-                <a
-                  href="/#pricing"
-                  className="text-white/70 transition-colors hover:text-white"
-                >
+                <Link href="/memory" className="text-white/70 transition-colors hover:text-white">
+                  Memory & Life
+                </Link>
+              </li>
+              <li>
+                <Link href="/intelligence" className="text-white/70 transition-colors hover:text-white">
+                  Intelligence
+                </Link>
+              </li>
+              <li>
+                <Link href="/trust" className="text-white/70 transition-colors hover:text-white">
+                  Trust & Teamwork
+                </Link>
+              </li>
+              <li>
+                <a href="/#pricing" className="text-white/70 transition-colors hover:text-white">
                   Pricing
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-white/70 transition-colors hover:text-white">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-white/70 transition-colors hover:text-white">
+                  Twitter/X
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <a
-              href="mailto:hello@palari.io"
-              className="text-lg font-medium text-white"
-            >
+            <a href="mailto:hello@palari.io" className="text-lg font-medium text-white">
               hello@palari.io
             </a>
           </div>

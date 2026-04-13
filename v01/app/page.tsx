@@ -1,15 +1,19 @@
-import BeforeAfterSection from "./components/BeforeAfterSection";
-import ByokSection from "./components/ByokSection";
+import CapabilitiesSection from "./components/CapabilitiesSection";
 import EarlyAccessSection from "./components/EarlyAccessSection";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
-import FoundingBatchSection from "./components/FoundingBatchSection";
+import FourPillarsSection from "./components/FourPillarsSection";
+import FullWidthPhoto from "./components/FullWidthPhoto";
 import HeroSection from "./components/HeroSection";
-import HowItWorksSimple from "./components/HowItWorksSimple";
+import HowItWorksSection from "./components/HowItWorksSection";
+import IntelligenceTeaser from "./components/IntelligenceTeaser";
 import MeetPalarisSection from "./components/MeetPalarisSection";
+import MemoryTeaser from "./components/MemoryTeaser";
 import Navbar from "./components/Navbar";
 import PricingSection from "./components/PricingSection";
-import ProblemSection from "./components/ProblemSection";
+import QuoteSection from "./components/QuoteSection";
+import SocialProofBar from "./components/SocialProofBar";
+import TrustTeaser from "./components/TrustTeaser";
 import WhatIsSection from "./components/WhatIsSection";
 
 export default function Home() {
@@ -18,13 +22,17 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <ProblemSection />
+        <SocialProofBar />
         <WhatIsSection />
-        <BeforeAfterSection />
         <MeetPalarisSection />
-        <HowItWorksSimple />
-        <ByokSection />
-        <FoundingBatchSection />
+        <HowItWorksSection />
+        <FourPillarsSection />
+        <MemoryTeaser />
+        <IntelligenceTeaser />
+        <TrustTeaser />
+        <CapabilitiesSection />
+        <FullWidthPhoto />
+        <QuoteSection />
         <PricingSection />
         <FaqSection />
         <EarlyAccessSection />

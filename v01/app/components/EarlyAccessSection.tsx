@@ -1,5 +1,4 @@
 import FadeIn from "./FadeIn";
-import Link from "next/link";
 
 export default function EarlyAccessSection() {
   return (
@@ -9,11 +8,12 @@ export default function EarlyAccessSection() {
     >
       <div className="mx-auto w-full max-w-7xl px-6 text-center md:px-10">
         <FadeIn>
-          <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl">
-            Get your Palari.
+          <h2 className="text-3xl font-bold tracking-tight text-[#2E2A7B] md:text-5xl">
+            Your Palaris are waiting to meet you
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[#4A4D73]">
-            Join the founding batch. Pick a number. Meet your coworker.
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
+            Every Palari starts as a stranger. But give them a week of memories and they&apos;ll
+            feel like someone who&apos;s known you for years.
           </p>
         </FadeIn>
 
@@ -25,24 +25,23 @@ export default function EarlyAccessSection() {
               className="w-full rounded-2xl border border-[#2E2A7B]/10 bg-white px-6 py-4 text-lg text-[#2E2A7B] outline-none transition-colors placeholder:text-[#5B5E84]/50 focus:border-[#22B8B0] focus:ring-2 focus:ring-[#22B8B0]/20"
             />
             <a
-              href="mailto:hello@palari.io?subject=Founding%20Batch%20Request"
+              href="mailto:hello@palari.io?subject=Early%20Access%20Request"
               className="inline-flex shrink-0 items-center justify-center rounded-2xl bg-[#F46F61] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[#F46F61]/25 transition hover:-translate-y-0.5"
             >
-              Get Early Access
+              Request Early Access
             </a>
           </div>
         </FadeIn>
 
         <FadeIn>
-          <p className="mt-8 text-base text-[#5B5E84]">
-            Or{" "}
-            <Link
-              href="/manifesto"
+          <p className="mt-6 text-base text-[#5B5E84]">
+            Or reach out directly at{" "}
+            <a
+              href="mailto:hello@palari.io"
               className="font-medium text-[#2E2A7B] underline"
             >
-              read the full story
-            </Link>{" "}
-            first.
+              hello@palari.io
+            </a>
           </p>
         </FadeIn>
       </div>
