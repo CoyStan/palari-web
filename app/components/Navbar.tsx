@@ -2,16 +2,32 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PalariDots from "./PalariDots";
 
-const navItems = [
-  { label: "How it works", href: "/#how-it-works" },
-  { label: "Memory", href: "/memory" },
-  { label: "Pricing", href: "/#pricing" },
+type NavLink = { label: string; href: string; kind: "link" };
+type NavDropdown = {
+  label: string;
+  kind: "dropdown";
+  items: { label: string; href: string }[];
+};
+type NavItem = NavLink | NavDropdown;
+
+const navItems: NavItem[] = [
+  { label: "How it works", href: "/#how-it-works", kind: "link" },
+  {
+    label: "Learn",
+    kind: "dropdown",
+    items: [
+      { label: "Memory Architecture", href: "/memory" },
+      { label: "Philosophy", href: "/philosophy" },
+      { label: "How Palaris Are Born", href: "/life" },
+    ],
+  },
+  { label: "Pricing", href: "/#pricing", kind: "link" },
 ];
 
-function NavLink({
+function SmartLink({
   href,
   className,
   children,
@@ -33,6 +49,119 @@ function NavLink({
     <a href={href} className={className} onClick={onClick}>
       {children}
     </a>
+  );
+}
+
+function DesktopDropdown({ item }: { item: NavDropdown }) {
+  const [open, setOpen] = useState(false);
+  const timeout = useRef<ReturnType<typeof setTimeout>>(null);
+
+  const enter = () => {
+    if (timeout.current) clearTimeout(timeout.current);
+    setOpen(true);
+  };
+  const leave = () => {
+    timeout.current = setTimeout(() => setOpen(false), 150);
+  };
+
+  return (
+    <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
+      <button
+        type="button"
+        className="inline-flex items-center gap-1 text-sm font-medium text-[#4A4D73] transition-colors hover:text-[#2E2A7B]"
+        onClick={() => setOpen((v) => !v)}
+      >
+        {item.label}
+        <svg
+          className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2.5}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 6 }}
+            transition={{ duration: 0.15 }}
+            className="absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 rounded-[20px] bg-white p-2 shadow-lg ring-1 ring-black/5"
+            style={{ minWidth: 220 }}
+          >
+            {item.items.map((sub) => (
+              <Link
+                key={sub.href}
+                href={sub.href}
+                onClick={() => setOpen(false)}
+                className="block rounded-xl px-4 py-2.5 text-sm font-medium text-[#4A4D73] transition-colors hover:bg-[#EEEAF8] hover:text-[#2E2A7B]"
+              >
+                {sub.label}
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+function MobileDropdown({
+  item,
+  onNavigate,
+}: {
+  item: NavDropdown;
+  onNavigate: () => void;
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="inline-flex w-full items-center justify-between text-base font-medium text-[#4A4D73]"
+      >
+        {item.label}
+        <svg
+          className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2.5}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="mt-2 flex flex-col gap-3 pl-4">
+              {item.items.map((sub) => (
+                <Link
+                  key={sub.href}
+                  href={sub.href}
+                  onClick={onNavigate}
+                  className="text-sm font-medium text-[#4A4D73]/80 transition-colors hover:text-[#2E2A7B]"
+                >
+                  {sub.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
 
@@ -67,15 +196,19 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.label}
-              href={item.href}
-              className="text-sm font-medium text-[#4A4D73] transition-colors hover:text-[#2E2A7B]"
-            >
-              {item.label}
-            </NavLink>
-          ))}
+          {navItems.map((item) =>
+            item.kind === "dropdown" ? (
+              <DesktopDropdown key={item.label} item={item} />
+            ) : (
+              <SmartLink
+                key={item.label}
+                href={item.href}
+                className="text-sm font-medium text-[#4A4D73] transition-colors hover:text-[#2E2A7B]"
+              >
+                {item.label}
+              </SmartLink>
+            )
+          )}
           <a
             href="/#meet-team"
             className="rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.02]"
@@ -134,16 +267,24 @@ export default function Navbar() {
               </div>
 
               <div className="flex flex-col gap-5">
-                {navItems.map((item) => (
-                  <NavLink
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-base font-medium text-[#4A4D73]"
-                  >
-                    {item.label}
-                  </NavLink>
-                ))}
+                {navItems.map((item) =>
+                  item.kind === "dropdown" ? (
+                    <MobileDropdown
+                      key={item.label}
+                      item={item}
+                      onNavigate={() => setIsOpen(false)}
+                    />
+                  ) : (
+                    <SmartLink
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className="text-base font-medium text-[#4A4D73]"
+                    >
+                      {item.label}
+                    </SmartLink>
+                  )
+                )}
               </div>
 
               <a

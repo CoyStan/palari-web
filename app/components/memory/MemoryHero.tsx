@@ -47,9 +47,9 @@ export default function MemoryHero() {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-6 max-w-xl text-lg leading-8 text-[#4A4D73]"
           >
-            Other AI tools forget you the moment you close the tab. A Palari builds a living
-            memory&mdash;your preferences, your history, the context that matters&mdash;and carries
-            it into every conversation.
+            Most AI treats memory like a filing cabinet&mdash;store a fact, retrieve it later.
+            Palari treats memory like a living system. Memories reinforce, decay, compress, and
+            connect&mdash;just like yours do.
           </motion.p>
 
           <motion.div

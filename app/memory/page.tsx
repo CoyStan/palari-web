@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import EfficiencySection from "../components/memory/EfficiencySection";
+import EndToEndFlow from "../components/memory/EndToEndFlow";
 import MemoryCtaSection from "../components/memory/MemoryCtaSection";
 import MemoryHero from "../components/memory/MemoryHero";
 import MemoryLifecycle from "../components/memory/MemoryLifecycle";
@@ -31,6 +32,7 @@ export default function MemoryPage() {
         <TwoBrainDiagram />
         <MemoryTypesGrid />
         <MemoryLifecycle />
+        <EndToEndFlow />
         <EfficiencySection />
         <MemoryCtaSection />
       </main>

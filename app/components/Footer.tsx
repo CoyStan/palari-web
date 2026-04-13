@@ -35,6 +35,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/philosophy" className="text-white/70 transition-colors hover:text-white">
+                  Philosophy
+                </Link>
+              </li>
+              <li>
+                <Link href="/life" className="text-white/70 transition-colors hover:text-white">
+                  How Palaris Are Born
+                </Link>
+              </li>
+              <li>
                 <a href="/#pricing" className="text-white/70 transition-colors hover:text-white">
                   Pricing
                 </a>

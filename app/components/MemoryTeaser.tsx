@@ -18,13 +18,29 @@ export default function MemoryTeaser() {
               sensory fragments, learned preferences, and more. Under 1,300 tokens per message.
               Under $0.001 per memory lookup.
             </p>
-            <Link
-              href="/memory"
-              className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-[#22B8B0] transition-colors hover:text-[#2E2A7B]"
-            >
-              Explore the memory architecture
-              <span aria-hidden="true">&rarr;</span>
-            </Link>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:gap-6">
+              <Link
+                href="/memory"
+                className="inline-flex items-center gap-2 text-base font-semibold text-[#22B8B0] transition-colors hover:text-[#2E2A7B]"
+              >
+                Explore the memory architecture
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
+              <Link
+                href="/philosophy"
+                className="inline-flex items-center gap-2 text-base font-semibold text-[#9B4FCC] transition-colors hover:text-[#2E2A7B]"
+              >
+                Read the philosophy
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
+              <Link
+                href="/life"
+                className="inline-flex items-center gap-2 text-base font-semibold text-[#F46F61] transition-colors hover:text-[#2E2A7B]"
+              >
+                How Palaris are born
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
           </div>
         </FadeIn>
       </div>
