@@ -6,10 +6,9 @@ import { useEffect, useState } from "react";
 import PalariDots from "./PalariDots";
 
 const navItems = [
-  { label: "Memory", href: "/memory" },
-  { label: "Life", href: "/life" },
-  { label: "Trust", href: "/trust" },
-  { label: "Philosophy", href: "/philosophy" },
+  { label: "How it works", href: "/how-it-works" },
+  { label: "Meet the Palaris", href: "/palaris" },
+  { label: "Manifesto", href: "/manifesto" },
 ];
 
 export default function Navbar() {
@@ -59,7 +58,7 @@ export default function Navbar() {
             href="/#early-access"
             className="rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.02]"
           >
-            Get early access
+            Get Your Palari
           </a>
         </nav>
 

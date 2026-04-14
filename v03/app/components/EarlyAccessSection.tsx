@@ -4,17 +4,17 @@ import Link from "next/link";
 export default function EarlyAccessSection() {
   return (
     <section
-      className="bg-gradient-to-br from-[#F7F5F2] via-[#F0F9F8] to-[#E5F8F7] py-16 md:py-24"
+      className="bg-gradient-to-br from-[#F7F5F2] via-[#F0F9F8] to-[#E5F8F7] py-12 md:py-16"
       id="early-access"
     >
-      <div className="mx-auto w-full max-w-4xl px-6 text-center md:px-10">
+      <div className="mx-auto w-full max-w-7xl px-6 text-center md:px-10">
         <FadeIn>
           <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl">
             Hire your first Palari.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[#4A4D73]">
-            Start building memory from day one. Your Palari will remember
-            today&rsquo;s conversation next month.
+            Join the founding batch. Pick a number. Start building memory from
+            day one.
           </p>
         </FadeIn>
 
@@ -26,10 +26,10 @@ export default function EarlyAccessSection() {
               className="w-full rounded-2xl border border-[#2E2A7B]/10 bg-white px-6 py-4 text-lg text-[#2E2A7B] outline-none transition-colors placeholder:text-[#5B5E84]/50 focus:border-[#22B8B0] focus:ring-2 focus:ring-[#22B8B0]/20"
             />
             <a
-              href="mailto:hello@palari.io?subject=Early%20Access"
+              href="mailto:hello@palari.io?subject=Founding%20Batch%20Request"
               className="inline-flex shrink-0 items-center justify-center rounded-2xl bg-[#F46F61] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[#F46F61]/25 transition hover:-translate-y-0.5"
             >
-              Get early access
+              Get Early Access
             </a>
           </div>
         </FadeIn>
@@ -38,7 +38,7 @@ export default function EarlyAccessSection() {
           <p className="mt-8 text-base text-[#5B5E84]">
             Or{" "}
             <Link
-              href="/philosophy"
+              href="/manifesto"
               className="font-medium text-[#2E2A7B] underline"
             >
               read the full story

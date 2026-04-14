@@ -12,7 +12,7 @@ export default function Footer() {
               <PalariDots scale="navbar" />
             </div>
             <p className="mt-4 max-w-xs text-base leading-relaxed text-white/50">
-              AI coworkers who remember you.
+              AI coworkers with memory of your work.
             </p>
             <p className="mt-2 text-sm text-white/30">
               Built in Washington, D.C.
@@ -26,34 +26,26 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-base">
               <li>
                 <Link
-                  href="/memory"
+                  href="/how-it-works"
                   className="text-white/70 transition-colors hover:text-white"
                 >
-                  Memory
+                  How it works
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/life"
+                  href="/palaris"
                   className="text-white/70 transition-colors hover:text-white"
                 >
-                  Life
+                  Meet the Palaris
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/trust"
+                  href="/manifesto"
                   className="text-white/70 transition-colors hover:text-white"
                 >
-                  Trust
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/philosophy"
-                  className="text-white/70 transition-colors hover:text-white"
-                >
-                  Philosophy
+                  Manifesto
                 </Link>
               </li>
               <li>
@@ -78,7 +70,9 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-white/15 pt-8">
-          <p className="text-sm text-white/40">&copy; 2026 Palari.</p>
+          <p className="text-sm text-white/40">
+            2026 Palari. Open source core under MIT.
+          </p>
         </div>
       </div>
     </footer>

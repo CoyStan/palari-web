@@ -1,20 +1,16 @@
-import ByokSection from "./components/ByokSection";
-import CapabilitiesSection from "./components/CapabilitiesSection";
+import CharacterSheetVsLifeSection from "./components/CharacterSheetVsLifeSection";
+import CompoundingOverTimeSection from "./components/CompoundingOverTimeSection";
 import EarlyAccessSection from "./components/EarlyAccessSection";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
-import FoundingBatchSection from "./components/FoundingBatchSection";
+import GoldenRuleSection from "./components/GoldenRuleSection";
 import HeroSection from "./components/HeroSection";
-import IntelligenceTiersSection from "./components/IntelligenceTiersSection";
+import LifeTeaserSection from "./components/LifeTeaserSection";
 import MeetPalarisSection from "./components/MeetPalarisSection";
-import MemoryProofSection from "./components/MemoryProofSection";
 import Navbar from "./components/Navbar";
-import PersonalityEasterEggSection from "./components/PersonalityEasterEggSection";
-import PortabilitySection from "./components/PortabilitySection";
 import PricingSection from "./components/PricingSection";
-import ProblemSection from "./components/ProblemSection";
-import ScopedTrustSection from "./components/ScopedTrustSection";
-import TwoBrainSection from "./components/TwoBrainSection";
+import RealWorkSection from "./components/RealWorkSection";
+import SlackWalkthroughSection from "./components/SlackWalkthroughSection";
 
 export default function Home() {
   return (
@@ -22,17 +18,13 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <ProblemSection />
-        <MemoryProofSection />
-        <TwoBrainSection />
-        <PortabilitySection />
-        <IntelligenceTiersSection />
-        <ScopedTrustSection />
-        <CapabilitiesSection />
         <MeetPalarisSection />
-        <ByokSection />
-        <PersonalityEasterEggSection />
-        <FoundingBatchSection />
+        <CharacterSheetVsLifeSection />
+        <SlackWalkthroughSection />
+        <GoldenRuleSection />
+        <RealWorkSection />
+        <CompoundingOverTimeSection />
+        <LifeTeaserSection />
         <PricingSection />
         <FaqSection />
         <EarlyAccessSection />

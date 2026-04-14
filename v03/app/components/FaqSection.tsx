@@ -6,34 +6,39 @@ import FadeIn from "./FadeIn";
 
 const faqItems = [
   {
-    question: "How is a Palari different from ChatGPT or Claude?",
+    question: "What API key do I need?",
     answer:
-      "ChatGPT and Claude have memory now. They store facts about you in a flat list. Palari&rsquo;s memory is structured: eleven types, an entity graph that connects people and projects, temporal tracking that knows when facts changed, and importance decay that keeps what matters and releases what doesn&rsquo;t. But the deeper difference is that Sofia has a name, a history, and a voice that&rsquo;s hers. She doesn&rsquo;t just remember what you said. She remembers it the way she would.",
+      "An Anthropic API key (for Claude) or an OpenAI key. Most founding users use Claude. You sign up at the provider\u2019s site, generate a key, and paste it into Palari. Your Palari uses this key for the heavy thinking work. Palari covers the rest.",
   },
   {
-    question: "What do I need to get started?",
+    question: "How much will my API usage cost?",
     answer:
-      "A Slack workspace and an email. That&rsquo;s it. No terminal, no API keys, no config files. You invite Sofia to a channel, tell her what you&rsquo;re working on, and she takes it from there.",
+      "Roughly $5\u201315/month depending on how much you use it. The Planning Layer actively optimizes your spend \u2014 85% of messages go through the cheapest path. Your Palari will warn you before expensive tasks.",
   },
   {
-    question: "Is my data safe?",
+    question: "How is a Palari different from ChatGPT?",
     answer:
-      "Each Palari has scoped access. Sofia sees the frontend folder, Leo sees the backend, neither sees your secrets. Memories are private per Palari by default. You control exactly what each one can read and write, and you can revoke access any time.",
+      "ChatGPT forgets you the moment you close the tab. A Palari remembers your project \u2014 the decisions, the regressions, the patterns across sprints. That memory compounds over weeks. By week four, it knows what matters in your codebase and who to ping.",
   },
   {
-    question: "Can I change how my Palari behaves?",
+    question: "Can I switch models or hosts later?",
     answer:
-      "Yes. Preferences are a memory type. Tell Sofia once that you want bullet points instead of paragraphs, or that you never want her to edit files in /shared without asking, and she remembers. You can also nudge her voice over time by reacting to her responses.",
-  },
-  {
-    question: "What if I want to stop?",
-    answer:
-      "You can pause or delete your Palari at any time. Your memory is yours. You can export the full SQLite file, delete everything from our servers, and take the relationship with you.",
+      "Your Palari\u2019s identity lives in a SQLite file you own. Download it, back it up, migrate between Claude, GPT, or open models, or run the open-source server on your own infrastructure. Same Palari, new engine.",
   },
   {
     question: "Does it work with our existing tools?",
     answer:
-      "Slack, Google Docs, Sheets, Drive, and GitHub for code review. More integrations land as the team asks for them.",
+      "Slack, Google Docs, Sheets, and Drive, plus GitHub for code review. BYOK works with Anthropic (Claude) or OpenAI today. More integrations land as the founding batch asks for them.",
+  },
+  {
+    question: "Is my data safe?",
+    answer:
+      "Each Palari has scoped access \u2014 Sofia sees the frontend folder, Leo sees the backend, neither sees your secrets. Memories are isolated per-Palari. You control exactly what each one can access.",
+  },
+  {
+    question: "What happens after the founding batch?",
+    answer:
+      "Stage 2 pricing kicks in: $29/month for individuals, $149/month for teams. Founding batch members keep free access for the duration of Stage 1. Your creation number is permanent regardless.",
   },
 ];
 
@@ -41,7 +46,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-white py-16 md:py-24">
+    <section className="py-12 md:py-16">
       <div className="mx-auto w-full max-w-4xl px-6 md:px-10">
         <FadeIn>
           <div className="text-center">
@@ -57,7 +62,7 @@ export default function FaqSection() {
 
             return (
               <FadeIn key={item.question}>
-                <article className="overflow-hidden rounded-[28px] bg-[#F7F5F2] ring-1 ring-black/5">
+                <article className="overflow-hidden rounded-[28px] bg-white ring-1 ring-black/5">
                   <button
                     type="button"
                     className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left"
@@ -84,10 +89,9 @@ export default function FaqSection() {
                         transition={{ duration: 0.3, ease: "easeOut" }}
                         className="overflow-hidden"
                       >
-                        <p
-                          className="px-6 pb-6 text-base leading-relaxed text-[#535778]"
-                          dangerouslySetInnerHTML={{ __html: item.answer }}
-                        />
+                        <p className="px-6 pb-6 text-base leading-relaxed text-[#535778]">
+                          {item.answer}
+                        </p>
                       </motion.div>
                     )}
                   </AnimatePresence>

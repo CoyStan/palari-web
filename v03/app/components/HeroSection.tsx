@@ -6,27 +6,21 @@ const slackThread = [
   {
     name: "You",
     dot: "bg-[#2E2A7B]",
-    text: "sofia, those auth tests are failing again. any idea why?",
+    text: "hey sofia, can you check why the auth tests are failing? i think it's related to that config change from last week",
     time: "10:42 AM",
   },
   {
     name: "Sofia",
     dot: "bg-[#F46F61]",
-    text: "probably the token_lifetime thing you refactored tuesday. checking.",
+    text: "On it — probably the token_lifetime thing you refactored on Tuesday. Checking now",
     time: "10:42 AM",
   },
   {
     name: "Sofia",
     dot: "bg-[#F46F61]",
-    text: "yep. three fixtures still point to the old config path. want me to fix them the way we did for the billing module last month?",
+    text: "Yep, found it. The default config path changed but three test fixtures still point to the old one. Fixing and pushing",
     time: "10:44 AM",
   },
-];
-
-const stats = [
-  { value: "3", label: "Palaris who remember" },
-  { value: "1", label: "click to set up" },
-  { value: "0", label: "terminal needed" },
 ];
 
 export default function HeroSection() {
@@ -42,28 +36,36 @@ export default function HeroSection() {
       />
 
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center md:px-10 lg:py-24">
+        {/* Left column */}
         <div className="relative z-10 flex flex-col">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-4 inline-flex w-fit items-center rounded-full border border-[#2E2A7B]/10 bg-white/80 px-4 py-2 text-sm font-medium text-[#2E2A7B] shadow-sm"
+          >
+            Founding batch &mdash; only 100 spots
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
             className="max-w-xl text-4xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]"
           >
-            Every AI forgets you.
-            <br />
-            <span className="text-[#F46F61]">Sofia doesn&rsquo;t.</span>
+            AI coworkers that remember your work.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-6 max-w-xl text-lg leading-8 text-[#4A4D73]"
           >
-            Sofia has a name, a number, and a memory of your project that
-            compounds every week you work together. Three weeks from now she
-            will remember what you shipped today. Six months from now,
-            switching means losing someone who knows you.
+            Palari is not a chatbot. Not an agent. Not a copilot. It&apos;s a
+            coworker with a memory of your project &mdash; portable across
+            models, budget-aware, and scoped to the work you actually hired it
+            to do.
           </motion.p>
 
           <motion.div
@@ -73,38 +75,21 @@ export default function HeroSection() {
             className="mt-8 flex flex-wrap gap-4"
           >
             <a
-              href="#early-access"
+              href="#founding-batch"
               className="rounded-2xl bg-[#F46F61] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#F46F61]/25 transition hover:-translate-y-0.5"
             >
               Get early access
             </a>
             <a
-              href="#meet-team"
+              href="#how-it-works"
               className="rounded-2xl border border-[#2E2A7B]/10 bg-white px-6 py-3 text-base font-semibold text-[#2E2A7B] shadow-sm transition hover:bg-[#EEEAF8]"
             >
-              Meet your Palaris
+              See the architecture
             </a>
           </motion.div>
-
-          <motion.dl
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.55 }}
-            className="mt-12 grid max-w-md grid-cols-3 gap-4"
-          >
-            {stats.map((s) => (
-              <div key={s.label}>
-                <dt className="text-3xl font-semibold text-[#2E2A7B]">
-                  {s.value}
-                </dt>
-                <dd className="mt-1 text-xs leading-snug text-[#5B5E84]">
-                  {s.label}
-                </dd>
-              </div>
-            ))}
-          </motion.dl>
         </div>
 
+        {/* Right column — Slack thread preview */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -114,8 +99,10 @@ export default function HeroSection() {
           <div className="rounded-[32px] border border-black/5 bg-white p-4 shadow-2xl shadow-[#2E2A7B]/10">
             <div className="rounded-[24px] bg-[#2E2A7B] p-5">
               <div className="mb-4 flex items-center justify-between">
-                <div className="text-sm font-medium text-white/70">
-                  #operations
+                <div>
+                  <div className="text-sm font-medium text-white/70">
+                    Thread in #frontend
+                  </div>
                 </div>
                 <div className="flex gap-2">
                   <span className="h-3 w-3 rounded-full bg-[#F46F61]" />
