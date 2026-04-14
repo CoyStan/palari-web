@@ -29,17 +29,16 @@ const tiers = [
 
 export default function PlanningLayerSection() {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section id="planning-layer" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-6 md:px-10">
         <FadeIn>
           <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-            Thinks before it thinks.
+            The only AI that actively saves you money.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
-            Most AI companies profit when you use more tokens. Palari charges a
-            flat subscription. We profit when you trust your Palari enough to
-            keep using it &mdash; which happens when it&apos;s thoughtful with
-            your resources.
+            Every message passes through the Planning Layer: classify the
+            task, check the budget, pick the smallest model that will do the
+            job. 85% ride the cheap path. Only 3% touch the expensive one.
           </p>
         </FadeIn>
 
@@ -73,12 +72,12 @@ export default function PlanningLayerSection() {
         <FadeIn>
           <div className="mt-12 rounded-[24px] bg-gradient-to-br from-[#EEEAF8] via-white to-[#F0F9F8] p-6 ring-1 ring-[#2E2A7B]/5">
             <p className="text-base leading-relaxed text-[#4A4D73]">
-              When Sofia says{" "}
+              Your Palari warns you before expensive tasks:{" "}
               <span className="font-medium text-[#2E2A7B]">
-                &ldquo;we&apos;re running low this week, want me to save the
-                deep analysis for Friday?&rdquo;
+                &ldquo;this is a Tier 3 call — about $0.03. Run it?&rdquo;
               </span>{" "}
-              &mdash; that&apos;s the Planning Layer protecting your budget.
+              It also paces spending so the bill at the end of the month is
+              never a shock.
             </p>
           </div>
         </FadeIn>

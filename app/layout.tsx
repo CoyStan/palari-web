@@ -8,9 +8,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const title = "Palari — Colleagues who remember";
+const title = "Palari — AI coworkers that remember your work.";
 const description =
-  "A Palari carries who you are outside the context window. Sofia, Leo, Alfred, and Maya are AI colleagues with names, personalities, and memory that grows. Talk in Slack. They handle the rest.";
+  "Palari is an AI coworker with memory of your project — portable across models, budget-aware, and scoped to the work you actually hired it to do. Talk in Slack. It handles the rest.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://palari.io"),
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         url: "/og-image-placeholder.png",
         width: 1200,
         height: 630,
-        alt: "Palari — Colleagues who remember",
+        alt: "Palari — AI coworkers that remember your work.",
       },
     ],
   },

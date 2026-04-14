@@ -10,10 +10,11 @@ export default function EarlyAccessSection() {
       <div className="mx-auto w-full max-w-7xl px-6 text-center md:px-10">
         <FadeIn>
           <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl">
-            Get your Palari.
+            Hire your first Palari.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[#4A4D73]">
-            Join the founding batch. Pick a number. Meet your coworker.
+            Join the founding batch. Pick a number. Start building memory from
+            day one.
           </p>
         </FadeIn>
 

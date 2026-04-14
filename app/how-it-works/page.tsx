@@ -13,12 +13,12 @@ import HowItWorksCta from "../components/how-it-works/HowItWorksCta";
 export const metadata: Metadata = {
   title: "How It Works \u2014 Palari",
   description:
-    "The architecture behind a coworker that remembers, plans, and sounds like a person. Two brains, seven memory types, three planning tiers.",
+    "The architecture behind an AI coworker with memory. Two layers, eleven memory types, a planning layer that saves you money, and scoped trust.",
   alternates: { canonical: "https://palari.io/how-it-works" },
   openGraph: {
     title: "How It Works \u2014 Palari",
     description:
-      "The architecture behind a coworker that remembers, plans, and sounds like a person.",
+      "The architecture behind an AI coworker with memory. Two layers, eleven memory types, a planning layer that saves you money, and scoped trust.",
     type: "website",
     url: "https://palari.io/how-it-works",
   },
@@ -32,10 +32,10 @@ export default function HowItWorksPage() {
         <HowItWorksHero />
         <TwoBrainSection />
         <MemorySystemSection />
-        <LifeGeneratorSection />
         <PlanningLayerSection />
         <ScopedTrustSection />
         <CoordinationSection />
+        <LifeGeneratorSection />
         <HowItWorksCta />
       </main>
       <Footer />

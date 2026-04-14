@@ -18,12 +18,17 @@ const faqItems = [
   {
     question: "How is a Palari different from ChatGPT?",
     answer:
-      "ChatGPT forgets you the moment you close the tab. A Palari remembers \u2014 your projects, your preferences, your history. It has a name, a personality, and a life story. It exists between conversations. The difference is not subtle; it\u2019s visceral.",
+      "ChatGPT forgets you the moment you close the tab. A Palari remembers your project \u2014 the decisions, the regressions, the patterns across sprints. That memory compounds over weeks. By week four, it knows what matters in your codebase and who to ping.",
   },
   {
-    question: "Can I switch my Palari later?",
+    question: "Can I switch models or hosts later?",
     answer:
-      "Your Palari\u2019s identity lives in a SQLite file you own. You can download it, back it up, switch models (Claude to GPT and back), or self-host the server. Lock-in through value, not walls.",
+      "Your Palari\u2019s identity lives in a SQLite file you own. Download it, back it up, migrate between Claude, GPT, or open models, or run the open-source server on your own infrastructure. Same Palari, new engine.",
+  },
+  {
+    question: "Does it work with our existing tools?",
+    answer:
+      "Slack, Google Docs, Sheets, and Drive, plus GitHub for code review. BYOK works with Anthropic (Claude) or OpenAI today. More integrations land as the founding batch asks for them.",
   },
   {
     question: "Is my data safe?",

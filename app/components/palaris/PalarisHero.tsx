@@ -21,7 +21,7 @@ export default function PalarisHero() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-4xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl"
         >
-          Every Palari is born, not built.
+          Seven specialists. Assemble the team your work actually needs.
         </motion.h1>
 
         <motion.p
@@ -30,8 +30,8 @@ export default function PalarisHero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="mx-auto mt-6 max-w-xl text-lg leading-8 text-[#4A4D73]"
         >
-          Each one has a unique biography, generated from scratch. No templates.
-          No prefabrication. What you see is the product of a lived story.
+          Each Palari is a domain expert with scoped access, its own memory,
+          and a working style that sharpens as you work together.
         </motion.p>
       </div>
     </section>

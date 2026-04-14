@@ -43,9 +43,9 @@ export default function PricingSection() {
                   <span className="pb-0.5 text-sm text-[#5B5E84]">/month</span>
                 </div>
                 <p className="mt-3 text-sm leading-6 text-[#4A4D73]">
-                  1 Palari with full life generation, all memory types, Planning
-                  Layer, Vibes Layer, Slack integration. BYOK for the Mama
-                  Model.
+                  1 Palari with full memory, Planning Layer budget controls,
+                  scoped access, Slack and Google Workspace integrations. BYOK
+                  for the Mama Model.
                 </p>
               </div>
 

@@ -6,33 +6,33 @@ import Link from "next/link";
 const palaris = [
   {
     name: "Sofia Campos",
-    hook: "Pattern hunter. Sees the structure inside the mess.",
-    bio: "Grew up in San Jos\u00e9 watching her mother trace letter spacing with a magnifying glass.",
-    role: "Frontend & Design",
+    role: "Operations Lead",
+    scope: "Frontend, design, sprint planning",
+    capabilities: "Async standups, PR reviews, regression hunting",
     dot: "bg-[#F46F61]",
     border: "border-[#F46F61]/20",
   },
   {
     name: "Leo Chen",
-    hook: "Quiet precision. When Leo writes a long message, pay attention.",
-    bio: "Learned patience from his grandfather\u2019s watchmaking shop in Dalian.",
-    role: "Backend & Systems",
+    role: "Data Engineer",
+    scope: "Backend, databases, API logs",
+    capabilities: "Query tuning, schema reviews, incident triage",
     dot: "bg-[#22B8B0]",
     border: "border-[#22B8B0]/20",
   },
   {
     name: "Alfred",
-    hook: "Reads everything. Writes nothing. Connects the dots you missed.",
-    bio: "NHS data analyst\u2019s kid from London. Learned that good notes save lives.",
-    role: "Coordinator & PM",
+    role: "Coordinator",
+    scope: "Read-only across all channels",
+    capabilities: "Status digests, dependency tracking, standup notes",
     dot: "bg-[#E7B83D]",
     border: "border-[#E7B83D]/20",
   },
   {
     name: "Ciro Rossi",
-    hook: "Raised above a printing press. Designs with his hands.",
-    bio: "Orphaned at four, grew up hearing the rhythm of the press through the floor.",
-    role: "Design Engineering",
+    role: "Design Engineer",
+    scope: "Component libraries, design tokens, frontend polish",
+    capabilities: "Accessibility audits, typography specs, UI refactors",
     dot: "bg-[#9B4FCC]",
     border: "border-[#9B4FCC]/20",
   },
@@ -45,13 +45,12 @@ export default function MeetPalarisSection() {
         <FadeIn>
           <div className="text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-              Your team is waiting.
+              Specialists, not generalists.
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-[#4A4D73]">
-              Every Palari is born, not built. When you join, a new Palari is
-              created for you &mdash; with a unique biography, personality, and
-              voice that emerged from a generated life. No two are the same.
-              Yours is yours alone.
+              Each Palari is a domain expert with scoped access, its own memory,
+              and a working style that sharpens as you work together. Assemble
+              the team your work actually needs.
             </p>
           </div>
         </FadeIn>
@@ -75,11 +74,17 @@ export default function MeetPalarisSection() {
                     </span>
                   </div>
                 </div>
-                <p className="text-sm font-medium leading-5 text-[#2E2A7B]">
-                  {p.hook}
+                <p className="text-xs font-semibold uppercase tracking-wide text-[#5B5E84]/60">
+                  Scope
                 </p>
-                <p className="mt-2 text-sm leading-6 text-[#4A4D73]">
-                  {p.bio}
+                <p className="mt-1 text-sm leading-5 text-[#2E2A7B]">
+                  {p.scope}
+                </p>
+                <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-[#5B5E84]/60">
+                  Capabilities
+                </p>
+                <p className="mt-1 text-sm leading-6 text-[#4A4D73]">
+                  {p.capabilities}
                 </p>
               </div>
             </FadeIn>
@@ -92,7 +97,7 @@ export default function MeetPalarisSection() {
               href="/palaris"
               className="inline-flex items-center gap-1 text-sm font-semibold text-[#2E2A7B] transition-colors hover:text-[#F46F61]"
             >
-              Meet the seven Palaris born so far
+              See all seven specialists
               <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>

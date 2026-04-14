@@ -1,37 +1,75 @@
 import FadeIn from "../FadeIn";
 
-const permanentTypes = [
+const enables = [
   {
-    name: "life_event",
-    description: "The formative moments from 28 years of generated life",
+    title: "Project continuity",
+    detail:
+      "Remembers what you shipped last sprint, what regressed, and which decisions are load-bearing.",
+  },
+  {
+    title: "Pattern recognition",
+    detail:
+      "Sees the same bug shape recurring across modules and flags it before you do.",
+  },
+  {
+    title: "Stakeholder awareness",
+    detail:
+      "Knows who owns what, who to ping, and which reviewers block which paths.",
+  },
+];
+
+const foundation = [
+  {
+    name: "project",
+    description: "Architecture decisions, open loops, recent refactors.",
+  },
+  {
+    name: "pattern",
+    description:
+      "Bug shapes and regression classes seen in this codebase over time.",
+  },
+  {
+    name: "stakeholder",
+    description: "Who owns which areas; who needs to be looped in.",
+  },
+  {
+    name: "decision",
+    description:
+      "The tradeoffs already made, so you don\u2019t relitigate every sprint.",
+  },
+  {
+    name: "relationship",
+    description: "The working dynamics that shape how the team actually ships.",
+  },
+];
+
+const earned = [
+  {
+    name: "working",
+    description: "What you\u2019re focused on right now.",
+  },
+  {
+    name: "preference",
+    description: "How you like explanations, reviews, and diffs.",
+  },
+  {
+    name: "recent_activity",
+    description: "What moved on the project this week.",
+  },
+  {
+    name: "conversational",
+    description:
+      "Threads and open questions from the last few Slack conversations.",
+  },
+  {
+    name: "voice",
+    description:
+      "Your Palari\u2019s working style, tightened by months of interaction.",
   },
   {
     name: "sensory",
     description:
-      "The smell of chlorine from the public pool mixed with cut grass",
-  },
-  {
-    name: "relationship",
-    description: "The people who shaped the Palari\u2019s values",
-  },
-  {
-    name: "opinion",
-    description: "Beliefs forged from experience, not assigned by prompt",
-  },
-];
-
-const earnedTypes = [
-  {
-    name: "working",
-    description: "What you\u2019re working on right now",
-  },
-  {
-    name: "preference",
-    description: "How you like things done",
-  },
-  {
-    name: "recent_life",
-    description: "What\u2019s been happening lately",
+      "Texture fragments from the generated biography. Surface rarely; anchor the voice.",
   },
 ];
 
@@ -41,23 +79,41 @@ export default function MemorySystemSection() {
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <FadeIn>
           <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-            Seven types of memory. One living system.
+            Memory is the dataset. Your dataset.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
-            Not a filing cabinet. A living system that mirrors how people
-            remember: facts decay if unused, reinforce when confirmed, and
-            surface unpredictably.
+            Not a filing cabinet. Associative retrieval across eleven memory
+            types, compressed until it costs under a cent per query. What it
+            enables is the point.
           </p>
+        </FadeIn>
+
+        <FadeIn>
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {enables.map((e) => (
+              <div
+                key={e.title}
+                className="rounded-[24px] border border-black/5 bg-[#F7F5F2] p-5"
+              >
+                <p className="text-sm font-semibold text-[#2E2A7B]">
+                  {e.title}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-[#4A4D73]">
+                  {e.detail}
+                </p>
+              </div>
+            ))}
+          </div>
         </FadeIn>
 
         <div className="mt-14 grid gap-8 md:grid-cols-2">
           <FadeIn>
             <div>
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-[#22B8B0]">
-                Permanent (never decay)
+                Foundation (durable project memory)
               </p>
               <div className="space-y-3">
-                {permanentTypes.map((t) => (
+                {foundation.map((t) => (
                   <div
                     key={t.name}
                     className="rounded-2xl border border-black/5 bg-[#F7F5F2] p-4"
@@ -79,10 +135,10 @@ export default function MemorySystemSection() {
           <FadeIn>
             <div>
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-[#F46F61]">
-                Earned (grow from working with you)
+                Earned (grown from working with you)
               </p>
               <div className="space-y-3">
-                {earnedTypes.map((t) => (
+                {earned.map((t) => (
                   <div
                     key={t.name}
                     className="rounded-2xl border border-black/5 bg-[#F7F5F2] p-4"
@@ -98,38 +154,16 @@ export default function MemorySystemSection() {
                   </div>
                 ))}
               </div>
-
-              {/* Before/After demo */}
-              <div className="mt-8 space-y-3">
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#4A4D73]/50">
-                  The difference
-                </p>
-                <div className="rounded-2xl border border-black/5 bg-[#F7F5F2] p-4">
-                  <p className="text-xs font-semibold text-[#999]">
-                    Without memory
-                  </p>
-                  <p className="mt-1 text-sm italic text-[#999]">
-                    &ldquo;That sounds frustrating. Deadlines can be
-                    tough.&rdquo;
-                  </p>
-                </div>
-                <div className="rounded-2xl border-2 border-[#F46F61]/20 bg-white p-4">
-                  <p className="text-xs font-semibold text-[#F46F61]">
-                    With memory
-                  </p>
-                  <p className="mt-1 text-sm text-[#2E2A7B]">
-                    &ldquo;yeah, missed deadlines are the worst. my first
-                    startup died because we kept polishing instead of
-                    shipping&rdquo;
-                  </p>
-                </div>
-                <p className="text-xs text-[#4A4D73]/70">
-                  The left is a character sheet. The right is a lived experience.
-                </p>
-              </div>
             </div>
           </FadeIn>
         </div>
+
+        <FadeIn>
+          <p className="mx-auto mt-10 max-w-2xl text-center text-sm italic text-[#5B5E84]">
+            Eleven types total. Five ship with the Palari; six compound as you
+            work.
+          </p>
+        </FadeIn>
       </div>
     </section>
   );

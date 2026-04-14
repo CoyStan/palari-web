@@ -23,7 +23,7 @@ const palaris = [
 
 export default function ScopedTrustSection() {
   return (
-    <section className="py-20 md:py-28">
+    <section id="scoped-trust" className="py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-6 md:px-10">
         <FadeIn>
           <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">

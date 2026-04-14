@@ -10,8 +10,8 @@ export default function ManifestoCta() {
             Join the founding batch.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[#4A4D73]">
-            The first 100 Palaris ever created. A permanent creation number. A
-            hand-designed avatar. Free during Stage 1.
+            The first 100 teams to run a Palari. A permanent creation number.
+            Free during Stage 1.
           </p>
         </FadeIn>
 
@@ -21,7 +21,7 @@ export default function ManifestoCta() {
               href="/#early-access"
               className="rounded-2xl bg-[#F46F61] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#F46F61]/25 transition hover:-translate-y-0.5"
             >
-              Get Your Palari
+              Get early access
             </a>
             <Link
               href="/how-it-works"

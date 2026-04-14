@@ -53,7 +53,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="max-w-xl text-4xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]"
           >
-            A coworker that remembers you.
+            AI coworkers that remember your work.
           </motion.h1>
 
           <motion.p
@@ -63,8 +63,9 @@ export default function HeroSection() {
             className="mt-6 max-w-xl text-lg leading-8 text-[#4A4D73]"
           >
             Palari is not a chatbot. Not an agent. Not a copilot. It&apos;s a
-            coworker &mdash; with a name, a life story, opinions, and a
-            relationship with you that deepens over time.
+            coworker with a memory of your project &mdash; portable across
+            models, budget-aware, and scoped to the work you actually hired it
+            to do.
           </motion.p>
 
           <motion.div
@@ -80,10 +81,10 @@ export default function HeroSection() {
               Get early access
             </a>
             <a
-              href="#meet-team"
+              href="#how-it-works"
               className="rounded-2xl border border-[#2E2A7B]/10 bg-white px-6 py-3 text-base font-semibold text-[#2E2A7B] shadow-sm transition hover:bg-[#EEEAF8]"
             >
-              Meet the Palaris
+              See the architecture
             </a>
           </motion.div>
         </div>

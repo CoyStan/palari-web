@@ -6,11 +6,11 @@ export default function PalarisCta() {
       <div className="mx-auto w-full max-w-7xl px-6 text-center md:px-10">
         <FadeIn>
           <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-            Choose your coworker. Get your creation number.
+            Hire your first specialist.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[#4A4D73]">
-            The founding batch is open. 90 spots for friends, classmates,
-            colleagues, and early believers.
+            The founding batch is open. 90 spots for teams building with us
+            while the product is still shaped by feedback.
           </p>
         </FadeIn>
 
@@ -20,7 +20,7 @@ export default function PalarisCta() {
               href="/#early-access"
               className="inline-flex rounded-2xl bg-[#F46F61] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[#F46F61]/25 transition hover:-translate-y-0.5"
             >
-              Get Your Palari
+              Get early access
             </a>
           </div>
         </FadeIn>

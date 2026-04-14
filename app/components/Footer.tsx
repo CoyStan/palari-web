@@ -12,7 +12,7 @@ export default function Footer() {
               <PalariDots scale="navbar" />
             </div>
             <p className="mt-4 max-w-xs text-base leading-relaxed text-white/50">
-              A coworker that remembers you.
+              AI coworkers with memory of your work.
             </p>
             <p className="mt-2 text-sm text-white/30">
               Built in Washington, D.C.

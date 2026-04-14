@@ -26,7 +26,7 @@ export default function HowItWorksCta() {
               href="/#early-access"
               className="rounded-2xl border border-[#2E2A7B]/10 bg-white px-6 py-3 text-base font-semibold text-[#2E2A7B] shadow-sm transition hover:bg-[#EEEAF8]"
             >
-              Get Your Palari
+              Get early access
             </a>
           </div>
         </FadeIn>

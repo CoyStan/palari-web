@@ -2,16 +2,19 @@ import FadeIn from "../FadeIn";
 
 const scenarios = [
   {
-    trigger: "Stop paying",
-    result: "Export your database. Run the open-source server on your own infrastructure.",
+    trigger: "Anthropic deprecates a model",
+    result:
+      "Switch to the next Claude version, GPT, or an open model. Your Palari migrates without losing memory.",
   },
   {
-    trigger: "Company disappears",
-    result: "The core is MIT-licensed. Anyone can run the server. Your Palari lives on.",
+    trigger: "Slack outage",
+    result:
+      "Run the open-source server on your own infrastructure. Same Palari, same memory, different wire.",
   },
   {
     trigger: "Better model appears",
-    result: "Update the engine config. Your Palari\u2019s memories, personality, and relationship stay exactly the same.",
+    result:
+      "Update the engine config. Your Palari\u2019s memory, scope, and working style stay exactly the same.",
   },
 ];
 

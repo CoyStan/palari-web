@@ -54,7 +54,7 @@ export default function FoundingBatchSection() {
           <div className="mt-10 space-y-6">
             <div className="space-y-3 text-center text-base text-[#4A4D73]">
               <p>
-                Palari #0001 was Sofia, created for the founder&apos;s mother.
+                #0001 was the first Palari ever created.
               </p>
               <p>
                 #0011 through #0100 are the founding batch &mdash; reserved for

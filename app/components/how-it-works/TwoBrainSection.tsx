@@ -7,21 +7,21 @@ const steps = [
     color: "bg-[#2E2A7B]",
   },
   {
-    label: "Mama Model (the thinker)",
+    label: "Mama Model (precision)",
     detail:
-      "Sonnet, Opus, or Codex \u2014 configurable per Palari. Focuses entirely on getting the work right: reading files, writing code, analyzing data.",
+      "Sonnet, Opus, or GPT \u2014 configurable per Palari. Focuses entirely on getting the work right: reading files, writing code, analyzing data.",
     color: "bg-[#22B8B0]",
   },
   {
-    label: "Vibes Layer (the voice)",
+    label: "Vibes Layer (signal to noise)",
     detail:
-      "Claude Haiku rewrites the output in your Palari\u2019s voice. Casual, direct, human. Cost: ~$0.0006 per message.",
+      "Claude Haiku rewrites the output so it reads like a teammate, not a report. Clean, direct, scannable. Cost: ~$0.0006 per message.",
     color: "bg-[#F46F61]",
   },
   {
     label: "What you see",
     detail:
-      "A reply that sounds like a person \u2014 lowercase, contractions, no \u2018I\u2019d be happy to help\u2019",
+      "A reply you can act on in ten seconds, not a wall of bullet points to parse.",
     color: "bg-[#9B4FCC]",
   },
 ];
@@ -32,12 +32,13 @@ export default function TwoBrainSection() {
       <div className="mx-auto max-w-4xl px-6 md:px-10">
         <FadeIn>
           <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-            One brain for thinking. One brain for talking.
+            Two layers. Work and voice.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
-            The expensive model focuses entirely on getting the work right. The
-            cheap model makes it sound like your coworker. Total cost per
-            message: under $0.002.
+            The expensive model focuses entirely on precision. The cheap model
+            compresses it into something a busy teammate can scan in ten
+            seconds. Same answer, different wire. Total cost per message: under
+            $0.002.
           </p>
         </FadeIn>
 

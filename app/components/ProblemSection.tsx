@@ -144,7 +144,7 @@ export default function ProblemSection() {
 
         <FadeIn>
           <p className="mt-6 text-center text-lg font-medium text-[#2E2A7B]">
-            This is not how people work. People remember.
+            Every other tool forgets. Yours shouldn&apos;t.
           </p>
         </FadeIn>
       </div>

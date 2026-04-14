@@ -13,22 +13,29 @@ export default function FounderStorySection() {
         <FadeIn>
           <div className="mt-8 space-y-6 text-lg leading-8 text-[#4A4D73]">
             <p>
+              I spent years inside analytics teams watching institutional
+              memory walk out the door every time an engineer left. Runbooks
+              went stale. The same incidents recurred. Onboarding took months
+              because the context was locked in people&apos;s heads.
+            </p>
+            <p>
               Applied ML and data engineering from the IMF&apos;s Strategy,
               Policy and Review Risk Unit: XGBoost pipelines, BGVAR models,
-              crisis forecasting across 180 countries. This is not someone who
-              learned AI from a tutorial.
+              crisis forecasting across 180 countries. The engineering
+              decisions behind Palari &mdash; the eleven memory types, the
+              Planning Layer&apos;s router, the Vibes Layer separation &mdash;
+              are shaped by that work.
             </p>
             <p>
               Economic policy and institutional thinking from Harvard Kennedy
-              School (Fulbright MPA/ID). The BYOK model, the Planning
-              Layer&apos;s incentive alignment, the memory-as-pricing strategy
-              &mdash; these are economic design decisions, not just engineering
-              ones.
+              School (Fulbright MPA/ID). BYOK, the Planning Layer&apos;s
+              incentive alignment, memory-as-pricing &mdash; these are
+              economic design decisions, not just engineering ones.
             </p>
             <p>
-              The entire product &mdash; the Rust server, the Slack plugin, the
-              Life Generator, the architecture book &mdash; was built in under
-              two weeks while employed full-time.
+              The first working build &mdash; the Rust server, the Slack
+              plugin, the Planning Layer, the memory subsystem &mdash; was
+              built in under two weeks while employed full-time.
             </p>
             <p className="font-medium text-[#2E2A7B]">
               No prior startup experience. No co-founder yet. These are real

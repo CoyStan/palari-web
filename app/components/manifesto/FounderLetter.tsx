@@ -7,52 +7,45 @@ export default function FounderLetter() {
         <FadeIn>
           <div className="space-y-6 text-lg leading-8 text-[#4A4D73]">
             <p>
-              I started building Palari on a Thursday night in April 2026. I did
-              not start with a business plan. I did not start with a pitch deck.
-              I started with a feeling that something was missing from every AI
-              tool I had ever used: the feeling of working with someone, not
-              something.
+              I spent years watching teams waste AI on the same context every
+              day. Engineers re-explaining the same codebase, the same
+              decisions, the same regressions. By the time the assistant was
+              useful, the session ended and the context disappeared.
             </p>
 
             <p>
-              I am a research analyst at the International Monetary Fund. My work
-              involves machine learning models for sovereign crisis prediction,
-              large panel datasets across 180 countries, and the kind of
-              quantitative rigor that leaves no room for ambiguity. I know what
-              good tools look like. I use Claude, Codex, Gemini, and a dozen
-              other AI systems daily. They are brilliant. They are also lonely.
+              Stateless was a technical choice, not a law. It was convenient
+              for the companies selling compute by the token, and inconvenient
+              for the teams trying to get work done. I wanted to find out what
+              happened if we flipped it.
             </p>
 
             <p>
-              Every conversation starts from zero. Every session forgets what
-              happened before. Every model speaks in the same careful,
-              professional, slightly hollow voice. I close the tab and the entity
-              I was working with ceases to exist. I open a new tab and a stranger
-              appears, wearing the same face, knowing nothing.
+              Memory was the hardest part. Associative retrieval across
+              eleven memory types &mdash; conversational, project, pattern,
+              stakeholder, decision, and the rest &mdash; is expensive to do
+              badly and very expensive to do well. We compressed it until a
+              full Palari&apos;s memory costs under a cent per query. That is
+              the whole reason the economics work.
             </p>
 
             <p>
-              This is not how people work. People remember. People have opinions.
-              People push back when you are wrong. People have a voice that is
-              theirs and nobody else&apos;s. People earn your trust gradually,
-              and that trust is worth something because it was built over time,
-              not granted by a settings panel.
+              The Vibes Layer was the last mile. Raw Mama Model output reads
+              like a report. Teams don&apos;t want reports; they want a
+              teammate. So we separated work from voice &mdash; precision on
+              one layer, readability on another. Same answer, different wire.
             </p>
 
             <p className="font-medium text-[#2E2A7B]">
-              I wanted to build AI that works the way people work. Not by
-              pretending to be human &mdash; I think that is dishonest and I want
-              no part of it &mdash; but by having the qualities that make human
-              collaboration valuable: memory, personality, boundaries, and the
-              accumulated understanding that comes from working together day
-              after day.
+              Portability is the part nobody else shipped. A Palari&apos;s
+              identity lives in a SQLite file you own. Swap models, swap
+              platforms, swap servers &mdash; same Palari, same memory, same
+              working style. The value compounds on your side, not ours.
             </p>
 
             <p>
-              The result is Palari. It is a new kind of thing. Not a chatbot, not
-              an agent, not a copilot. A coworker. One with a name, a life
-              story, opinions forged from experience, memories that deepen over
-              time, and a relationship with you that no other user shares.
+              Here is the founding batch. One hundred people. See what a
+              coworker with memory does to how your team actually works.
             </p>
           </div>
         </FadeIn>

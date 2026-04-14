@@ -135,7 +135,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="mt-auto rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-3 text-center text-sm font-semibold text-white"
               >
-                Get Your Palari
+                Get early access
               </a>
             </motion.aside>
           </>

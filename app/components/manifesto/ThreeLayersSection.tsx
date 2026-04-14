@@ -4,8 +4,8 @@ const layers = [
   {
     label: "Identity Layer",
     description:
-      "Your Palari\u2019s memories, personality, and relationships live in a SQLite database. Portable. Exportable. Yours.",
-    detail: "Change the model: same Palari. Change the platform: same Palari. Delete the memories: different Palari.",
+      "Memory, scope, and working style live in a portable SQLite file. You can switch providers without losing the Palari you&rsquo;ve trained.",
+    detail: "Practical consequence: you can change providers without losing the Palari you&rsquo;ve trained.",
     tags: ["SQLite", "Portable", "Exportable"],
     accent: "bg-[#2E2A7B]",
     textColor: "text-white",
@@ -14,9 +14,9 @@ const layers = [
   {
     label: "Compute Layer",
     description:
-      "Model-agnostic by design. Claude today, something better tomorrow. Your Palari\u2019s identity doesn\u2019t depend on any one model.",
-    detail: "Update the engine configuration. Memories, personality, relationship unchanged.",
-    tags: ["Claude", "Codex", "Model-Agnostic"],
+      "Model-agnostic by design. Claude today, GPT tomorrow, an open model next year. The engine is configuration, not identity.",
+    detail: "Practical consequence: model deprecations are a config change, not a migration project.",
+    tags: ["Claude", "GPT", "Model-Agnostic"],
     accent: "border-2 border-[#9B4FCC]/20 bg-[#F5F0FF]",
     textColor: "text-[#2E2A7B]",
     tagStyle: "bg-[#9B4FCC]/10 text-[#9B4FCC]/70",
@@ -24,8 +24,8 @@ const layers = [
   {
     label: "Communication Layer",
     description:
-      "Slack today, because that\u2019s where work happens. But the architecture supports anything. Your Palari isn\u2019t trapped in any channel.",
-    detail: "Only the wire changes. The Palari is the same entity.",
+      "Slack today because that&rsquo;s where teams work. The architecture supports anything with an API and a message queue.",
+    detail: "Practical consequence: if your team leaves Slack, your Palari doesn&rsquo;t.",
     tags: ["Slack", "API", "Extensible"],
     accent: "border-2 border-[#22B8B0]/20 bg-[#F0F9F8]",
     textColor: "text-[#2E2A7B]",

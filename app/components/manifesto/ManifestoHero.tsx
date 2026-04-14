@@ -28,11 +28,19 @@ export default function ManifestoHero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-3xl font-semibold italic tracking-tight text-[#2E2A7B] md:text-4xl lg:text-5xl"
+          className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl lg:text-5xl"
         >
-          For everyone who ever talked to a machine and wished it would
-          remember.
+          Why we built AI coworkers with memory.
         </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.25 }}
+          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#4A4D73]"
+        >
+          Every AI tool forgets. We built one that doesn&apos;t. Here&apos;s
+          why, and what we had to change about the architecture to do it.
+        </motion.p>
       </div>
     </section>
   );

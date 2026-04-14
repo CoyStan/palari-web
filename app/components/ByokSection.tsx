@@ -9,12 +9,12 @@ export default function ByokSection() {
         <FadeIn>
           <div className="text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-              You bring the brain. We add the soul.
+              You own the compute. You own the key.
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-[#4A4D73]">
-              Palari uses a Bring Your Own Key model. You provide your API key
-              for the heavy compute. We handle personality, memory, and
-              intelligence &mdash; at a tenth of a cent per message.
+              Palari uses a Bring Your Own Key model. You provide the API key
+              for Claude, GPT, or any model you trust. We handle memory,
+              routing, and scope &mdash; at a tenth of a cent per message.
             </p>
           </div>
         </FadeIn>

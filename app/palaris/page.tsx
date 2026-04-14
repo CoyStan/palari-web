@@ -9,12 +9,12 @@ import PalarisCta from "../components/palaris/PalarisCta";
 export const metadata: Metadata = {
   title: "Meet the Palaris \u2014 Palari",
   description:
-    "Every Palari is born, not built. Meet Sofia, Leo, Alfred, Ciro, Jamal, Ravi, and Yuki \u2014 seven AI coworkers with unique biographies and voices.",
+    "Seven specialists. Assemble the team your work actually needs. Meet Sofia, Leo, Alfred, Ciro, Jamal, Ravi, and Yuki.",
   alternates: { canonical: "https://palari.io/palaris" },
   openGraph: {
     title: "Meet the Palaris \u2014 Palari",
     description:
-      "Every Palari is born, not built. Meet the seven founding AI coworkers.",
+      "Seven specialists. Assemble the team your work actually needs.",
     type: "website",
     url: "https://palari.io/palaris",
   },

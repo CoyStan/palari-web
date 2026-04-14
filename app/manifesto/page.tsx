@@ -12,12 +12,12 @@ import ManifestoCta from "../components/manifesto/ManifestoCta";
 export const metadata: Metadata = {
   title: "Manifesto \u2014 Palari",
   description:
-    "Why Palari exists. A letter from the founder about memory, personality, and what it means to build AI that works the way people work.",
+    "Why we built AI coworkers with memory. The engineering case for portable memory, two-layer brains, and scoped trust.",
   alternates: { canonical: "https://palari.io/manifesto" },
   openGraph: {
     title: "Manifesto \u2014 Palari",
     description:
-      "Why Palari exists. A letter from the founder about memory, personality, and what it means to build AI that works the way people work.",
+      "Why we built AI coworkers with memory. The engineering case for portable memory, two-layer brains, and scoped trust.",
     type: "website",
     url: "https://palari.io/manifesto",
   },

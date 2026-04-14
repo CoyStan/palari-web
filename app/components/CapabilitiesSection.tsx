@@ -75,10 +75,9 @@ export default function CapabilitiesSection() {
               The Golden Rule
             </h3>
             <p className="mt-2 text-base leading-relaxed text-[#4A4D73]">
-              Palaris never act without your permission. They remember your
-              preferences, propose changes in the way you like them explained,
-              and wait for your Approve or Skip. Your Palari learns how you work
-              &mdash; but you are always in control.
+              Palaris never write without your approval. They propose changes,
+              reference prior decisions, and wait for your Approve or Skip. No
+              silent writes. You stay in control.
             </p>
           </div>
         </FadeIn>

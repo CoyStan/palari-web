@@ -30,7 +30,7 @@ export default function HowItWorksHero() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-4xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl"
         >
-          How a Palari thinks.
+          How a Palari works.
         </motion.h1>
 
         <motion.p
@@ -39,8 +39,8 @@ export default function HowItWorksHero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="mx-auto mt-6 max-w-xl text-lg leading-8 text-[#4A4D73]"
         >
-          The architecture behind a coworker that remembers, plans, and sounds
-          like a person.
+          Two layers. Eleven memory types. A planning layer that saves you
+          money. And a personality that emerges from all of it.
         </motion.p>
       </div>
     </section>
