@@ -24,7 +24,7 @@ const slackThread = [
 ];
 
 const stats = [
-  { value: "3", label: "Palaris who remember" },
+  { value: "5", label: "Palaris who remember" },
   { value: "1", label: "click to set up" },
   { value: "0", label: "terminal needed" },
 ];
@@ -49,9 +49,9 @@ export default function HeroSection() {
             transition={{ duration: 0.7 }}
             className="max-w-xl text-4xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]"
           >
-            Every AI forgets you.
-            <br />
-            <span className="text-[#F46F61]">Sofia doesn&rsquo;t.</span>
+            AI coworkers who remember how you work,{" "}
+            <span className="text-[#F46F61]">get better every month,</span>
+            {" "}and never need you to update anything.
           </motion.h1>
 
           <motion.p
@@ -60,10 +60,10 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 max-w-xl text-lg leading-8 text-[#4A4D73]"
           >
-            Sofia has a name, a number, and a memory of your project that
-            compounds every week you work together. Three weeks from now she
-            will remember what you shipped today. Six months from now,
-            switching means losing someone who knows you.
+            Each Palari has a unique voice, a persistent memory, and scoped
+            access to your files. You talk to them the way you'd talk to a
+            teammate. They remember everything. The engine underneath keeps
+            improving. You change nothing.
           </motion.p>
 
           <motion.div

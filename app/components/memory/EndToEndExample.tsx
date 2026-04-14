@@ -22,7 +22,7 @@ const turns = [
     actor: "Vibes Layer",
     dot: "bg-[#F46F61]",
     tag: "internal",
-    text: "Receives: life_event (first-startup scar about trusting the dashboard), sensory (toner smell of late nights debugging), relationship (user is terse; don&rsquo;t pad), recent_life. Rewrites answer in Sofia&rsquo;s voice.",
+    text: "Receives: life_event (conviction about trusting the dashboard), sensory (toner smell of late nights debugging), relationship (user is terse, don&rsquo;t pad), recent_life. Rewrites answer in Sofia&rsquo;s voice.",
   },
   {
     actor: "Sofia",

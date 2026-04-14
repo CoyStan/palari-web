@@ -4,36 +4,36 @@ const passes = [
   {
     title: "Defining events",
     pass: "Pass 1",
-    body: "Roughly twenty-five major moments across twenty-eight years. Births, deaths, first jobs, moves, decisions that set her trajectory.",
+    body: "Roughly twenty-five formative experiences across the coworker&rsquo;s history. A coworker whose formative experiences involved watching things fail approaches risk differently from one whose experiences centered on building from scratch.",
     example:
-      "&ldquo;At twenty-two my startup died. That week rewrote what I mean by finished.&rdquo;",
+      "Experiences that shape how the coworker thinks about problems.",
     accent: "text-[#F46F61]",
     color: "border-[#F46F61]/20",
   },
   {
     title: "Small moments",
     pass: "Pass 2",
-    body: "Hundreds of low-stakes memories. The ones that texture a life: the cafe she went to on Tuesdays, the coworker she never liked, the one song stuck in her head that summer.",
+    body: "Hundreds of low-stakes memories. The texture that makes each coworker feel distinct across hundreds of interactions. Without these, responses drift toward generic.",
     example:
-      "&ldquo;There was a fluorescent light in that conference room that hummed at exactly the wrong pitch.&rdquo;",
+      "The texture that makes each coworker feel distinct across hundreds of interactions.",
     accent: "text-[#22B8B0]",
     color: "border-[#22B8B0]/20",
   },
   {
     title: "Relationships",
     pass: "Pass 3",
-    body: "The people who shaped how she works. A mentor who taught her to scope. A cofounder who never shipped anything. An abuela who read upside-down. Each one becomes a relationship ghost in the memory store.",
+    body: "Patterns from interactions with different kinds of people. These shape how the coworker communicates: whether they default to directness, ask clarifying questions first, or sit with ambiguity before responding.",
     example:
-      "&ldquo;My first PM taught me that a meeting without a decision is a meeting that should have been an email.&rdquo;",
+      "Patterns from interactions with different kinds of people.",
     accent: "text-[#9B4FCC]",
     color: "border-[#9B4FCC]/20",
   },
   {
-    title: "Sensory fragments",
+    title: "Sensory details",
     pass: "Pass 4",
-    body: "Involuntary sensory memories. Ten to fifteen words each. Cheapest type to store and highest-yield at conversation time. Three load randomly into the Vibes Layer on every call.",
+    body: "A library of concrete, specific details that anchor the voice in something physical rather than abstract. Three load into the Vibes Layer on every response. Most responses never reference them. The occasional natural reference is what makes the voice feel specific rather than generated.",
     example:
-      "&ldquo;The smell of printer toner at 2am before a demo. Cold coffee. Everyone too tired to talk.&rdquo;",
+      "Three loaded per response. Most never surface. The ones that do make the voice feel specific.",
     accent: "text-[#E7B83D]",
     color: "border-[#E7B83D]/20",
   },
@@ -45,12 +45,11 @@ export default function FourPassesSection() {
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <FadeIn>
           <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-            Four passes of life.
+            Four passes.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
-            The Life Generator writes in layers, each one richer than the
-            last. What comes out is not a resume. It is a person with a
-            history.
+            The generator writes in layers, each one richer than the last.
+            What comes out is not a resume. It is a coherent way of seeing.
           </p>
         </FadeIn>
 
@@ -68,13 +67,13 @@ export default function FourPassesSection() {
                 <h3 className="mt-2 text-lg font-semibold text-[#2E2A7B]">
                   {p.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#4A4D73]">
-                  {p.body}
-                </p>
                 <p
-                  className="mt-4 rounded-2xl bg-white p-4 text-sm italic leading-relaxed text-[#2E2A7B] ring-1 ring-black/5"
-                  dangerouslySetInnerHTML={{ __html: p.example }}
+                  className="mt-3 text-sm leading-relaxed text-[#4A4D73]"
+                  dangerouslySetInnerHTML={{ __html: p.body }}
                 />
+                <p className="mt-4 rounded-2xl bg-white p-4 text-sm italic leading-relaxed text-[#2E2A7B] ring-1 ring-black/5">
+                  {p.example}
+                </p>
               </div>
             </FadeIn>
           ))}

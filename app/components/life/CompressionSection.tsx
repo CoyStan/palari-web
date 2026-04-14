@@ -1,11 +1,11 @@
 import FadeIn from "../FadeIn";
 
 const beforeItems = [
-  "She stayed late on Thursdays to review the ship list.",
-  "Her cofounder never read the ship list.",
-  "The launch postmortem was three hours; nobody wrote it down.",
-  "The investor asked for a demo the day of the outage.",
-  "She apologized seven times in one week.",
+  "Detailed memory A",
+  "Detailed memory B",
+  "Detailed memory C",
+  "Detailed memory D",
+  "Detailed memory E",
 ];
 
 export default function CompressionSection() {
@@ -14,13 +14,13 @@ export default function CompressionSection() {
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <FadeIn>
           <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-            Five memories became one understanding.
+            Five memories become one understanding.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
-            A life has too many moments to keep every one. After the
-            biography is generated, a compression pass folds related
-            memories into a single durable understanding. The detailed
-            ones are replaced, but the lesson stays.
+            The raw output from the four passes is too much to carry into
+            every conversation. A compression pass folds related memories
+            into a single durable conviction. The surface detail is
+            released. The underlying judgment stays.
           </p>
         </FadeIn>
 
@@ -41,6 +41,9 @@ export default function CompressionSection() {
                   </li>
                 ))}
               </ul>
+              <p className="mt-4 text-xs italic text-[#5B5E84]/70">
+                Five specific events, each with its own texture.
+              </p>
             </div>
           </FadeIn>
 
@@ -49,14 +52,14 @@ export default function CompressionSection() {
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#F46F61]">
                 After compression
               </p>
-              <p className="mt-4 text-base italic leading-relaxed text-[#2E2A7B]">
-                &ldquo;I spent a year covering for a partner who would
-                not show up. It taught me that the only thing worse than
-                shipping late is shipping late while apologizing.&rdquo;
+              <p className="mt-4 text-base leading-relaxed text-[#2E2A7B]">
+                One durable conviction. A specific way of seeing. A rule
+                the coworker carries into every future problem, expressed
+                in her own language.
               </p>
               <p className="mt-4 text-sm leading-relaxed text-[#4A4D73]">
-                One durable opinion, one durable scar. Five moments
-                released.
+                The five surface memories are released. The judgment they
+                produced stays.
               </p>
             </div>
           </FadeIn>

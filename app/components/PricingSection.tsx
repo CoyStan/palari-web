@@ -52,7 +52,7 @@ export default function PricingSection() {
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-[#4A4D73]">
               Every plan includes full memory and your Palari&rsquo;s
-              personality. Upgrade when you want more coworkers.
+              unique voice. Upgrade when you want more coworkers.
             </p>
           </div>
         </FadeIn>
@@ -101,6 +101,17 @@ export default function PricingSection() {
             </FadeIn>
           ))}
         </div>
+
+        <FadeIn>
+          <div className="mx-auto mt-10 max-w-3xl rounded-[24px] bg-white p-6 text-center ring-1 ring-black/5 md:p-8">
+            <p className="text-sm leading-relaxed text-[#4A4D73]">
+              We profit from subscription, not from how much compute you
+              use. Every efficiency we find goes directly to making your
+              Palari faster and cheaper. Our incentive is to save you
+              money, not spend it.
+            </p>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

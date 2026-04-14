@@ -9,14 +9,14 @@ export default function VibesLayerHumanizationSection() {
             The Vibes Layer
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-            Where a life becomes a voice.
+            Where the synthesis becomes a voice.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-[#4A4D73]">
-            The biography on its own is just data. The Vibes Layer is
-            what turns it into how she talks. On every message, three
-            sensory fragments, one or two core memories, and a handful of
-            opinions load into context. The raw answer goes in; Sofia
-            comes out.
+            The generated material on its own is just data. The Vibes
+            Layer is what turns it into how the coworker talks. On every
+            message, three sensory fragments, one or two core convictions,
+            and a handful of preferences load into context. The raw answer
+            goes in. Your Palari comes out.
           </p>
         </FadeIn>
 

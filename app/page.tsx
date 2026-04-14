@@ -1,16 +1,15 @@
-import CharacterSheetVsLifeSection from "./components/CharacterSheetVsLifeSection";
 import CompoundingOverTimeSection from "./components/CompoundingOverTimeSection";
 import EarlyAccessSection from "./components/EarlyAccessSection";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
 import GoldenRuleSection from "./components/GoldenRuleSection";
 import HeroSection from "./components/HeroSection";
-import LifeTeaserSection from "./components/LifeTeaserSection";
 import MeetPalarisSection from "./components/MeetPalarisSection";
 import Navbar from "./components/Navbar";
+import NeverFallBehindSection from "./components/NeverFallBehindSection";
 import PricingSection from "./components/PricingSection";
 import RealWorkSection from "./components/RealWorkSection";
-import SlackWalkthroughSection from "./components/SlackWalkthroughSection";
+import SameWorkFiveVoicesSection from "./components/SameWorkFiveVoicesSection";
 
 export default function Home() {
   return (
@@ -18,13 +17,12 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <SameWorkFiveVoicesSection />
         <MeetPalarisSection />
-        <CharacterSheetVsLifeSection />
-        <SlackWalkthroughSection />
-        <GoldenRuleSection />
-        <RealWorkSection />
+        <NeverFallBehindSection />
         <CompoundingOverTimeSection />
-        <LifeTeaserSection />
+        <RealWorkSection />
+        <GoldenRuleSection />
         <PricingSection />
         <FaqSection />
         <EarlyAccessSection />

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import LifeHero from "../components/life/LifeHero";
-import SofiaTimelineSection from "../components/life/SofiaTimelineSection";
 import LifeStepsSection from "../components/life/LifeStepsSection";
 import FourPassesSection from "../components/life/FourPassesSection";
 import CompressionSection from "../components/life/CompressionSection";
@@ -11,14 +10,14 @@ import VibesLayerHumanizationSection from "../components/life/VibesLayerHumaniza
 import DisclaimerCallout from "../components/life/DisclaimerCallout";
 
 export const metadata: Metadata = {
-  title: "Life. Palari.",
+  title: "How voices are generated. Palari.",
   description:
-    "Every Palari ships with a life. A twenty-eight-year biography compressed into a person with opinions, scars, and a voice that&rsquo;s hers.",
+    "Every Palari ships with a unique voice generated through a multi-step process. Specific convictions, specific ways of noticing, consistent across thousands of interactions.",
   alternates: { canonical: "https://palari.io/life" },
   openGraph: {
-    title: "Life. Palari.",
+    title: "How voices are generated. Palari.",
     description:
-      "Every Palari ships with a life. A twenty-eight-year biography compressed into a person.",
+      "Every Palari ships with a unique voice generated through a multi-step process. Specific convictions, specific ways of noticing, consistent across thousands of interactions.",
     type: "website",
     url: "https://palari.io/life",
   },
@@ -30,7 +29,6 @@ export default function LifePage() {
       <Navbar />
       <main>
         <LifeHero />
-        <SofiaTimelineSection />
         <LifeStepsSection />
         <FourPassesSection />
         <CompressionSection />

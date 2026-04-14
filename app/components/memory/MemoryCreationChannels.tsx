@@ -2,10 +2,10 @@ import FadeIn from "../FadeIn";
 
 const channels = [
   {
-    title: "Life Generator",
-    when: "Once, at birth",
+    title: "Voice generator",
+    when: "Once, before the Palari ships",
     detail:
-      "Runs one time per Palari. Populates life_event, sensory fragments, relationship ghosts, and opinions. This is the biography.",
+      "Runs one time per Palari. Populates life_event, sensory fragments, relationship patterns, and opinions. This is the generated voice material.",
   },
   {
     title: "Automatic extraction",
@@ -38,8 +38,8 @@ export default function MemoryCreationChannels() {
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
             Memory formation is not a single process. Different channels
             cover different timescales, from the Palari&rsquo;s
-            pre-generated life to the conversation you had five minutes
-            ago.
+            pre-generated voice material to the conversation you had five
+            minutes ago.
           </p>
         </FadeIn>
 

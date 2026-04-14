@@ -27,10 +27,9 @@ export default function RealWorkSection() {
               Palaris do real work.
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-[#4A4D73]">
-              Personality is anchored to capability. Sofia is not just
-              charming. She edits your Google Doc, processes your
-              spreadsheet, compiles your weekly summary, and posts receipts
-              in Slack when she&rsquo;s done.
+              Voice is anchored to capability. Your Palari edits Google
+              Docs, processes spreadsheets, compiles weekly summaries, and
+              posts receipts in Slack when the work is done.
             </p>
           </div>
         </FadeIn>

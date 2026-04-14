@@ -47,7 +47,8 @@ export default function MeetPalarisSection() {
             </h2>
             <p className="mt-4 text-lg text-[#4A4D73]">
               Three coworkers, each with their own scope, their own voice, and
-              a memory of your work that grows every week.
+              a memory of your work that grows every week. Pick the ones
+              whose thinking matches how you want to work.
             </p>
           </div>
         </FadeIn>
@@ -108,7 +109,7 @@ export default function MeetPalarisSection() {
         <FadeIn>
           <p className="mx-auto mt-10 max-w-2xl text-center text-sm italic leading-relaxed text-[#5B5E84]">
             Voice is how you know the memory is working. Same models
-            underneath. A specific person on top.
+            underneath. A specific coworker on top.
           </p>
         </FadeIn>
 
@@ -118,7 +119,7 @@ export default function MeetPalarisSection() {
               href="/life"
               className="inline-flex items-center gap-1 text-sm font-semibold text-[#2E2A7B] transition-colors hover:text-[#F46F61]"
             >
-              How a Palari is born
+              How voices are generated
               <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>

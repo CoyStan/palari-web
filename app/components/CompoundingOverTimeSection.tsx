@@ -4,7 +4,7 @@ import Link from "next/link";
 const stages = [
   {
     label: "Week 1",
-    body: "Sofia learns your name, your project, your file structure. She asks the right questions because she doesn&rsquo;t yet know what you care about.",
+    body: "Your Palari learns your name, your project, your file structure. She asks the right questions because she doesn&rsquo;t yet know what you care about.",
     accent: "bg-[#E7B83D]",
   },
   {
@@ -19,7 +19,7 @@ const stages = [
   },
   {
     label: "Month 6",
-    body: "Switching means losing someone who knows you. That is not lock-in. It is a relationship.",
+    body: "Switching means losing someone who knows how you think. That is not lock-in. It is a relationship.",
     accent: "bg-[#F46F61]",
   },
 ];
@@ -31,11 +31,12 @@ export default function CompoundingOverTimeSection() {
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-              She gets better every week.
+              What happens over time.
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-[#4A4D73]">
               A Palari compounds. What you tell her today shapes how she
-              answers you in October. Watch the relationship deepen.
+              answers you in October. After six months, switching means
+              losing someone who knows how you think.
             </p>
           </div>
         </FadeIn>

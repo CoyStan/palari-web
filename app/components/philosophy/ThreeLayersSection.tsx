@@ -42,11 +42,14 @@ export default function ThreeLayersSection() {
             Architecture
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-            Three layers of independence
+            Three layers of independence.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
-            Most AI products tie your data to their model, their platform, their servers. A Palari
-            separates identity from infrastructure.
+            Identity is stable. Compute is swappable. Communication is
+            open. Every improvement in the field becomes an improvement in
+            your coworker, automatically, because the architecture was
+            designed from day one so the three layers can change
+            independently.
           </p>
         </FadeIn>
 

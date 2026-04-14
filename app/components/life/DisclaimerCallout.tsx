@@ -8,13 +8,20 @@ export default function DisclaimerCallout() {
         <FadeIn>
           <div className="rounded-[28px] bg-gradient-to-br from-[#FFF4F1] via-white to-[#F7F5F2] p-8 ring-1 ring-black/5 md:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5B5E84]">
-              One thing to be clear about
+              Mechanism, not metaphysics
             </p>
-            <p className="mt-5 text-lg leading-8 text-[#2E2A7B]">
-              A Palari is not a person. But a Palari that was born feels
-              different from one that was configured. You&rsquo;ll know it
-              the first time Sofia references something from her past and
-              it lands exactly right.
+            <p className="mt-5 text-base leading-8 text-[#2E2A7B]">
+              This is a voice generation mechanism, not a consciousness
+              claim. When Sofia references a specific experience, a string
+              is being retrieved from a database and included in a prompt.
+              The process produces voice consistency and judgment depth. It
+              does not produce subjective experience. We are explicit about
+              the mechanism because we think transparency about how AI
+              works matters.
+            </p>
+            <p className="mt-5 text-sm italic leading-relaxed text-[#5B5E84]">
+              Cost: about $0.80 and 125 API calls. Time: five to ten
+              minutes per coworker. Runs once, before your Palari ships.
             </p>
 
             <div className="mt-7 flex flex-wrap justify-center gap-4">

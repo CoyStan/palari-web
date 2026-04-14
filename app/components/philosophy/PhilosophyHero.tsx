@@ -30,7 +30,8 @@ export default function PhilosophyHero() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl lg:text-5xl"
         >
-          Why we built AI coworkers with memory.
+          Why we built AI coworkers that keep getting better on your
+          behalf.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 14 }}
@@ -38,8 +39,9 @@ export default function PhilosophyHero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#4A4D73]"
         >
-          Every AI tool forgets. We built one that doesn&apos;t. Here&apos;s
-          why, and what we had to change about the architecture to do it.
+          Memory was the first thing. Voice was the last mile. The
+          architecture underneath is what makes it all keep improving,
+          without you having to change anything.
         </motion.p>
       </div>
     </section>

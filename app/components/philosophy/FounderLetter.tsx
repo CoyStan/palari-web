@@ -24,40 +24,51 @@ export default function FounderLetter() {
 
             <p>
               Memory was the hardest part. Associative retrieval across
-              eleven memory types, grouped into what the Palari experiences
-              permanently and what she learns about your work, is expensive
-              to do badly and very expensive to do well. We compressed it
-              until a full Palari&rsquo;s memory costs under a cent per
-              query. That is the whole reason the economics work.
+              eleven memory types, grouped into what the Palari holds
+              permanently and what she learns about your work, is
+              expensive to do badly and very expensive to do well. We
+              compressed it until a full Palari&rsquo;s memory costs under
+              a cent per query. That is the whole reason the economics
+              work.
             </p>
 
             <p>
               Voice was the last mile. Raw model output reads like a
-              report. Teams don&rsquo;t want reports; they want a teammate.
-              So we separated work from voice, precision on one layer,
-              readability on another. Same answer, different wire.
+              report. Teams don&rsquo;t want reports. They want a
+              teammate. So we separated work from voice, precision on one
+              layer, readability on another. Same answer, different wire.
             </p>
 
             <p>
               A note on what Palari is not. We are not building digital
-              humans. Palaris don&rsquo;t have feelings. The generated
-              biography is a mechanism, not a metaphysics claim. It exists
-              so the same Sofia reviews code the same way every time, so the
-              voice is consistent, so the feedback is specific. A specialist
-              with a persistent style. Not a person.
+              humans. Palaris don&rsquo;t have feelings. The voice
+              generation process is a mechanism, not a metaphysics claim.
+              It exists so the same Sofia reviews code the same way every
+              time, so the voice is consistent, so the feedback is
+              specific. A specialist with a persistent style. Not a
+              person.
+            </p>
+
+            <p>
+              What I actually care about is that the thing you hire
+              keeps getting better on its own. Identity is stable. Compute
+              is swappable. When a new model appears, we swap it in
+              underneath. Your coworker sounds the same, remembers the
+              same things, has the same access. The engine just got
+              better. You change nothing.
             </p>
 
             <p className="font-medium text-[#2E2A7B]">
               Portability is the part nobody else shipped. A Palari&rsquo;s
-              identity lives in a SQLite file you own. Change models, change
-              platforms, change servers, and you still have the same Palari,
-              the same memory, the same working style. The value compounds
-              on your side, not ours.
+              identity lives in a SQLite file you own. Change models,
+              change platforms, change servers, and you still have the
+              same Palari, the same memory, the same working style. The
+              value compounds on your side, not ours.
             </p>
 
             <p>
-              Here&rsquo;s the early batch. See what a coworker with memory
-              does to how your team ships.
+              Try it. See what a coworker with memory does to how your
+              team ships.
             </p>
           </div>
         </FadeIn>

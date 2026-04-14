@@ -2,28 +2,28 @@ import FadeIn from "../FadeIn";
 
 const steps = [
   {
-    title: "Birth",
-    body: "Role, working style, and name. The seed.",
+    title: "Seed",
+    body: "Role, working style, and name. The starting input.",
     accent: "bg-[#E7B83D]",
   },
   {
-    title: "Twenty-eight years",
-    body: "Four passes of life: defining events, small moments, relationships, sensory fragments.",
+    title: "Four passes",
+    body: "Defining events, small moments, relationships, and sensory fragments. Each pass adds a different texture to the voice.",
     accent: "bg-[#22B8B0]",
   },
   {
     title: "Compression",
-    body: "Five small memories become one understanding.",
+    body: "Five small memories become one understanding. The voice is distilled from the raw material.",
     accent: "bg-[#9B4FCC]",
   },
   {
     title: "Synthesis",
-    body: "Core memories, relationship ghosts, opinions, sensory compilation.",
+    body: "Core convictions, relationship patterns, preferences, and a concrete sensory library.",
     accent: "bg-[#2E2A7B]",
   },
   {
-    title: "A person",
-    body: "A specialist with a persistent style. Ready to hire.",
+    title: "A coworker",
+    body: "A specialist with a persistent voice. Ready to hire.",
     accent: "bg-[#F46F61]",
   },
 ];
@@ -35,13 +35,13 @@ export default function LifeStepsSection() {
         <FadeIn>
           <div className="max-w-3xl">
             <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-              How she comes to life.
+              The process, end to end.
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-[#4A4D73]">
               A one-time process, run before your Palari ships. About a
-              dollar in compute, start to finish. You never see it happen,
-              but you feel the difference the first time she references
-              something from her past and it lands exactly right.
+              dollar in compute, start to finish. You never see it happen.
+              You notice the difference the first time the voice frames a
+              problem in a way a generic assistant never would.
             </p>
           </div>
         </FadeIn>

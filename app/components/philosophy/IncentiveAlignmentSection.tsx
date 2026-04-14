@@ -9,12 +9,20 @@ export default function IncentiveAlignmentSection() {
             Incentives
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-            We make money when you waste less.
+            We profit when you use less compute.
           </h2>
+          <p className="mt-5 text-lg leading-relaxed text-[#4A4D73]">
+            We profit from subscription. Not from tokens, not from compute,
+            not from how much you use the product. This means every
+            efficiency we find, every cheaper model, every faster
+            technique, every better paper, goes directly to making your
+            Palari better and cheaper. We are the only AI company whose
+            business model rewards us for reducing your costs.
+          </p>
         </FadeIn>
 
         <FadeIn>
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
             <div className="rounded-[24px] bg-[#F7F5F2] p-6 ring-1 ring-black/5">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#5B5E84]">
                 The usual AI business model
@@ -31,9 +39,10 @@ export default function IncentiveAlignmentSection() {
                 The Palari business model
               </p>
               <p className="mt-3 text-sm leading-relaxed text-[#2E2A7B]">
-                A flat subscription. The less compute Sofia burns on your
-                behalf, the cheaper she is for us to run, and the longer
-                you stay. Our margin and your efficiency point the same way.
+                A flat subscription. The less compute your Palari burns on
+                your behalf, the cheaper she is for us to run, and the
+                longer you stay. Our margin and your efficiency point the
+                same way.
               </p>
             </div>
           </div>
@@ -41,11 +50,11 @@ export default function IncentiveAlignmentSection() {
 
         <FadeIn>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
-            That&rsquo;s why the Planning Layer exists. It routes simple
-            questions to small models, keeps the expensive ones for the work
-            that actually needs them, and turns a 30,000-token prompt into a
-            3,000-token prompt with the right memories loaded. We built the
-            router because we wanted our incentives to line up with yours.
+            OpenAI profits when you consume more tokens. Anthropic profits
+            per API call. Google profits on compute. None of them will
+            build a system that actively seeks the cheapest adequate model
+            for every task. We will, because our margin improves when we
+            find efficiencies.
           </p>
         </FadeIn>
       </div>

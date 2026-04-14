@@ -6,16 +6,20 @@ export default function LifeHero() {
       <div className="mx-auto max-w-4xl px-6 md:px-10">
         <FadeIn>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F46F61]">
-            How a Palari is born
+            How voices are generated
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
-            Twenty-eight years before you meet her.
+            Every AI assistant sounds the same. Each Palari does not.
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-[#4A4D73]">
-            Every Palari ships with a life. A biography of defining
-            events, small moments, relationships, and sensory fragments,
-            compressed into the person who shows up in Slack on day one.
-            This is how that person is made.
+            Most AI products ship with a personality description pasted on
+            top. Be helpful. Be casual. Be concise. The result is
+            interchangeable. Palari does something different. Each
+            coworker&rsquo;s voice is generated through a multi-step process
+            that produces specific convictions, specific ways of noticing,
+            and specific preferences consistent across thousands of
+            interactions. The process takes about ten minutes and costs less
+            than a dollar. Here&rsquo;s how it works.
           </p>
         </FadeIn>
       </div>

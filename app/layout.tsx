@@ -10,7 +10,7 @@ const inter = Inter({
 
 const title = "Palari. AI coworkers who remember you.";
 const description =
-  "Every AI forgets you. Sofia doesn't. Palaris are coworkers with a name, a history, and a memory of your work that compounds over time.";
+  "AI coworkers who remember how you work, get better every month, and never need you to update anything. Persistent memory, unique voices, auto-improving infrastructure.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://palari.io"),

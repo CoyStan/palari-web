@@ -2,23 +2,23 @@ import FadeIn from "../FadeIn";
 
 const buckets = [
   {
-    title: "Core memories",
-    body: "Twenty or so events that anchor who she is. The startup. The kiln. The beach in San Jos&eacute;.",
+    title: "Core convictions",
+    body: "Around twenty durable rules the coworker carries forward. Opinions earned from experience, not pasted on top.",
     accent: "bg-[#F46F61]",
   },
   {
-    title: "Relationship ghosts",
-    body: "People she carries forward. A mentor, a cofounder, an abuela. They show up in how she reviews your code.",
+    title: "Relationship patterns",
+    body: "Templates for how to communicate with different kinds of people. They shape how the coworker reviews your code and asks questions.",
     accent: "bg-[#9B4FCC]",
   },
   {
-    title: "Opinions",
-    body: "Beliefs forged from specific experience. &ldquo;Polish is the last thing you add, not the reason you&rsquo;re late.&rdquo;",
+    title: "Preferences",
+    body: "Specific aesthetic and process commitments. Concise over verbose. Direct questions over hedges. These give the voice its grain.",
     accent: "bg-[#22B8B0]",
   },
   {
-    title: "Sensory compilation",
-    body: "A deck of ten to fifteen-word fragments. Three load randomly into every Vibes call.",
+    title: "Sensory library",
+    body: "A deck of concrete fragments, around ten to fifteen words each. Three load on every response. The occasional natural reference is what makes the voice feel specific.",
     accent: "bg-[#E7B83D]",
   },
 ];
@@ -29,12 +29,12 @@ export default function SynthesisSection() {
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <FadeIn>
           <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-            What Sofia ships with.
+            What ships with the coworker.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
-            After the biography is generated and compressed, synthesis
-            produces the memories Sofia actually carries with her. This is
-            what sits in the database on her first day.
+            After the four passes and compression, synthesis produces the
+            material your Palari actually carries into conversations. This
+            is what sits in the database on day one.
           </p>
         </FadeIn>
 
@@ -51,10 +51,9 @@ export default function SynthesisSection() {
                     {b.title}
                   </h3>
                 </div>
-                <p
-                  className="mt-3 text-sm leading-relaxed text-[#4A4D73]"
-                  dangerouslySetInnerHTML={{ __html: b.body }}
-                />
+                <p className="mt-3 text-sm leading-relaxed text-[#4A4D73]">
+                  {b.body}
+                </p>
               </div>
             </FadeIn>
           ))}

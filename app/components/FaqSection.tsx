@@ -8,17 +8,22 @@ const faqItems = [
   {
     question: "How is a Palari different from ChatGPT or Claude?",
     answer:
-      "ChatGPT and Claude have memory now. They store facts about you in a flat list. Palari&rsquo;s memory is structured: eleven types, an entity graph that connects people and projects, temporal tracking that knows when facts changed, and importance decay that keeps what matters and releases what doesn&rsquo;t. But the deeper difference is that Sofia has a name, a history, and a voice that&rsquo;s hers. She doesn&rsquo;t just remember what you said. She remembers it the way she would.",
+      "ChatGPT and Claude have basic memory now. They store facts about you in a flat list. Palari&rsquo;s memory is deeper: eleven types, entity graphs connecting people and projects, and temporal tracking that knows when facts changed. But the real difference is two things. Your Palari has a unique voice that&rsquo;s consistent across every interaction, and the infrastructure underneath keeps improving without you doing anything. New models, new techniques, new optimizations. All adopted by the Palari team and deployed to your coworker automatically.",
   },
   {
-    question: "What do I need to get started?",
+    question: "Do I need to be technical?",
     answer:
-      "A Slack workspace and an email. That&rsquo;s it. No terminal, no API keys, no config files. You invite Sofia to a channel, tell her what you&rsquo;re working on, and she takes it from there.",
+      "No. No terminal, no API keys, no config files. A Slack workspace and an email is all it takes. You invite Sofia to a channel, tell her what you&rsquo;re working on, and she takes it from there.",
   },
   {
     question: "Is my data safe?",
     answer:
-      "Each Palari has scoped access. Sofia sees the frontend folder, Leo sees the backend, neither sees your secrets. Memories are private per Palari by default. You control exactly what each one can read and write, and you can revoke access any time.",
+      "Yes. Each Palari has scoped file access. Sofia can only read and write the folders you assign her. She can&rsquo;t access Leo&rsquo;s files or Alfred&rsquo;s. Memory is private per coworker by default. You control exactly what each one can read and write, and you can revoke access any time.",
+  },
+  {
+    question: "How does the voice work?",
+    answer:
+      "Each Palari&rsquo;s voice is generated through a proprietary process that produces unique convictions, preferences, and ways of noticing things. The same data analysis framed by Sofia sounds different from the same analysis framed by Alfred, not because they have different personalities pasted on top, but because they have different ways of thinking about problems. You choose the coworker whose voice matches how you want to work.",
   },
   {
     question: "Can I change how my Palari behaves?",

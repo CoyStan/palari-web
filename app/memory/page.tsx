@@ -10,6 +10,7 @@ import EntityGraph from "../components/memory/EntityGraph";
 import TemporalValidity from "../components/memory/TemporalValidity";
 import EndToEndExample from "../components/memory/EndToEndExample";
 import CostStats from "../components/memory/CostStats";
+import EvolvingArchitectureSection from "../components/memory/EvolvingArchitectureSection";
 
 export const metadata: Metadata = {
   title: "Memory. Palari.",
@@ -39,6 +40,7 @@ export default function MemoryPage() {
         <TemporalValidity />
         <EndToEndExample />
         <CostStats />
+        <EvolvingArchitectureSection />
       </main>
       <Footer />
     </div>
