@@ -45,7 +45,7 @@ export default function PricingSection() {
                 <p className="mt-3 text-sm leading-6 text-[#4A4D73]">
                   1 Palari with full memory, Planning Layer budget controls,
                   scoped access, Slack and Google Workspace integrations. BYOK
-                  for the Mama Model.
+                  for the Primary Model.
                 </p>
               </div>
 

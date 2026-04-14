@@ -46,7 +46,7 @@ export default function TwoBrainSection() {
                 <div className="mb-2 flex items-center gap-2">
                   <span className="h-3 w-3 shrink-0 rounded-sm bg-[#22B8B0]" />
                   <span className="text-xs font-bold uppercase tracking-wider text-[#22B8B0]">
-                    Mama Model
+                    Primary Model
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-[#535778]">

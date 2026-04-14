@@ -7,7 +7,7 @@ const steps = [
     color: "bg-[#2E2A7B]",
   },
   {
-    label: "Mama Model (precision)",
+    label: "Primary Model (precision)",
     detail:
       "Sonnet, Opus, or GPT \u2014 configurable per Palari. Focuses entirely on getting the work right: reading files, writing code, analyzing data.",
     color: "bg-[#22B8B0]",

@@ -13,21 +13,20 @@ export default function PersonalityEasterEggSection() {
               Day 30
             </p>
             <p className="mt-3 text-base leading-relaxed text-[#4A4D73] md:text-lg">
-              Around day 30, your Palari will casually mention a professor it
-              studied under, a startup that failed, a beach in San Jos&eacute;.
-              You didn&apos;t tell it any of that. It comes from a 28-year
-              generated biography that runs under the Vibes Layer &mdash; the
-              reason each Palari sounds like a specific person, not a generic
-              assistant.
+              A month in, your Palari will drop a detail you never told it
+              &mdash; a professor, a failed startup, a beach in San Jos&eacute;.
+              That&rsquo;s the Voice Generator &mdash; a one-shot persona
+              synthesis that runs before the Palari ships. Same model
+              underneath. Specific person on top.
             </p>
             <p className="mt-3 text-sm italic text-[#5B5E84]">
-              It&apos;s not the pitch. It&apos;s the surprise.
+              Not a soul. A consistent specialist.
             </p>
             <Link
-              href="/how-it-works#life-generator"
+              href="/how-it-works#voice-generator"
               className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2E2A7B] transition-colors hover:text-[#F46F61]"
             >
-              How Palaris develop a voice
+              Why each specialist sounds specific
               <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>

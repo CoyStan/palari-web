@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import HowItWorksHero from "../components/how-it-works/HowItWorksHero";
 import TwoBrainSection from "../components/how-it-works/TwoBrainSection";
 import MemorySystemSection from "../components/how-it-works/MemorySystemSection";
-import LifeGeneratorSection from "../components/how-it-works/LifeGeneratorSection";
+import VoiceGeneratorSection from "../components/how-it-works/VoiceGeneratorSection";
 import PlanningLayerSection from "../components/how-it-works/PlanningLayerSection";
 import ScopedTrustSection from "../components/how-it-works/ScopedTrustSection";
 import CoordinationSection from "../components/how-it-works/CoordinationSection";
@@ -35,7 +35,7 @@ export default function HowItWorksPage() {
         <PlanningLayerSection />
         <ScopedTrustSection />
         <CoordinationSection />
-        <LifeGeneratorSection />
+        <VoiceGeneratorSection />
         <HowItWorksCta />
       </main>
       <Footer />
