@@ -6,19 +6,19 @@ const slackThread = [
   {
     name: "You",
     dot: "bg-[#2E2A7B]",
-    text: "sofia, the march campaign numbers look off. did we double-send?",
+    text: "Sofia, the March campaign numbers look off. Did we double-send?",
     time: "10:42 AM",
   },
   {
     name: "Sofia",
     dot: "bg-[#F46F61]",
-    text: "checking. the rhythm felt off tuesday night when the automation you tweaked went live — was waiting to see.",
+    text: "Checking. The rhythm felt off Tuesday night when the automation you tweaked went live — I was waiting to see.",
     time: "10:42 AM",
   },
   {
     name: "Sofia",
     dot: "bg-[#F46F61]",
-    text: "yep. three segments overlap with the retention list. same pattern as the holiday promo in november. want me to dedupe the way we did then, or document the overlap first so we catch it earlier next time?",
+    text: "Yep. Three segments overlap with the retention list — same pattern as the holiday promo in November. Want me to dedupe the way we did then, or document the overlap first so we catch it earlier next time?",
     time: "10:44 AM",
   },
 ];

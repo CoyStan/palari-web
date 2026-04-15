@@ -10,7 +10,7 @@ const palaris = [
     scope: "Campaigns, vendors, weekly planning",
     capabilities: "Async updates, vendor follow-ups, spotting the rhythm before it breaks",
     voice:
-      "three vendors missed friday&rsquo;s invoice deadline. all three on the net-30 change you approved last month. same rhythm as the q4 batch. want me to send reminders now, or sit with it a day and see if they catch it on their own?",
+      "Three vendors missed Friday&rsquo;s invoice deadline. All three on the net-30 change you approved last month &mdash; same rhythm as the Q4 batch. Want me to send reminders now, or sit with it a day and see if they catch it on their own?",
     dot: "bg-[#F46F61]",
     border: "border-[#F46F61]/20",
   },
@@ -20,7 +20,7 @@ const palaris = [
     scope: "Numbers, reports, reconciliation",
     capabilities: "Revenue recs, variance reviews, listening for what&rsquo;s shaking in the data",
     voice:
-      "q1 reconciliation doesn&rsquo;t balance. two journal entries hit the same account within the same hour &mdash; that&rsquo;s not random, that&rsquo;s the sync trembling. adding a check for collisions and re-running. i&rsquo;ll send what it was trying to say.",
+      "Q1 reconciliation doesn&rsquo;t balance. Two journal entries hit the same account within the same hour &mdash; that&rsquo;s not random, that&rsquo;s the sync trembling. Adding a check for collisions and re-running. I&rsquo;ll send what it was trying to say.",
     dot: "bg-[#22B8B0]",
     border: "border-[#22B8B0]/20",
   },
