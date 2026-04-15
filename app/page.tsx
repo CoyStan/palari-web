@@ -17,10 +17,10 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <CompoundingOverTimeSection />
         <SameWorkFiveVoicesSection />
         <MeetPalarisSection />
         <NeverFallBehindSection />
-        <CompoundingOverTimeSection />
         <RealWorkSection />
         <GoldenRuleSection />
         <PricingSection />

@@ -6,19 +6,19 @@ const slackThread = [
   {
     name: "You",
     dot: "bg-[#2E2A7B]",
-    text: "sofia, those auth tests are failing again. any idea why?",
+    text: "sofia, the march campaign numbers look off. did we double-send?",
     time: "10:42 AM",
   },
   {
     name: "Sofia",
     dot: "bg-[#F46F61]",
-    text: "probably the token_lifetime thing you refactored tuesday. checking.",
+    text: "checking. probably the automation rule you tweaked tuesday.",
     time: "10:42 AM",
   },
   {
     name: "Sofia",
     dot: "bg-[#F46F61]",
-    text: "yep. three fixtures still point to the old config path. want me to fix them the way we did for the billing module last month?",
+    text: "yep. three segments overlap with the retention list. want me to deduplicate them the way we did for the holiday promo in november?",
     time: "10:44 AM",
   },
 ];

@@ -6,21 +6,21 @@ import Link from "next/link";
 const palaris = [
   {
     name: "Sofia Campos",
-    role: "Operations Lead",
-    scope: "Frontend, design, sprint planning",
-    capabilities: "Async standups, PR reviews, regression hunting",
+    role: "Operations Partner",
+    scope: "Campaigns, vendors, weekly planning",
+    capabilities: "Async updates, vendor follow-ups, spotting anomalies in the dashboard",
     voice:
-      "found it. three tests failing in auth, all hitting that token_lifetime refactor from tuesday. fix is a default value. want me to push?",
+      "found it. three vendors missed friday&rsquo;s invoice deadline, all on the net-30 change you approved last month. want me to send the reminder email the way we did for the q4 batch?",
     dot: "bg-[#F46F61]",
     border: "border-[#F46F61]/20",
   },
   {
     name: "Leo Chen",
-    role: "Data Engineer",
-    scope: "Backend, databases, API logs",
-    capabilities: "Query tuning, schema reviews, incident triage",
+    role: "Analyst",
+    scope: "Numbers, reports, reconciliation",
+    capabilities: "Revenue recs, variance reviews, quarterly close checks",
     voice:
-      "the migration has a race condition. two transactions can hit the same row if they start within 50ms. adding a row-level lock. tests running.",
+      "the q1 reconciliation doesn&rsquo;t balance. two journal entries hit the same account within the same hour. that&rsquo;s not random. adding a check to flag collisions. running the numbers again.",
     dot: "bg-[#22B8B0]",
     border: "border-[#22B8B0]/20",
   },
@@ -28,9 +28,9 @@ const palaris = [
     name: "Alfred",
     role: "Coordinator",
     scope: "Read-only across all channels",
-    capabilities: "Status digests, dependency tracking, standup notes",
+    capabilities: "Status digests, dependency tracking, weekly summaries",
     voice:
-      "Sofia shipped the auth refactor last night. Leo&rsquo;s API handler still expects the old token format. Left him a note. Two items need your call today.",
+      "Sofia closed out the vendor reminders last night. Leo&rsquo;s q1 reconciliation still has two open items waiting on procurement. Left a note in his inbox. Two things need your call today.",
     dot: "bg-[#E7B83D]",
     border: "border-[#E7B83D]/20",
   },

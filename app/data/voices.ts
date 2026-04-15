@@ -91,18 +91,18 @@ export const scenarios: Scenario[] = [
     },
   },
   {
-    id: "code-test",
-    label: "Code test result",
+    id: "vendor-review",
+    label: "Vendor contract review",
     rawOutput:
-      "I ran the test suite against the authentication service and 47 of 52 tests passed successfully. The five failing tests are all in the session refresh flow, specifically they time out waiting for the token rotation endpoint to respond within 200ms. I can investigate whether this is a network latency issue in the test environment or an actual performance regression in the rotation logic.",
+      "I've reviewed the six vendor contracts up for renewal next quarter and flagged the three with pricing changes that exceed the 5% threshold from the approved budget. The other three are flat renewals with no material changes. I can draft renewal notices for the three flat contracts tonight, or walk through the three pricing escalations first so you can prioritize.",
     responses: {
       sofia:
-        "ran the tests. 47 of 52 passed. the five failures are all in the session refresh flow, timing out waiting on the token rotation endpoint at 200ms. could be test-env latency, could be a real regression. the rhythm between the two feels off either way. want me to dig?",
+        "vendor review's done. six contracts up for renewal, three are flat and three have pricing changes above the 5% threshold. the flat ones are the easy win. want me to draft those renewal notices tonight, or walk the three escalations first so you can prioritize?",
       alfred:
-        "Ran the auth service tests. 47 of 52 passed. The five failures all sit in the session refresh flow, timing out at the 200ms threshold on the token rotation endpoint. I can look into whether it's a test-environment latency issue or a real regression in rotation. Which would you rather I chase first?",
-      leo: "tests done: 47 of 52 passed. the five failing ones cluster in session refresh, all timing out at the 200ms threshold on the token rotation endpoint. that's not random. a cluster like that is either environmental or the material is telling us something shifted in rotation. want me to listen differently to it?",
-      ravi: "The auth test suite ran. 47 of 52 passed, and the five failures all pool at the same junction: session refresh, timing out at 200ms on the token rotation endpoint. Before we rewrite anything, can we listen to what rotation is doing in the test env first? The signal is already there.",
-      ezra: "47 of 52 passed. all five failures are the same failure: session refresh timing out at 200ms on the token rotation endpoint. the pattern repeats because the actual rule is somewhere in rotation or the env, not in the tests. want me to watch that cycle once more and figure out which?",
+        "The vendor review is in. Six contracts renewing, three flat and three with pricing changes above the 5% threshold. Before we send anything, should we talk about whether the three escalations are worth negotiating, or is it cleaner to approve the flat ones and deal with the rest separately?",
+      leo: "reviewed the six contracts. three are flat. three have pricing changes over the 5% threshold. that's a cluster, not a spread. the material is telling us something about that vendor cohort, not about pricing generally. depends which story we trust before we negotiate.",
+      ravi: "The vendor review is done. Six contracts, three flat, three with pricing over the 5% threshold. Before we sign any of them, can we understand what changed for those three? A jump like that usually tells you something the last cycle missed.",
+      ezra: "six contracts renewing: three flat, three with pricing changes over 5%. the three escalations are a pattern of three, not three separate events. the actual rule is whether they share a reason. want me to check what they have in common before we negotiate?",
     },
   },
 ];
