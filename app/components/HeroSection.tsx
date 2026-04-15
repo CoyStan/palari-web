@@ -1,157 +1,258 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-const slackThread = [
-  {
-    name: "You",
-    dot: "bg-[#2E2A7B]",
-    text: "sofia, the march campaign numbers look off. did we double-send?",
-    time: "10:42 AM",
-  },
-  {
-    name: "Sofia",
-    dot: "bg-[#F46F61]",
-    text: "checking. probably the automation rule you tweaked tuesday.",
-    time: "10:42 AM",
-  },
-  {
-    name: "Sofia",
-    dot: "bg-[#F46F61]",
-    text: "yep. three segments overlap with the retention list. want me to deduplicate them the way we did for the holiday promo in november?",
-    time: "10:44 AM",
-  },
+const navItems = [
+  { label: "Memory", href: "/memory" },
+  { label: "Life", href: "/life" },
+  { label: "Trust", href: "/trust" },
+  { label: "Philosophy", href: "/philosophy" },
 ];
 
-const stats = [
-  { value: "5", label: "Palaris who remember" },
-  { value: "1", label: "click to set up" },
-  { value: "0", label: "terminal needed" },
+const dots = [
+  { color: "#E7B83D", x: 0.561, y: -0.081, d: 0.22 },
+  { color: "#F46F61", x: 0.643, y: -0.231, d: 0.138 },
+  { color: "#E7B83D", x: 0.654, y: 0.055, d: 0.154 },
+  { color: "#F46F61", x: 0.722, y: -0.366, d: 0.179 },
+  { color: "#22B8B0", x: 0.742, y: -0.026, d: 0.179 },
+  { color: "#2E2A7B", x: 0.818, y: -0.239, d: 0.236 },
 ];
+
+const WORDMARK_ANIM_START = 0.1;
+const DOTS_ANIM_START = 0.5;
+const DOT_STAGGER = 0.1;
+const TAGLINE_DELAY = DOTS_ANIM_START + dots.length * DOT_STAGGER + 0.1;
+const DESCRIPTOR_DELAY = TAGLINE_DELAY + 0.15;
+const CTA_DELAY = DESCRIPTOR_DELAY + 0.15;
+const SCROLL_INDICATOR_DELAY = CTA_DELAY + 0.4;
 
 export default function HeroSection() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [box, setBox] = useState<{ w: number; h: number } | null>(null);
+  const textRef = useRef<HTMLSpanElement>(null);
+
+  useLayoutEffect(() => {
+    const el = textRef.current;
+    if (!el) return;
+
+    const measure = () => {
+      const rect = el.getBoundingClientRect();
+      setBox({ w: rect.width, h: rect.height });
+    };
+
+    measure();
+    if (typeof document !== "undefined" && document.fonts?.ready) {
+      document.fonts.ready.then(measure).catch(() => {});
+    }
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    window.addEventListener("resize", measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
-    <section className="relative overflow-hidden border-b border-black/5 bg-gradient-to-br from-[#EEEAF8] via-white to-[#F7F5F2]">
+    <section className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden bg-[#F7F5F2]">
       <div
-        className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-[#22B8B0]/15 blur-3xl"
         aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle at 18% 22%, rgba(34,184,176,0.10), transparent 55%), radial-gradient(circle at 82% 78%, rgba(244,111,97,0.10), transparent 55%), radial-gradient(circle at 50% 50%, rgba(155,79,204,0.04), transparent 65%)",
+        }}
       />
-      <div
-        className="pointer-events-none absolute right-0 top-0 h-72 w-72 rounded-full bg-[#F46F61]/15 blur-3xl"
-        aria-hidden="true"
-      />
 
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center md:px-10 lg:py-24">
-        <div className="relative z-10 flex flex-col">
-          <motion.h1
-            initial={{ opacity: 0, y: 18 }}
+      <button
+        type="button"
+        aria-label="Open menu"
+        onClick={() => setIsOpen(true)}
+        className="absolute right-5 top-5 z-30 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/60 backdrop-blur ring-1 ring-black/5 transition-shadow hover:shadow-md md:right-8 md:top-8"
+      >
+        <span className="sr-only">Open menu</span>
+        <div className="space-y-1.5">
+          <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
+          <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
+          <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
+        </div>
+      </button>
+
+      <div className="relative z-10 flex w-full flex-col items-center px-6 text-center">
+        <div className="relative inline-block">
+          <motion.span
+            ref={textRef}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="max-w-xl text-4xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]"
+            transition={{ duration: 0.7, delay: WORDMARK_ANIM_START, ease: [0.22, 1, 0.36, 1] }}
+            className="block font-bold leading-none text-[#2E2A7B]"
+            style={{
+              fontFamily: "var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif",
+              fontSize: "clamp(4.5rem, 28vw, 16rem)",
+              letterSpacing: "-0.03em",
+            }}
           >
-            AI coworkers who{" "}
-            <span className="text-[#F46F61]">remember how you work.</span>
-          </motion.h1>
+            Palari
+          </motion.span>
 
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-6 max-w-xl text-lg leading-8 text-[#4A4D73]"
-          >
-            Each Palari has a unique voice, a persistent memory, and scoped
-            access to your files. You talk to them the way you'd talk to a
-            teammate. They remember everything. The engine underneath keeps
-            improving. You change nothing.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-8 flex flex-wrap gap-4"
-          >
-            <a
-              href="#early-access"
-              className="rounded-2xl bg-[#F46F61] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#F46F61]/25 transition hover:-translate-y-0.5"
-            >
-              Get early access
-            </a>
-            <a
-              href="#meet-team"
-              className="rounded-2xl border border-[#2E2A7B]/10 bg-white px-6 py-3 text-base font-semibold text-[#2E2A7B] shadow-sm transition hover:bg-[#EEEAF8]"
-            >
-              Meet your Palaris
-            </a>
-          </motion.div>
-
-          <motion.dl
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.55 }}
-            className="mt-12 grid max-w-md grid-cols-3 gap-4"
-          >
-            {stats.map((s) => (
-              <div key={s.label}>
-                <dt className="text-3xl font-semibold text-[#2E2A7B]">
-                  {s.value}
-                </dt>
-                <dd className="mt-1 text-xs leading-snug text-[#5B5E84]">
-                  {s.label}
-                </dd>
-              </div>
-            ))}
-          </motion.dl>
+          {box
+            ? dots.map((dot, i) => {
+                const diameter = box.h * dot.d;
+                return (
+                  <motion.span
+                    key={i}
+                    aria-hidden="true"
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 320,
+                      damping: 14,
+                      delay: DOTS_ANIM_START + i * DOT_STAGGER,
+                    }}
+                    className="absolute rounded-full"
+                    style={{
+                      left: box.w * dot.x - diameter / 2,
+                      top: box.h * dot.y - diameter / 2,
+                      width: diameter,
+                      height: diameter,
+                      background: dot.color,
+                    }}
+                  />
+                );
+              })
+            : null}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <motion.p
+          initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="relative z-10"
+          transition={{ duration: 0.6, delay: TAGLINE_DELAY, ease: "easeOut" }}
+          className="mt-6 font-medium text-[#5B5E84]"
+          style={{ fontSize: "clamp(1rem, 2.4vw, 1.375rem)" }}
         >
-          <div className="rounded-[32px] border border-black/5 bg-white p-4 shadow-2xl shadow-[#2E2A7B]/10">
-            <div className="rounded-[24px] bg-[#2E2A7B] p-5">
-              <div className="mb-4 flex items-center justify-between">
-                <div className="text-sm font-medium text-white/70">
-                  #operations
-                </div>
-                <div className="flex gap-2">
-                  <span className="h-3 w-3 rounded-full bg-[#F46F61]" />
-                  <span className="h-3 w-3 rounded-full bg-[#E7B83D]" />
-                  <span className="h-3 w-3 rounded-full bg-[#22B8B0]" />
-                </div>
-              </div>
+          Same coworker. Every time.
+        </motion.p>
 
-              <div className="rounded-[20px] bg-white p-5">
-                <div className="space-y-4">
-                  {slackThread.map((msg, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <span
-                        className={`mt-1 h-8 w-8 shrink-0 rounded-full ${msg.dot}`}
-                        aria-hidden="true"
-                      />
-                      <div className="min-w-0">
-                        <div className="flex items-baseline gap-2">
-                          <p className="text-sm font-semibold text-[#2E2A7B]">
-                            {msg.name}
-                          </p>
-                          <span className="text-xs text-[#5B5E84]/60">
-                            {msg.time}
-                          </span>
-                        </div>
-                        <p className="mt-0.5 text-sm leading-relaxed text-[#535778]">
-                          {msg.text}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+        <motion.p
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: DESCRIPTOR_DELAY, ease: "easeOut" }}
+          className="mt-2 text-sm text-[#8B8EB2] md:text-[0.95rem]"
+        >
+          An AI coworker with memory. Lives in your Slack.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: CTA_DELAY, ease: "easeOut" }}
+          className="mt-10 flex flex-col items-center gap-3"
+        >
+          <a
+            href="#early-access"
+            className="inline-flex min-w-[200px] items-center justify-center rounded-xl bg-[#F46F61] px-8 py-3.5 text-base font-semibold text-white shadow-md shadow-[#F46F61]/20 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#F46F61]/30"
+          >
+            Get early access
+          </a>
+          <a
+            href="#five-voices"
+            className="inline-flex min-w-[200px] items-center justify-center rounded-xl border border-[#2E2A7B]/15 bg-white/60 px-8 py-3.5 text-base font-semibold text-[#2E2A7B] backdrop-blur transition-colors hover:bg-white"
+          >
+            Meet your Palaris
+          </a>
         </motion.div>
       </div>
+
+      <motion.div
+        aria-hidden="true"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ duration: 0.8, delay: SCROLL_INDICATOR_DELAY }}
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
+      >
+        <div className="flex h-10 w-6 items-start justify-center rounded-full border border-[#2E2A7B]/25 p-1.5">
+          <motion.span
+            className="block h-1.5 w-1.5 rounded-full bg-[#2E2A7B]/50"
+            animate={{ y: [0, 10, 0], opacity: [0.6, 1, 0.6] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </div>
+      </motion.div>
+
+      <AnimatePresence>
+        {isOpen ? (
+          <>
+            <motion.button
+              type="button"
+              aria-label="Close menu"
+              className="fixed inset-0 z-40 bg-black/30"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+            />
+            <motion.aside
+              className="fixed right-0 top-0 z-50 flex h-full w-72 flex-col gap-8 bg-[#F7F5F2] p-6 ring-1 ring-black/5"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-lg font-bold tracking-tight text-[#2E2A7B]">
+                  Palari
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setIsOpen(false)}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-xl ring-1 ring-black/5"
+                  aria-label="Close menu"
+                >
+                  &#x2715;
+                </button>
+              </div>
+
+              <div className="flex flex-col gap-5">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-base font-medium text-[#4A4D73]"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <a
+                  href="#pricing"
+                  onClick={() => setIsOpen(false)}
+                  className="text-base font-medium text-[#4A4D73]"
+                >
+                  Pricing
+                </a>
+              </div>
+
+              <a
+                href="#early-access"
+                onClick={() => setIsOpen(false)}
+                className="mt-auto rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-3 text-center text-sm font-semibold text-white"
+              >
+                Get early access
+              </a>
+            </motion.aside>
+          </>
+        ) : null}
+      </AnimatePresence>
     </section>
   );
 }
