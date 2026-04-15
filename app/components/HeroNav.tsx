@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import PalariLogo from "./PalariLogo";
 
 const navItems = [
   { label: "Memory", href: "/memory" },
@@ -24,6 +25,10 @@ export default function HeroNav() {
 
   return (
     <>
+      <div className="fixed left-5 top-5 z-40 md:left-8 md:top-8">
+        <PalariLogo href="/" />
+      </div>
+
       <button
         type="button"
         aria-label="Open menu"
