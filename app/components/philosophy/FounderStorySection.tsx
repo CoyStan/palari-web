@@ -13,34 +13,50 @@ export default function FounderStorySection() {
         <FadeIn>
           <div className="mt-8 space-y-6 text-lg leading-8 text-[#4A4D73]">
             <p>
-              I spent years inside analytics teams watching institutional
-              memory walk out the door every time an engineer left. Runbooks
-              went stale. The same incidents recurred. Onboarding took months
-              because the context was locked in people&apos;s heads.
+              I spent years watching institutional memory walk out the door
+              every time an engineer left &mdash; runbooks going stale, the
+              same incidents recurring, onboarding dragging for months
+              because the context was locked in people&rsquo;s heads. When
+              I started using AI tools to close the gap, I hit a sharper
+              version of the same problem: every session starts from zero.
+              Close the tab and the assistant forgets you. That&rsquo;s a
+              technical choice, not a law, and it&rsquo;s the one Palari
+              refuses to make.
             </p>
+
             <p>
-              Applied ML and data engineering from the IMF&apos;s Strategy,
-              Policy and Review Risk Unit: XGBoost models, BGVAR models,
-              crisis forecasting across 180 countries. The engineering
-              decisions behind Palari &mdash; the structured memory, the
-              routing layer, the separation of work from voice &mdash;
-              are shaped by that work.
+              I come to this from applied economics and engineering, not
+              from product. Crime-prediction models for Mexico City&rsquo;s
+              Public Security Ministry taught me how quickly a data tool
+              can do harm if nobody explains why it exists. Macro-crisis
+              forecasting at the IMF taught me that the signal usually
+              lives in the loss, not the growth. Economic-development work
+              from Kazakhstan to Somalia taught me that institutional
+              memory is the thing that decides whether a program survives
+              the next election. Harvard Kennedy School (Fulbright MPA/ID)
+              gave me the framework for thinking about systems at country
+              scale; the work itself taught me why memory is the part
+              worth building for.
             </p>
-            <p>
-              Economic policy and institutional thinking from Harvard Kennedy
-              School (Fulbright MPA/ID). Bring-your-own-key, incentive
-              alignment, memory-as-pricing. These are economic design
-              decisions, not just engineering ones.
-            </p>
+
             <p>
               The first working build &mdash; the Rust server, the Slack
               plugin, the routing layer, the memory subsystem &mdash; came
-              together in under two weeks while I was employed full-time.
+              together in under two weeks while I was still employed
+              full-time. No prior startup experience. No co-founder yet.
+              These are real gaps. The product is the proof that the idea
+              is worth building.
             </p>
-            <p className="font-medium text-[#2E2A7B]">
-              No prior startup experience. No co-founder yet. These are real
-              gaps. The product is the proof that the idea is worth building.
+          </div>
+        </FadeIn>
+
+        <FadeIn>
+          <div className="mt-10 text-right">
+            <p className="text-base font-semibold text-[#2E2A7B]">
+              Quetzali Ram&iacute;rez Guill&eacute;n
             </p>
+            <p className="mt-1 text-sm text-[#4A4D73]">Washington, D.C.</p>
+            <p className="text-sm text-[#4A4D73]">April 2026</p>
           </div>
         </FadeIn>
       </div>

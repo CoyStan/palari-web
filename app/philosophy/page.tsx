@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PhilosophyHero from "../components/philosophy/PhilosophyHero";
-import FounderLetter from "../components/philosophy/FounderLetter";
 import IncentiveAlignmentSection from "../components/philosophy/IncentiveAlignmentSection";
 import ThreeLayersSection from "../components/philosophy/ThreeLayersSection";
 import AlwaysImprovingSection from "../components/philosophy/AlwaysImprovingSection";
@@ -32,7 +31,6 @@ export default function PhilosophyPage() {
       <Navbar />
       <main>
         <PhilosophyHero />
-        <FounderLetter />
         <IncentiveAlignmentSection />
         <ThreeLayersSection />
         <AlwaysImprovingSection />
