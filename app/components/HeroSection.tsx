@@ -49,9 +49,8 @@ export default function HeroSection() {
             transition={{ duration: 0.7 }}
             className="max-w-xl text-4xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]"
           >
-            AI coworkers who remember how you work,{" "}
-            <span className="text-[#F46F61]">get better every month,</span>
-            {" "}and never need you to update anything.
+            AI coworkers who{" "}
+            <span className="text-[#F46F61]">remember how you work.</span>
           </motion.h1>
 
           <motion.p
