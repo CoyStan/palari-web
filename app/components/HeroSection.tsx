@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import PalariBrainDiagram from "./PalariBrainDiagram";
 
 const navItems = [
   { label: "Memory", href: "/memory" },
@@ -87,89 +88,105 @@ export default function HeroSection() {
         </div>
       </button>
 
-      <div className="relative z-10 flex w-full flex-col items-center px-6 text-center">
-        <div className="relative inline-block">
-          <motion.span
-            ref={textRef}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: WORDMARK_ANIM_START, ease: [0.22, 1, 0.36, 1] }}
-            className="block font-bold leading-none text-[#2E2A7B]"
-            style={{
-              fontFamily: "var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif",
-              fontSize: "clamp(4.5rem, 28vw, 16rem)",
-              letterSpacing: "-0.03em",
-            }}
-          >
-            Palari
-          </motion.span>
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-10 px-6 md:flex-row md:items-center md:justify-between md:gap-12 md:px-10">
+        <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="relative inline-block">
+            <motion.span
+              ref={textRef}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: WORDMARK_ANIM_START, ease: [0.22, 1, 0.36, 1] }}
+              className="block font-bold leading-none text-[#2E2A7B]"
+              style={{
+                fontFamily:
+                  "var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif",
+                fontSize: "clamp(3rem, 14vw, 9rem)",
+                letterSpacing: "-0.03em",
+              }}
+            >
+              Palari
+            </motion.span>
 
-          {box
-            ? dots.map((dot, i) => {
-                const diameter = box.h * dot.d;
-                return (
-                  <motion.span
-                    key={i}
-                    aria-hidden="true"
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 320,
-                      damping: 14,
-                      delay: DOTS_ANIM_START + i * DOT_STAGGER,
-                    }}
-                    className="absolute rounded-full"
-                    style={{
-                      left: box.w * dot.x - diameter / 2,
-                      top: box.h * dot.y - diameter / 2,
-                      width: diameter,
-                      height: diameter,
-                      background: dot.color,
-                    }}
-                  />
-                );
-              })
-            : null}
+            {box
+              ? dots.map((dot, i) => {
+                  const diameter = box.h * dot.d;
+                  return (
+                    <motion.span
+                      key={i}
+                      aria-hidden="true"
+                      initial={{ scale: 0, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 320,
+                        damping: 14,
+                        delay: DOTS_ANIM_START + i * DOT_STAGGER,
+                      }}
+                      className="absolute rounded-full"
+                      style={{
+                        left: box.w * dot.x - diameter / 2,
+                        top: box.h * dot.y - diameter / 2,
+                        width: diameter,
+                        height: diameter,
+                        background: dot.color,
+                      }}
+                    />
+                  );
+                })
+              : null}
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: TAGLINE_DELAY, ease: "easeOut" }}
+            className="mt-5 font-medium text-[#5B5E84]"
+            style={{ fontSize: "clamp(1rem, 2.2vw, 1.35rem)" }}
+          >
+            Same coworker. Every time.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: DESCRIPTOR_DELAY, ease: "easeOut" }}
+            className="mt-2 text-sm text-[#8B8EB2] md:text-[0.95rem]"
+          >
+            An AI coworker with memory. Lives in your Slack.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: CTA_DELAY, ease: "easeOut" }}
+            className="mt-8 flex flex-col items-stretch gap-3 md:items-start"
+          >
+            <a
+              href="#early-access"
+              className="inline-flex min-w-[200px] items-center justify-center rounded-xl bg-[#F46F61] px-8 py-3.5 text-base font-semibold text-white shadow-md shadow-[#F46F61]/20 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#F46F61]/30"
+            >
+              Get early access
+            </a>
+            <a
+              href="#five-voices"
+              className="inline-flex min-w-[200px] items-center justify-center rounded-xl border border-[#2E2A7B]/15 bg-white/60 px-8 py-3.5 text-base font-semibold text-[#2E2A7B] backdrop-blur transition-colors hover:bg-white"
+            >
+              Meet your Palaris
+            </a>
+          </motion.div>
         </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: TAGLINE_DELAY, ease: "easeOut" }}
-          className="mt-6 font-medium text-[#5B5E84]"
-          style={{ fontSize: "clamp(1rem, 2.4vw, 1.375rem)" }}
-        >
-          Same coworker. Every time.
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: DESCRIPTOR_DELAY, ease: "easeOut" }}
-          className="mt-2 text-sm text-[#8B8EB2] md:text-[0.95rem]"
-        >
-          An AI coworker with memory. Lives in your Slack.
-        </motion.p>
-
         <motion.div
-          initial={{ opacity: 0, y: 8 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: CTA_DELAY, ease: "easeOut" }}
-          className="mt-10 flex flex-col items-center gap-3"
+          transition={{
+            duration: 0.7,
+            delay: CTA_DELAY + 0.1,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="w-full max-w-sm md:flex-shrink-0"
         >
-          <a
-            href="#early-access"
-            className="inline-flex min-w-[200px] items-center justify-center rounded-xl bg-[#F46F61] px-8 py-3.5 text-base font-semibold text-white shadow-md shadow-[#F46F61]/20 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#F46F61]/30"
-          >
-            Get early access
-          </a>
-          <a
-            href="#five-voices"
-            className="inline-flex min-w-[200px] items-center justify-center rounded-xl border border-[#2E2A7B]/15 bg-white/60 px-8 py-3.5 text-base font-semibold text-[#2E2A7B] backdrop-blur transition-colors hover:bg-white"
-          >
-            Meet your Palaris
-          </a>
+          <PalariBrainDiagram />
         </motion.div>
       </div>
 
