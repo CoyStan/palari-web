@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useLayoutEffect, useRef, useState } from "react";
-import PalariBrainDiagram from "./PalariBrainDiagram";
+import HeroSlackDemo from "./HeroSlackDemo";
 
 const dots = [
   { color: "#E7B83D", x: 0.561, y: -0.081, d: 0.22 },
@@ -158,13 +158,13 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.7,
+            duration: 0.6,
             delay: CTA_DELAY + 0.1,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="w-full max-w-sm md:flex-shrink-0"
+          className="w-full max-w-md md:flex-shrink-0"
         >
-          <PalariBrainDiagram />
+          <HeroSlackDemo />
         </motion.div>
       </div>
 
