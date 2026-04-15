@@ -31,67 +31,75 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <header
-      className={`sticky top-0 z-50 bg-[#F7F5F2]/85 backdrop-blur transition-shadow ${
-        isScrolled ? "shadow-md ring-1 ring-black/5" : ""
-      }`}
-    >
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 md:px-10">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-[#2E2A7B]"
-        >
-          <span className="text-xl font-bold tracking-tight">Palari</span>
-          <PalariDots scale="navbar" />
-        </Link>
-
-        <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="text-sm font-medium text-[#4A4D73] transition-colors hover:text-[#2E2A7B]"
-            >
-              {item.label}
-            </Link>
-          ))}
-          <a
-            href="/#early-access"
-            className="rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.02]"
+    <>
+      <header
+        className={`sticky top-0 z-40 bg-[#F7F5F2]/85 backdrop-blur transition-shadow ${
+          isScrolled ? "shadow-md ring-1 ring-black/5" : ""
+        }`}
+      >
+        <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 md:px-10">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-[#2E2A7B]"
           >
-            Get early access
-          </a>
-        </nav>
+            <span className="text-xl font-bold tracking-tight">Palari</span>
+            <PalariDots scale="navbar" />
+          </Link>
 
-        <button
-          type="button"
-          aria-label="Open menu"
-          onClick={() => setIsOpen(true)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-2xl ring-1 ring-black/5 md:hidden"
-        >
-          <span className="sr-only">Open menu</span>
-          <div className="space-y-1.5">
-            <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
-            <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
-            <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
-          </div>
-        </button>
-      </div>
+          <nav className="hidden items-center gap-8 md:flex">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="text-sm font-medium text-[#4A4D73] transition-colors hover:text-[#2E2A7B]"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <a
+              href="/#early-access"
+              className="rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.02]"
+            >
+              Get early access
+            </a>
+          </nav>
 
+          <button
+            type="button"
+            aria-label="Open menu"
+            onClick={() => setIsOpen(true)}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-sm ring-1 ring-black/5 md:hidden"
+          >
+            <span className="sr-only">Open menu</span>
+            <div className="space-y-1.5">
+              <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
+              <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
+              <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
+            </div>
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile drawer rendered as a sibling of <header>.
+          Must NOT be a child of any element with backdrop-filter,
+          transform, filter, or will-change — those create a
+          containing block for position:fixed and the drawer would
+          be sized/positioned relative to that parent instead of
+          the viewport, leaving the menu transparent on mobile. */}
       <AnimatePresence>
         {isOpen && (
           <>
             <motion.button
               type="button"
               aria-label="Close menu"
-              className="fixed inset-0 z-40 bg-black/30 md:hidden"
+              className="fixed inset-0 z-[80] bg-black/45 backdrop-blur-[2px] md:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
             />
             <motion.aside
-              className="fixed right-0 top-0 z-50 flex h-full w-72 flex-col gap-8 bg-[#F7F5F2] p-6 ring-1 ring-black/5 md:hidden"
+              className="fixed right-0 top-0 z-[90] flex h-screen w-80 max-w-[85vw] flex-col gap-8 bg-[#F7F5F2] p-6 shadow-2xl shadow-black/20 ring-1 ring-black/10 md:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -118,13 +126,13 @@ export default function Navbar() {
                 </button>
               </div>
 
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col">
                 {navItems.map((item) => (
                   <Link
                     key={item.label}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-base font-medium text-[#4A4D73]"
+                    className="border-b border-[#2E2A7B]/10 py-4 text-lg font-semibold text-[#2E2A7B] transition-colors hover:text-[#F46F61]"
                   >
                     {item.label}
                   </Link>
@@ -142,6 +150,6 @@ export default function Navbar() {
           </>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
