@@ -34,10 +34,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/life"
+                  href="/character"
                   className="text-white/70 transition-colors hover:text-white"
                 >
-                  Life
+                  Character
                 </Link>
               </li>
               <li>
@@ -68,12 +68,33 @@ export default function Footer() {
           </div>
 
           <div>
-            <a
-              href="mailto:hello@palari.io"
-              className="text-lg font-medium text-white"
-            >
-              hello@palari.io
-            </a>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-white/40">
+              Contact
+            </h3>
+            <ul className="mt-4 space-y-3 text-base">
+              <li>
+                <a
+                  href="mailto:hello@palari.io"
+                  className="text-white/70 transition-colors hover:text-white"
+                >
+                  hello@palari.io
+                </a>
+                <p className="text-xs text-white/40">
+                  General & beta access
+                </p>
+              </li>
+              <li>
+                <a
+                  href="mailto:hello@palari.io?subject=Investors%20%26%20partners"
+                  className="text-white/70 transition-colors hover:text-white"
+                >
+                  Investors &amp; partners
+                </a>
+                <p className="text-xs text-white/40">
+                  hello@palari.io &middot; subject: investors
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
 

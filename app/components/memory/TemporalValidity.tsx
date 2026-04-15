@@ -6,17 +6,17 @@ export default function TemporalValidity() {
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <FadeIn>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#22B8B0]">
-            Temporal validity
+            Facts have dates
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-4xl">
-            Facts change. Sofia knows when.
+            Your Palari knows when things changed.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#4A4D73]">
             Your manager was Jane until March. Your manager is Marcus now.
-            Both facts are true, on different dates. Palari stores every
-            change with valid_from, valid_until, and a superseded_by link
-            back to the previous version. Historical queries walk the
-            chain.
+            Both facts are true, on different dates. Your Palari keeps
+            both, tied to when each was the case, so an old fact never
+            shows up as a current one and a current fact never erases
+            the history.
           </p>
         </FadeIn>
 
@@ -29,12 +29,11 @@ export default function TemporalValidity() {
                   Your manager is Jane
                 </p>
                 <p className="mt-1 text-xs text-[#5B5E84]/70">
-                  valid_from: 2025-09-01 &middot; valid_until: 2026-03-14
-                  &middot; superseded_by: next
+                  From September 2025 to March 14, 2026
                 </p>
               </div>
               <span className="shrink-0 rounded-full bg-[#5B5E84]/10 px-3 py-1 text-xs font-semibold text-[#5B5E84]">
-                archived
+                past
               </span>
             </div>
 
@@ -49,7 +48,7 @@ export default function TemporalValidity() {
                   Your manager is Marcus
                 </p>
                 <p className="mt-1 text-xs text-[#5B5E84]/70">
-                  valid_from: 2026-03-14 &middot; valid_until: null
+                  From March 14, 2026
                 </p>
               </div>
               <span className="shrink-0 rounded-full bg-[#22B8B0]/15 px-3 py-1 text-xs font-semibold text-[#137471]">
@@ -61,10 +60,9 @@ export default function TemporalValidity() {
 
         <FadeIn>
           <p className="mx-auto mt-10 max-w-2xl text-center text-sm italic text-[#5B5E84]">
-            Ask &ldquo;who was my manager in February?&rdquo; and Sofia
-            walks the chain back to Jane. Ask &ldquo;who is my manager?&rdquo;
-            and she lands on Marcus. Nothing is deleted. Nothing is
-            confused.
+            Ask &ldquo;who was my manager in February?&rdquo; and your
+            Palari goes back to Jane. Ask &ldquo;who is my manager?&rdquo;
+            and it says Marcus. Nothing is deleted. Nothing is confused.
           </p>
         </FadeIn>
       </div>

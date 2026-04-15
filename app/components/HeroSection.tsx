@@ -23,10 +23,10 @@ const slackThread = [
   },
 ];
 
-const stats = [
-  { value: "5", label: "Palaris who remember" },
-  { value: "1", label: "click to set up" },
-  { value: "0", label: "terminal needed" },
+const principles = [
+  { label: "Persistent memory", detail: "Your Palari remembers across sessions." },
+  { label: "Distinct voice", detail: "Every coworker is its own character." },
+  { label: "Scoped access", detail: "You always decide what it can touch." },
 ];
 
 export default function HeroSection() {
@@ -43,6 +43,15 @@ export default function HeroSection() {
 
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center md:px-10 lg:py-24">
         <div className="relative z-10 flex flex-col">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-5 inline-flex w-fit items-center gap-2 rounded-full bg-white/60 px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-[#2E2A7B] ring-1 ring-[#2E2A7B]/10"
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-[#22B8B0]" aria-hidden="true" />
+            Private beta &middot; invite-only
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
@@ -89,15 +98,15 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.55 }}
-            className="mt-12 grid max-w-md grid-cols-3 gap-4"
+            className="mt-12 grid max-w-md grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4"
           >
-            {stats.map((s) => (
-              <div key={s.label}>
-                <dt className="text-3xl font-semibold text-[#2E2A7B]">
-                  {s.value}
+            {principles.map((p) => (
+              <div key={p.label}>
+                <dt className="text-sm font-semibold text-[#2E2A7B]">
+                  {p.label}
                 </dt>
                 <dd className="mt-1 text-xs leading-snug text-[#5B5E84]">
-                  {s.label}
+                  {p.detail}
                 </dd>
               </div>
             ))}

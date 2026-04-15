@@ -23,30 +23,31 @@ export default function FounderLetter() {
             </p>
 
             <p>
-              Memory was the hardest part. Associative retrieval across
-              eleven memory types, grouped into what the Palari holds
-              permanently and what she learns about your work, is
-              expensive to do badly and very expensive to do well. We
-              compressed it until a full Palari&rsquo;s memory costs under
-              a cent per query. That is the whole reason the economics
-              work.
+              Memory was the hardest part. Structured retrieval,
+              separated into the part of the coworker that stays stable
+              and the part that grows with your work, is expensive to do
+              badly and very expensive to do well. We compressed it until
+              a full Palari&rsquo;s memory costs under a cent per query.
+              That is the whole reason the economics work.
             </p>
 
             <p>
               Voice was the last mile. Raw model output reads like a
               report. Teams don&rsquo;t want reports. They want a
-              teammate. So we separated work from voice, precision on one
-              layer, readability on another. Same answer, different wire.
+              teammate. So we separated the work from the voice &mdash;
+              precision on one side, readability on the other. Same
+              answer, different wire.
             </p>
 
             <p>
               A note on what Palari is not. We are not building digital
-              humans. Palaris don&rsquo;t have feelings. The voice
-              generation process is a mechanism, not a metaphysics claim.
-              It exists so the same Sofia reviews code the same way every
-              time, so the voice is consistent, so the feedback is
-              specific. A specialist with a persistent style. Not a
-              person.
+              humans. A Palari is a character &mdash; a voice, a set of
+              preferences, a way of noticing &mdash; instantiated over
+              the memory of your work. A character is not a person. It
+              does not have a past, it is not conscious, and it never
+              claims to be. What it has is a consistent way of showing
+              up for your team. A specialist with a persistent style.
+              Not a person.
             </p>
 
             <p>

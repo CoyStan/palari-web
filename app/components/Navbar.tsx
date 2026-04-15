@@ -7,7 +7,7 @@ import PalariDots from "./PalariDots";
 
 const navItems = [
   { label: "Memory", href: "/memory" },
-  { label: "Life", href: "/life" },
+  { label: "Character", href: "/character" },
   { label: "Trust", href: "/trust" },
   { label: "Philosophy", href: "/philosophy" },
 ];

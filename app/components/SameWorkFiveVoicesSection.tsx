@@ -122,10 +122,10 @@ export default function SameWorkFiveVoicesSection() {
         <FadeIn>
           <div className="mt-6 text-center">
             <Link
-              href="/life"
+              href="/character"
               className="inline-flex items-center gap-1 text-sm font-semibold text-[#2E2A7B] transition-colors hover:text-[#F46F61]"
             >
-              How voices are generated
+              What a character is
               <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>

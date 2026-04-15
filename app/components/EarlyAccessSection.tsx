@@ -9,7 +9,10 @@ export default function EarlyAccessSection() {
     >
       <div className="mx-auto w-full max-w-4xl px-6 text-center md:px-10">
         <FadeIn>
-          <h2 className="text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#22B8B0]">
+            Private beta &middot; invite-only
+          </p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#2E2A7B] md:text-5xl">
             Hire your first Palari.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[#4A4D73]">
@@ -29,22 +32,34 @@ export default function EarlyAccessSection() {
               href="mailto:hello@palari.io?subject=Early%20Access"
               className="inline-flex shrink-0 items-center justify-center rounded-2xl bg-[#F46F61] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[#F46F61]/25 transition hover:-translate-y-0.5"
             >
-              Get early access
+              Request an invite
             </a>
           </div>
         </FadeIn>
 
         <FadeIn>
-          <p className="mt-8 text-base text-[#5B5E84]">
-            Or{" "}
-            <Link
-              href="/philosophy"
-              className="font-medium text-[#2E2A7B] underline"
-            >
-              read the full story
-            </Link>{" "}
-            first.
-          </p>
+          <div className="mt-10 inline-flex flex-col gap-2 text-sm text-[#5B5E84]">
+            <p>
+              Or{" "}
+              <Link
+                href="/philosophy"
+                className="font-medium text-[#2E2A7B] underline"
+              >
+                read the full story
+              </Link>{" "}
+              first.
+            </p>
+            <p className="text-[#5B5E84]/80">
+              Investors &amp; partners:{" "}
+              <a
+                href="mailto:hello@palari.io?subject=Investors%20%26%20partners"
+                className="font-medium text-[#2E2A7B] underline"
+              >
+                hello@palari.io
+              </a>
+              {" "}(subject: investors).
+            </p>
+          </div>
         </FadeIn>
       </div>
     </section>

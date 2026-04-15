@@ -8,7 +8,7 @@ const faqItems = [
   {
     question: "How is a Palari different from ChatGPT or Claude?",
     answer:
-      "ChatGPT and Claude have basic memory now. They store facts about you in a flat list. Palari&rsquo;s memory is deeper: eleven types, entity graphs connecting people and projects, and temporal tracking that knows when facts changed. But the real difference is two things. Your Palari has a unique voice that&rsquo;s consistent across every interaction, and the infrastructure underneath keeps improving without you doing anything. New models, new techniques, new optimizations. All adopted by the Palari team and deployed to your coworker automatically.",
+      "ChatGPT and Claude have basic memory now. They store facts about you in a flat list. Palari&rsquo;s memory is structured: entities that connect people and projects, facts that carry their dates so old context doesn&rsquo;t show up as current, a part that stays stable (the character) and a part that grows with you. The real difference is two things. Your Palari has a distinct voice that&rsquo;s consistent across every interaction, and the infrastructure underneath keeps improving without you doing anything. New models, new techniques, new optimizations. All adopted by the Palari team and deployed to your coworker automatically.",
   },
   {
     question: "Do I need to be technical?",
@@ -23,12 +23,12 @@ const faqItems = [
   {
     question: "How does the voice work?",
     answer:
-      "Each Palari&rsquo;s voice is generated through a proprietary process that produces unique convictions, preferences, and ways of noticing things. The same data analysis framed by Sofia sounds different from the same analysis framed by Alfred, not because they have different personalities pasted on top, but because they have different ways of thinking about problems. You choose the coworker whose voice matches how you want to work.",
+      "Every Palari is a character &mdash; a distinct voice, a set of preferences, a way of noticing. The same analysis framed by Sofia sounds different from the same analysis framed by Alfred, not because they have personalities pasted on top, but because they have different stable ways of thinking about problems. You choose the coworker whose voice matches how you want to work. A Palari never claims to be a person; it&rsquo;s a character, and it knows the difference.",
   },
   {
     question: "Can I change how my Palari behaves?",
     answer:
-      "Yes. Preferences are a memory type. Tell Sofia once that you want bullet points instead of paragraphs, or that you never want her to edit files in /shared without asking, and she remembers. You can also nudge her voice over time by reacting to her responses.",
+      "Yes. Tell Sofia once that you want bullet points instead of paragraphs, or that you never want her to edit files in /shared without asking, and she remembers. You can also nudge her voice over time by reacting to her responses. The character stays; the way she works with you specifically adjusts.",
   },
   {
     question: "What if I want to stop?",

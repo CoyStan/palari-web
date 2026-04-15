@@ -2,25 +2,23 @@ import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import MemoryHero from "../components/memory/MemoryHero";
-import TwoBrainDiagram from "../components/memory/TwoBrainDiagram";
-import ElevenMemoryTypes from "../components/memory/ElevenMemoryTypes";
-import MemoryCreationChannels from "../components/memory/MemoryCreationChannels";
-import MemoryLifecycle from "../components/memory/MemoryLifecycle";
+import MemoryTwoKinds from "../components/memory/MemoryTwoKinds";
 import EntityGraph from "../components/memory/EntityGraph";
 import TemporalValidity from "../components/memory/TemporalValidity";
-import EndToEndExample from "../components/memory/EndToEndExample";
 import CostStats from "../components/memory/CostStats";
 import EvolvingArchitectureSection from "../components/memory/EvolvingArchitectureSection";
 
+const title = "Memory. Palari.";
+const description =
+  "Your Palari remembers your work. One part of its memory stays stable — the character. One part grows with you. Under a cent per lookup, portable, yours to take with you.";
+
 export const metadata: Metadata = {
-  title: "Memory. Palari.",
-  description:
-    "Eleven memory types routed to the layer that needs them. An entity graph, temporal validity, importance decay, compression. Sub-cent memory costs and no vector database.",
+  title,
+  description,
   alternates: { canonical: "https://palari.io/memory" },
   openGraph: {
-    title: "Memory. Palari.",
-    description:
-      "Eleven memory types routed to the layer that needs them. An entity graph, temporal validity, importance decay, compression.",
+    title,
+    description,
     type: "website",
     url: "https://palari.io/memory",
   },
@@ -32,13 +30,9 @@ export default function MemoryPage() {
       <Navbar />
       <main>
         <MemoryHero />
-        <TwoBrainDiagram />
-        <ElevenMemoryTypes />
-        <MemoryCreationChannels />
-        <MemoryLifecycle />
+        <MemoryTwoKinds />
         <EntityGraph />
         <TemporalValidity />
-        <EndToEndExample />
         <CostStats />
         <EvolvingArchitectureSection />
       </main>

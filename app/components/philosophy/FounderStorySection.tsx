@@ -22,20 +22,20 @@ export default function FounderStorySection() {
               Applied ML and data engineering from the IMF&apos;s Strategy,
               Policy and Review Risk Unit: XGBoost models, BGVAR models,
               crisis forecasting across 180 countries. The engineering
-              decisions behind Palari, the eleven memory types, the Planning
-              Layer&apos;s router, the separation of work from voice, are
-              shaped by that work.
+              decisions behind Palari &mdash; the structured memory, the
+              routing layer, the separation of work from voice &mdash;
+              are shaped by that work.
             </p>
             <p>
               Economic policy and institutional thinking from Harvard Kennedy
-              School (Fulbright MPA/ID). BYOK, the Planning Layer&apos;s
-              incentive alignment, memory-as-pricing. These are economic
-              design decisions, not just engineering ones.
+              School (Fulbright MPA/ID). Bring-your-own-key, incentive
+              alignment, memory-as-pricing. These are economic design
+              decisions, not just engineering ones.
             </p>
             <p>
-              The first working build, the Rust server, the Slack plugin,
-              the Planning Layer, the memory subsystem, came together in
-              under two weeks while I was employed full-time.
+              The first working build &mdash; the Rust server, the Slack
+              plugin, the routing layer, the memory subsystem &mdash; came
+              together in under two weeks while I was employed full-time.
             </p>
             <p className="font-medium text-[#2E2A7B]">
               No prior startup experience. No co-founder yet. These are real

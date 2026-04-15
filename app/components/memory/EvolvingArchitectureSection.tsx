@@ -18,10 +18,10 @@ export default function EvolvingArchitectureSection() {
             time without any action from you.
           </p>
           <p className="mt-5 text-lg leading-relaxed text-[#4A4D73]">
-            The eleven memory types, the entity graph, the temporal
-            validity tracking: these are the current state. They won&rsquo;t
-            be the final state. The architecture was designed from day one
-            to evolve.
+            The character, the shared history, the way entities connect
+            across conversations, the way facts carry their dates: these
+            are the current shape. They won&rsquo;t be the final shape.
+            The architecture was designed from day one to evolve.
           </p>
         </FadeIn>
       </div>
