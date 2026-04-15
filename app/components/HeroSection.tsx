@@ -1,16 +1,8 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { useLayoutEffect, useRef, useState } from "react";
 import PalariBrainDiagram from "./PalariBrainDiagram";
-
-const navItems = [
-  { label: "Memory", href: "/memory" },
-  { label: "Life", href: "/life" },
-  { label: "Trust", href: "/trust" },
-  { label: "Philosophy", href: "/philosophy" },
-];
 
 const dots = [
   { color: "#E7B83D", x: 0.561, y: -0.081, d: 0.22 },
@@ -30,7 +22,6 @@ const CTA_DELAY = DESCRIPTOR_DELAY + 0.15;
 const SCROLL_INDICATOR_DELAY = CTA_DELAY + 0.4;
 
 export default function HeroSection() {
-  const [isOpen, setIsOpen] = useState(false);
   const [box, setBox] = useState<{ w: number; h: number } | null>(null);
   const textRef = useRef<HTMLSpanElement>(null);
 
@@ -56,13 +47,6 @@ export default function HeroSection() {
     };
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
-
   return (
     <section className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden bg-[#F7F5F2]">
       <div
@@ -74,20 +58,6 @@ export default function HeroSection() {
         }}
       />
 
-      <button
-        type="button"
-        aria-label="Open menu"
-        onClick={() => setIsOpen(true)}
-        className="absolute right-5 top-5 z-30 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/60 backdrop-blur ring-1 ring-black/5 transition-shadow hover:shadow-md md:right-8 md:top-8"
-      >
-        <span className="sr-only">Open menu</span>
-        <div className="space-y-1.5">
-          <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
-          <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
-          <span className="block h-0.5 w-5 bg-[#2E2A7B]" />
-        </div>
-      </button>
-
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-10 px-6 md:flex-row md:items-center md:justify-between md:gap-12 md:px-10">
         <div className="flex flex-col items-center text-center md:items-start md:text-left">
           <div className="relative inline-block">
@@ -95,7 +65,11 @@ export default function HeroSection() {
               ref={textRef}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: WORDMARK_ANIM_START, ease: [0.22, 1, 0.36, 1] }}
+              transition={{
+                duration: 0.7,
+                delay: WORDMARK_ANIM_START,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="block font-bold leading-none text-[#2E2A7B]"
               style={{
                 fontFamily:
@@ -149,7 +123,11 @@ export default function HeroSection() {
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: DESCRIPTOR_DELAY, ease: "easeOut" }}
+            transition={{
+              duration: 0.6,
+              delay: DESCRIPTOR_DELAY,
+              ease: "easeOut",
+            }}
             className="mt-2 text-sm text-[#8B8EB2] md:text-[0.95rem]"
           >
             An AI coworker with memory. Lives in your Slack.
@@ -205,71 +183,6 @@ export default function HeroSection() {
           />
         </div>
       </motion.div>
-
-      <AnimatePresence>
-        {isOpen ? (
-          <>
-            <motion.button
-              type="button"
-              aria-label="Close menu"
-              className="fixed inset-0 z-40 bg-black/30"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-            />
-            <motion.aside
-              className="fixed right-0 top-0 z-50 flex h-full w-72 flex-col gap-8 bg-[#F7F5F2] p-6 ring-1 ring-black/5"
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 0.25, ease: "easeOut" }}
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-lg font-bold tracking-tight text-[#2E2A7B]">
-                  Palari
-                </span>
-                <button
-                  type="button"
-                  onClick={() => setIsOpen(false)}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-xl ring-1 ring-black/5"
-                  aria-label="Close menu"
-                >
-                  &#x2715;
-                </button>
-              </div>
-
-              <div className="flex flex-col gap-5">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-base font-medium text-[#4A4D73]"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-                <a
-                  href="#pricing"
-                  onClick={() => setIsOpen(false)}
-                  className="text-base font-medium text-[#4A4D73]"
-                >
-                  Pricing
-                </a>
-              </div>
-
-              <a
-                href="#early-access"
-                onClick={() => setIsOpen(false)}
-                className="mt-auto rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-3 text-center text-sm font-semibold text-white"
-              >
-                Get early access
-              </a>
-            </motion.aside>
-          </>
-        ) : null}
-      </AnimatePresence>
     </section>
   );
 }

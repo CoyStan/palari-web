@@ -3,6 +3,7 @@ import EarlyAccessSection from "./components/EarlyAccessSection";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
 import GoldenRuleSection from "./components/GoldenRuleSection";
+import HeroNav from "./components/HeroNav";
 import HeroSection from "./components/HeroSection";
 import MeetPalarisSection from "./components/MeetPalarisSection";
 import NeverFallBehindSection from "./components/NeverFallBehindSection";
@@ -13,6 +14,7 @@ import SameWorkFiveVoicesSection from "./components/SameWorkFiveVoicesSection";
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#F7F5F2] text-[#2E2A7B]">
+      <HeroNav />
       <main>
         <HeroSection />
         <CompoundingOverTimeSection />
