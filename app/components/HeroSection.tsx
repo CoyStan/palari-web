@@ -12,13 +12,13 @@ const slackThread = [
   {
     name: "Sofia",
     dot: "bg-[#F46F61]",
-    text: "checking. probably the automation rule you tweaked tuesday.",
+    text: "checking. the rhythm felt off tuesday night when the automation you tweaked went live — was waiting to see.",
     time: "10:42 AM",
   },
   {
     name: "Sofia",
     dot: "bg-[#F46F61]",
-    text: "yep. three segments overlap with the retention list. want me to deduplicate them the way we did for the holiday promo in november?",
+    text: "yep. three segments overlap with the retention list. same pattern as the holiday promo in november. want me to dedupe the way we did then, or document the overlap first so we catch it earlier next time?",
     time: "10:44 AM",
   },
 ];

@@ -8,9 +8,9 @@ const palaris = [
     name: "Sofia Campos",
     role: "Operations Partner",
     scope: "Campaigns, vendors, weekly planning",
-    capabilities: "Async updates, vendor follow-ups, spotting anomalies in the dashboard",
+    capabilities: "Async updates, vendor follow-ups, spotting the rhythm before it breaks",
     voice:
-      "found it. three vendors missed friday&rsquo;s invoice deadline, all on the net-30 change you approved last month. want me to send the reminder email the way we did for the q4 batch?",
+      "three vendors missed friday&rsquo;s invoice deadline. all three on the net-30 change you approved last month. same rhythm as the q4 batch. want me to send reminders now, or sit with it a day and see if they catch it on their own?",
     dot: "bg-[#F46F61]",
     border: "border-[#F46F61]/20",
   },
@@ -18,9 +18,9 @@ const palaris = [
     name: "Leo Chen",
     role: "Analyst",
     scope: "Numbers, reports, reconciliation",
-    capabilities: "Revenue recs, variance reviews, quarterly close checks",
+    capabilities: "Revenue recs, variance reviews, listening for what&rsquo;s shaking in the data",
     voice:
-      "the q1 reconciliation doesn&rsquo;t balance. two journal entries hit the same account within the same hour. that&rsquo;s not random. adding a check to flag collisions. running the numbers again.",
+      "q1 reconciliation doesn&rsquo;t balance. two journal entries hit the same account within the same hour &mdash; that&rsquo;s not random, that&rsquo;s the sync trembling. adding a check for collisions and re-running. i&rsquo;ll send what it was trying to say.",
     dot: "bg-[#22B8B0]",
     border: "border-[#22B8B0]/20",
   },
@@ -30,7 +30,7 @@ const palaris = [
     scope: "Read-only across all channels",
     capabilities: "Status digests, dependency tracking, weekly summaries",
     voice:
-      "Sofia closed out the vendor reminders last night. Leo&rsquo;s q1 reconciliation still has two open items waiting on procurement. Left a note in his inbox. Two things need your call today.",
+      "Sofia closed the vendor reminders last night. Leo&rsquo;s Q1 reconciliation still has two open items sitting with procurement &mdash; I&rsquo;ve left him a note. Two things need your call today; I put them at the top of your inbox so you don&rsquo;t have to hunt.",
     dot: "bg-[#E7B83D]",
     border: "border-[#E7B83D]/20",
   },
