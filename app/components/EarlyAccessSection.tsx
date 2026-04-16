@@ -40,14 +40,21 @@ export default function EarlyAccessSection() {
         <FadeIn>
           <div className="mt-10 inline-flex flex-col gap-2 text-sm text-[#5B5E84]">
             <p>
-              Or{" "}
+              Or start with{" "}
+              <Link
+                href="/memory"
+                className="font-medium text-[#2E2A7B] underline"
+              >
+                the memory system
+              </Link>
+              , then{" "}
               <Link
                 href="/philosophy"
                 className="font-medium text-[#2E2A7B] underline"
               >
                 read the full story
-              </Link>{" "}
-              first.
+              </Link>
+              .
             </p>
             <p className="text-[#5B5E84]/80">
               Investors &amp; partners:{" "}

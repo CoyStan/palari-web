@@ -7,6 +7,7 @@ import EntityGraph from "../components/memory/EntityGraph";
 import TemporalValidity from "../components/memory/TemporalValidity";
 import CostStats from "../components/memory/CostStats";
 import EvolvingArchitectureSection from "../components/memory/EvolvingArchitectureSection";
+import PageNextCta from "../components/PageNextCta";
 
 const title = "Memory. Palari.";
 const description =
@@ -35,6 +36,12 @@ export default function MemoryPage() {
         <TemporalValidity />
         <CostStats />
         <EvolvingArchitectureSection />
+        <PageNextCta
+          headline="Memory is what a Palari knows. Character is who they are."
+          body="A memory without a voice is a database. A voice without memory is a chatbot. The two have to meet somewhere, and that somewhere has a name."
+          next={{ label: "Meet the character", href: "/character" }}
+          secondary={{ label: "Get early access", href: "/#early-access" }}
+        />
       </main>
       <Footer />
     </div>

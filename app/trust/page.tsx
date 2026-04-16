@@ -9,6 +9,7 @@ import CompartmentalizedRiskSection from "../components/trust/CompartmentalizedR
 import MemoryIsolationSection from "../components/trust/MemoryIsolationSection";
 import MultiCoworkerCoordinationSection from "../components/trust/MultiCoworkerCoordinationSection";
 import GoldenRuleCalloutSection from "../components/trust/GoldenRuleCalloutSection";
+import PageNextCta from "../components/PageNextCta";
 
 export const metadata: Metadata = {
   title: "Trust. Palari.",
@@ -37,6 +38,12 @@ export default function TrustPage() {
         <MemoryIsolationSection />
         <MultiCoworkerCoordinationSection />
         <GoldenRuleCalloutSection />
+        <PageNextCta
+          headline="You've seen how it works. Here's why we built it this way."
+          body="The memory system, the character, the scoped trust: they're all answers to a single argument about what AI coworkers should be, and who their incentives should serve."
+          next={{ label: "Read the philosophy", href: "/philosophy" }}
+          secondary={{ label: "Get early access", href: "/#early-access" }}
+        />
       </main>
       <Footer />
     </div>
