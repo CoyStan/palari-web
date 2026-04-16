@@ -1,7 +1,6 @@
 "use client";
 
 import FadeIn from "./FadeIn";
-import Link from "next/link";
 
 const palaris = [
   {
@@ -113,17 +112,6 @@ export default function MeetPalarisSection() {
           </p>
         </FadeIn>
 
-        <FadeIn>
-          <div className="mt-6 text-center">
-            <Link
-              href="/character"
-              className="inline-flex items-center gap-1 text-sm font-semibold text-[#2E2A7B] transition-colors hover:text-[#F46F61]"
-            >
-              What a character is
-              <span aria-hidden="true">&rarr;</span>
-            </Link>
-          </div>
-        </FadeIn>
       </div>
     </section>
   );

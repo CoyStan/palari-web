@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import FadeIn from "./FadeIn";
@@ -119,17 +118,6 @@ export default function SameWorkFiveVoicesSection() {
           </p>
         </FadeIn>
 
-        <FadeIn>
-          <div className="mt-6 text-center">
-            <Link
-              href="/character"
-              className="inline-flex items-center gap-1 text-sm font-semibold text-[#2E2A7B] transition-colors hover:text-[#F46F61]"
-            >
-              What a character is
-              <span aria-hidden="true">&rarr;</span>
-            </Link>
-          </div>
-        </FadeIn>
       </div>
     </section>
   );

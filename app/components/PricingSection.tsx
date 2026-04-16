@@ -112,6 +112,17 @@ export default function PricingSection() {
             </p>
           </div>
         </FadeIn>
+
+        <FadeIn>
+          <div className="mt-10 text-center">
+            <a
+              href="/philosophy#early-access"
+              className="inline-flex items-center justify-center rounded-2xl bg-[#F46F61] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#F46F61]/25 transition hover:-translate-y-0.5"
+            >
+              Get early access
+            </a>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
