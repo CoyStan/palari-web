@@ -57,7 +57,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="/#early-access"
+              href="/philosophy#early-access"
               className="rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.02]"
             >
               Get early access
@@ -140,7 +140,7 @@ export default function Navbar() {
               </div>
 
               <a
-                href="/#early-access"
+                href="/philosophy#early-access"
                 onClick={() => setIsOpen(false)}
                 className="mt-auto rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-3 text-center text-sm font-semibold text-white"
               >

@@ -81,10 +81,10 @@ export default function HeroSection() {
             className="mt-8 flex flex-wrap gap-4"
           >
             <a
-              href="#early-access"
+              href="/memory"
               className="rounded-2xl bg-[#F46F61] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#F46F61]/25 transition hover:-translate-y-0.5"
             >
-              Get early access
+              See how memory works
             </a>
             <a
               href="#meet-team"

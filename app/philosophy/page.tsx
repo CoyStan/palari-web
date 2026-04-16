@@ -9,7 +9,7 @@ import PortabilitySection from "../components/philosophy/PortabilitySection";
 import ScopedTrustRationaleSection from "../components/philosophy/ScopedTrustRationaleSection";
 import EthicsSection from "../components/philosophy/EthicsSection";
 import FounderStorySection from "../components/philosophy/FounderStorySection";
-import PageNextCta from "../components/PageNextCta";
+import EarlyAccessSection from "../components/EarlyAccessSection";
 
 export const metadata: Metadata = {
   title: "Philosophy. Palari.",
@@ -38,13 +38,7 @@ export default function PhilosophyPage() {
         <ScopedTrustRationaleSection />
         <EthicsSection />
         <FounderStorySection />
-        <PageNextCta
-          eyebrow="Ready when you are"
-          headline="Meet a coworker who remembers."
-          body="Start building memory from day one. What you tell your Palari today will shape how it answers you next month."
-          next={{ label: "Get early access", href: "/#early-access" }}
-          secondary={{ label: "Start from the memory system", href: "/memory" }}
-        />
+        <EarlyAccessSection />
       </main>
       <Footer />
     </div>

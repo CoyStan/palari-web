@@ -42,7 +42,6 @@ export default function TrustPage() {
           headline="You've seen how it works. Here's why we built it this way."
           body="The memory system, the character, the scoped trust: they're all answers to a single argument about what AI coworkers should be, and who their incentives should serve."
           next={{ label: "Read the philosophy", href: "/philosophy" }}
-          secondary={{ label: "Get early access", href: "/#early-access" }}
         />
       </main>
       <Footer />

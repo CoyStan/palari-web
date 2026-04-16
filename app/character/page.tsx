@@ -36,7 +36,6 @@ export default function CharacterPage() {
           headline="A character needs scope. Here's how you give it safely."
           body="Sofia writes your campaigns. Leo closes your books. Alfred reads everything, writes nothing. Each coworker earns access the way a new hire would."
           next={{ label: "See how trust works", href: "/trust" }}
-          secondary={{ label: "Get early access", href: "/#early-access" }}
         />
       </main>
       <Footer />

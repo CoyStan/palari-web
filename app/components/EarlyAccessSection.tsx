@@ -1,5 +1,4 @@
 import FadeIn from "./FadeIn";
-import Link from "next/link";
 
 export default function EarlyAccessSection() {
   return (
@@ -16,8 +15,9 @@ export default function EarlyAccessSection() {
             Hire your first Palari.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[#4A4D73]">
-            Start building memory from day one. Your Palari will remember
-            today&rsquo;s conversation next month.
+            You&rsquo;ve read the whole thing. If it sounds like the
+            teammate you want, leave your email. We&rsquo;ll be in touch
+            with an invite.
           </p>
         </FadeIn>
 
@@ -38,35 +38,16 @@ export default function EarlyAccessSection() {
         </FadeIn>
 
         <FadeIn>
-          <div className="mt-10 inline-flex flex-col gap-2 text-sm text-[#5B5E84]">
-            <p>
-              Or start with{" "}
-              <Link
-                href="/memory"
-                className="font-medium text-[#2E2A7B] underline"
-              >
-                the memory system
-              </Link>
-              , then{" "}
-              <Link
-                href="/philosophy"
-                className="font-medium text-[#2E2A7B] underline"
-              >
-                read the full story
-              </Link>
-              .
-            </p>
-            <p className="text-[#5B5E84]/80">
-              Investors &amp; partners:{" "}
-              <a
-                href="mailto:hello@palari.io?subject=Investors%20%26%20partners"
-                className="font-medium text-[#2E2A7B] underline"
-              >
-                hello@palari.io
-              </a>
-              {" "}(subject: investors).
-            </p>
-          </div>
+          <p className="mt-8 text-sm text-[#5B5E84]/80">
+            Investors &amp; partners:{" "}
+            <a
+              href="mailto:hello@palari.io?subject=Investors%20%26%20partners"
+              className="font-medium text-[#2E2A7B] underline"
+            >
+              hello@palari.io
+            </a>
+            {" "}(subject: investors).
+          </p>
         </FadeIn>
       </div>
     </section>
