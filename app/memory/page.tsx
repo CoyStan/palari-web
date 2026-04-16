@@ -40,6 +40,7 @@ export default function MemoryPage() {
           headline="Memory is what a Palari knows. Character is who they are."
           body="A memory without a voice is a database. A voice without memory is a chatbot. The two have to meet somewhere, and that somewhere has a name."
           next={{ label: "Meet the character", href: "/character" }}
+          secondary={{ label: "Skip to early access", href: "/philosophy#early-access" }}
         />
       </main>
       <Footer />

@@ -99,13 +99,13 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             />
             <motion.aside
-              className="fixed right-0 top-0 z-[90] flex h-screen w-80 max-w-[85vw] flex-col gap-8 bg-[#F7F5F2] p-6 shadow-2xl shadow-black/20 ring-1 ring-black/10 md:hidden"
+              className="fixed right-0 top-0 z-[90] flex h-[100dvh] w-80 max-w-[85vw] flex-col bg-[#F7F5F2] shadow-2xl shadow-black/20 ring-1 ring-black/10 md:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.25, ease: "easeOut" }}
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between px-6 pb-4 pt-6">
                 <Link
                   href="/"
                   className="inline-flex items-center gap-2"
@@ -126,7 +126,7 @@ export default function Navbar() {
                 </button>
               </div>
 
-              <div className="flex flex-col">
+              <div className="flex flex-1 flex-col overflow-y-auto px-6 pb-4">
                 {navItems.map((item) => (
                   <Link
                     key={item.label}
@@ -139,13 +139,15 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <a
-                href="/philosophy#early-access"
-                onClick={() => setIsOpen(false)}
-                className="mt-auto rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-3 text-center text-sm font-semibold text-white"
-              >
-                Get early access
-              </a>
+              <div className="border-t border-[#2E2A7B]/10 bg-[#F7F5F2] px-6 pb-[env(safe-area-inset-bottom,1.5rem)] pt-4">
+                <a
+                  href="/philosophy#early-access"
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-2xl bg-gradient-to-r from-[#22B8B0] to-[#2E2A7B] px-5 py-4 text-center text-base font-semibold text-white shadow-md shadow-[#2E2A7B]/15"
+                >
+                  Get early access
+                </a>
+              </div>
             </motion.aside>
           </>
         )}

@@ -1,5 +1,4 @@
 import FadeIn from "./FadeIn";
-import Link from "next/link";
 
 const stages = [
   {
@@ -63,17 +62,6 @@ export default function CompoundingOverTimeSection() {
           ))}
         </div>
 
-        <FadeIn>
-          <div className="mt-10 text-center">
-            <Link
-              href="/memory"
-              className="inline-flex items-center gap-1 text-sm font-semibold text-[#2E2A7B] transition-colors hover:text-[#F46F61]"
-            >
-              How the memory actually works
-              <span aria-hidden="true">&rarr;</span>
-            </Link>
-          </div>
-        </FadeIn>
       </div>
     </section>
   );
